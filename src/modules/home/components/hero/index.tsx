@@ -8,9 +8,26 @@ import React, { useCallback } from "react";
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-const Hero = () => {
+const slides = [
+  {
+    image: "/image.webp",
+    title: "Slide 1 Title",
+    description: "Slide 1 Description"
+  },
+  {
+    image: "/image.webp",
+    title: "Slide 2 Title",
+    description: "Slide 2 Description"
+  },
+  {
+    image: "/image.webp",
+    title: "Slide 3 Title",
+    description: "Slide 3 Description"
+  }
+]
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay( { delay: 3000 } )] )
+const Hero = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -25,15 +42,21 @@ const Hero = () => {
       <div className='embla mx-auto mt-12 max-w-lg'>
         <div className='embla__viewport h-56 border' ref={emblaRef}>
           <div className='embla__container h-full'>
-            <div className='embla__slide flex items-center justify-center'>
-              Slide 1
-            </div>
-            <div className='embla__slide flex items-center justify-center'>
-              Slide 2
-            </div>
-            <div className='embla__slide flex items-center justify-center'>
-              Slide 3
-            </div>
+            {slides.map((slide, index) => (
+              <div className='embla__slide flex items-center justify-center' key={index}>
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  width={300}
+                  height={200}
+                  className="object-cover mr-6"
+                />
+                <div>
+                  <Heading className="mb-1">{slide.title}</Heading>
+                  <p className="text-sm text-ui-text-secondary">{slide.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
