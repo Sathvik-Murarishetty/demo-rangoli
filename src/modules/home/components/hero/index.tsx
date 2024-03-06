@@ -46,10 +46,13 @@ const achievementsList = [
 ];
 
 const slides = [
-  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" },
-  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" },
-  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" }
-]
+  {
+    image: 'https://img.freepik.com/free-photo/top-view-delicious-chocolate-orange-table_23-2148395057.jpg',
+  },
+  {
+    image: 'https://img.freepik.com/free-photo/delicious-indian-dessert-with-copy-space_23-2149312352.jpg',
+  },
+];
 
 const Hero = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
@@ -86,12 +89,11 @@ const Hero = () => {
 
       if (timeDifference === 0) {
         clearInterval(timerInterval)
-        // You can add code here to handle what happens when the target date is reached.
       }
     }, 1000)
 
     return () => {
-      clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
+      clearInterval(timerInterval)
     }
   }, [])
 
@@ -123,25 +125,6 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subt">
-      <div className='embla mx-auto mt-12 max-w-lg'>
-        <div className='embla__viewport h-56 border' ref={emblaRef}>
-          <div className='embla__container h-full'>
-            {slides.map((slide, index) => (
-              <div className='embla__slide flex items-center justify-center' key={index}>
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  width={300}
-                  height={200}
-                  className="object-cover mr-6"
-                />
-                <div>
-                  <Heading className="mb-1">{slide.title}</Heading>
-                  <p className="text-sm text-ui-text-secondary">{slide.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
 
           <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
@@ -154,7 +137,7 @@ const Hero = () => {
       </div>
       <section className="text-black">
         <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
-          <Image src="/images/about-image.png" alt="About-Us" width={500} height={300} />
+          <Image src="https://img.freepik.com/free-photo/top-view-delicious-coconut-candies-inside-plate-pink-surface_140725-80887.jpg" alt="About-Us" width={500} height={300} />
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-black mb-4">About Us</h2>
             <p className="text-black texxt-base md:text-lg">
