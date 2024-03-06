@@ -166,12 +166,13 @@ const Hero = () => {
                     animateToNumber={parseInt(achievement.value)}
                     locale="en-US"
                     className="text-black text-4xl font-bold"
-                    configs={(_: any, index: any) => {
-                      return {
-                        mass: 1,
-                        friction: 100,
-                        tensions: 340 * (index + 1),
-                      };
+                    transitions={(index) => ({
+                      type: "spring",
+                      duration: index + 0.3,
+                    })}
+                    fontStyle={{
+                      fontSize: 40,
+                      color: "red",
                     }}
                   />
                   {achievement.postfix}
