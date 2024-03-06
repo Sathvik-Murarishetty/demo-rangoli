@@ -51,6 +51,27 @@ const slides = [
   { image: "/image.webp" }
 ]
 
+<<<<<<< HEAD
+=======
+const slides = [
+  {
+    image: "/image.webp",
+    title: "Slide 1 Title",
+    description: "Slide 1 Description"
+  },
+  {
+    image: "/image.webp",
+    title: "Slide 2 Title",
+    description: "Slide 2 Description"
+  },
+  {
+    image: "/image.webp",
+    title: "Slide 3 Title",
+    description: "Slide 3 Description"
+  }
+]
+
+>>>>>>> 2c6cb77b474c842fc473295a119c87042518286f
 const Hero = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
 
@@ -103,6 +124,7 @@ const Hero = () => {
 )
 
   return (
+<<<<<<< HEAD
     <div>
       <div className="w-full relative">
         <div className='embla mx-auto relative'>
@@ -123,6 +145,27 @@ const Hero = () => {
                 </div>
               ))}
             </div>
+=======
+    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subt">
+      <div className='embla mx-auto mt-12 max-w-lg'>
+        <div className='embla__viewport h-56 border' ref={emblaRef}>
+          <div className='embla__container h-full'>
+            {slides.map((slide, index) => (
+              <div className='embla__slide flex items-center justify-center' key={index}>
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  width={300}
+                  height={200}
+                  className="object-cover mr-6"
+                />
+                <div>
+                  <Heading className="mb-1">{slide.title}</Heading>
+                  <p className="text-sm text-ui-text-secondary">{slide.description}</p>
+                </div>
+              </div>
+            ))}
+>>>>>>> 2c6cb77b474c842fc473295a119c87042518286f
           </div>
 
           <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
