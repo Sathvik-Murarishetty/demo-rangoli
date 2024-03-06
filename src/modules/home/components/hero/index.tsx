@@ -51,27 +51,6 @@ const slides = [
   { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" }
 ]
 
-<<<<<<< HEAD
-=======
-const slides = [
-  {
-    image: "/image.webp",
-    title: "Slide 1 Title",
-    description: "Slide 1 Description"
-  },
-  {
-    image: "/image.webp",
-    title: "Slide 2 Title",
-    description: "Slide 2 Description"
-  },
-  {
-    image: "/image.webp",
-    title: "Slide 3 Title",
-    description: "Slide 3 Description"
-  }
-]
-
->>>>>>> 2c6cb77b474c842fc473295a119c87042518286f
 const Hero = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
 
@@ -124,7 +103,6 @@ const Hero = () => {
 )
 
   return (
-<<<<<<< HEAD
     <div>
       <div className="w-full relative">
         <div className='embla mx-auto relative'>
@@ -145,7 +123,6 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-=======
     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subt">
       <div className='embla mx-auto mt-12 max-w-lg'>
         <div className='embla__viewport h-56 border' ref={emblaRef}>
@@ -165,7 +142,6 @@ const Hero = () => {
                 </div>
               </div>
             ))}
->>>>>>> 2c6cb77b474c842fc473295a119c87042518286f
           </div>
 
           <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
