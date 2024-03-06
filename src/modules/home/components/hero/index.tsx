@@ -46,9 +46,9 @@ const achievementsList = [
 ];
 
 const slides = [
-  { image: "/image.webp" },
-  { image: "/image.webp" },
-  { image: "/image.webp" }
+  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" },
+  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" },
+  { image: "https://imgs.search.brave.com/NLuWkAftd8Cfg6LcaGGM0Y62Y6JcydiAV6uv0z_6y3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NjY4OTI2OC9waG90/by95b3VuZy13b21h/bi1kaXdhbGktY2Vs/ZWJyYXRlLXN0b2Nr/LXBob3RvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz03WnY3/YVo4bU1IdzNLQVpW/UWpkSzRSLURIcHpP/dnhJUHpkQlc2QW9U/TnJJPQ" }
 ]
 
 <<<<<<< HEAD
