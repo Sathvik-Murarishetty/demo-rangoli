@@ -30,7 +30,7 @@ const nextConfig = withStoreConfig({
         hostname: "img.freepik.com",
       },
       {
-      protocol: "https",
+      protocol: "http",
       hostname: "res.cloudinary.com",
       },
     ],
