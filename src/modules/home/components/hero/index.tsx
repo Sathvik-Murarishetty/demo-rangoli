@@ -109,10 +109,10 @@ const Hero = () => {
       <div>
       <div className="w-full relative">
         <div className='embla mx-auto relative'>
-          <div className='embla__viewport border' ref={emblaRef}>
+          <div className='embla__viewport' ref={emblaRef}>
             <div className='embla__container h-full'>
               {slides.map((slide, index) => (
-                <div className='embla__slide flex flex-col items-center justify-center mb-10' key={index}>
+                <div className='embla__slide flex flex-col items-center justify-center' key={index}>
                   <img
                     src={slide.image}
                     alt={`Slide ${index + 1}`}
