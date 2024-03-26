@@ -106,6 +106,7 @@ const Hero = () => {
 
   return (
     <div>
+      <div>
       <div className="w-full relative">
         <div className='embla mx-auto relative'>
           <div className='embla__viewport border' ref={emblaRef}>
@@ -135,23 +136,48 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <section className="text-black">
-        <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
-          <Image src="https://img.freepik.com/free-photo/top-view-delicious-coconut-candies-inside-plate-pink-surface_140725-80887.jpg" alt="About-Us" width={500} height={300} />
-          <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-            <h2 className="text-4xl font-bold text-black mb-4">About Us</h2>
-            <p className="text-black texxt-base md:text-lg">
-              When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian style of art featuring patterns and designs in rich, jewel-like colors.
-            </p>
-            <p className="text-black texxt-base md:text-lg">
-              Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious service invites you to linger and enjoy your dining experience.
-            </p>
-            <p className="text-black texxt-base md:text-lg">
-              We have the experience to ensure your wedding, wedding reception, anniversary, birthday, bridal shower, baby shower, picnic, corporate events, meetings, religious gatherings, holidays and other parties are successful.
-            </p>
+      <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
+          <span className="uppercase tracking-widest">Beyond Authentic</span>
+          <StarIcon className="h-6 w-6 text-white" />
+          <div className="text-white" />
+          <span className="uppercase tracking-widest">Premium Ingredients</span>
+          <StarIcon className="h-6 w-6 text-white" />
+          <div className="text-white" />
+          <span className="uppercase tracking-widest">Meticulously Processed</span>
+        </div>
+      </div>
+      <div className="flex justify-center py-16">
+        <div className="max-w-6xl w-full px-4">
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-sm uppercase tracking-wider text-gray-500">• Our Story •</h3>
+              <h1 className="mt-4 text-5xl font-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
+              <p className="mt-6 text-lg text-gray-700">
+                When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative
+                versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian
+                style of art featuring patterns and designs in rich, jewel-like colors.
+                <br />
+                Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior
+                welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious
+                service invites you to linger and enjoy your dining experience.
+              </p>
+            </div>
+            <div>
+              <img
+                alt="The process of making sweets"
+                className="w-full h-auto object-cover"
+                height="400"
+                src="/placeholder.svg"
+                style={{
+                  aspectRatio: "600/400",
+                  objectFit: "cover",
+                }}
+                width="600"
+              />
+            </div>
           </div>
         </div>
-      </section>
+      </div>
       <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
           {achievementsList.map((achievement, index) => {
@@ -172,7 +198,7 @@ const Hero = () => {
                     })}
                     fontStyle={{
                       fontSize: 40,
-                      color: "red",
+                      color: "black",
                     }}
                   />
                   {achievement.postfix}
@@ -202,4 +228,24 @@ const Hero = () => {
     </div>
     )
 }
+
+function StarIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  )
+}
+
 export default Hero;
