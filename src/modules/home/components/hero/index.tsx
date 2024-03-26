@@ -120,6 +120,9 @@ const Hero = () => {
                     height="20%"
                     className="object-cover mr-6"
                   />
+                            <div className="mt-2">
+                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
+          </div>
                 </div>
               ))}
             </div>
@@ -133,7 +136,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-        <section className="w-full">
+        <section className="w-full mb-5">
           <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
             <div className="space-y-3 p-4">
               <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm dark:bg-amber-800">
@@ -146,9 +149,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="mt-2 mb-5 mx-auto">
-                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-                  </div>
+
         </section>
       <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
           <span className="uppercase tracking-widest">Beyond Authentic</span>
