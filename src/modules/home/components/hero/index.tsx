@@ -136,6 +136,27 @@ const Hero = () => {
           </div>
         </div>
       </div>
+        <section className="w-full">
+          <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
+            <img
+              alt="Hero"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
+              height="40%"
+              src="/placeholder.svg"
+              width="100%"
+            />
+            <div className="space-y-3 p-4">
+              <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm dark:bg-amber-800">
+                Authentic Indian Sweets
+              </div>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+              <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Experience the rich and delightful taste of Indian sweets brought to your doorstep. Handcrafted with
+                love and tradition.
+              </p>
+            </div>
+          </div>
+        </section>
       <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
           <span className="uppercase tracking-widest">Beyond Authentic</span>
           <StarIcon className="h-6 w-6 text-white" />
