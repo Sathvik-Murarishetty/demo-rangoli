@@ -47,10 +47,10 @@ const achievementsList = [
 
 const slides = [
   {
-    image: 'https://img.freepik.com/free-photo/top-view-delicious-chocolate-orange-table_23-2148395057.jpg',
+    image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485312/1_dkgpc1.png',
   },
   {
-    image: 'https://img.freepik.com/free-photo/delicious-indian-dessert-with-copy-space_23-2149312352.jpg',
+    image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485314/2_siobkl.png',
   },
 ];
 
