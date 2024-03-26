@@ -113,16 +113,13 @@ const Hero = () => {
             <div className='embla__container h-full'>
               {slides.map((slide, index) => (
                 <div className='embla__slide flex flex-col items-center justify-center mb-10' key={index}>
-                  <Image
+                  <img
                     src={slide.image}
                     alt={`Slide ${index + 1}`}
-                    width={1000}
-                    height={500}
+                    width="100%"
+                    height="20%"
                     className="object-cover mr-6"
                   />
-                  <div className="mt-2">
-                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-                  </div>
                 </div>
               ))}
             </div>
@@ -138,13 +135,6 @@ const Hero = () => {
       </div>
         <section className="w-full">
           <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
-            <img
-              alt="Hero"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
-              height="40%"
-              src="/placeholder.svg"
-              width="100%"
-            />
             <div className="space-y-3 p-4">
               <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm dark:bg-amber-800">
                 Authentic Indian Sweets
@@ -156,6 +146,9 @@ const Hero = () => {
               </p>
             </div>
           </div>
+          <div className="mt-2">
+                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
+                  </div>
         </section>
       <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
           <span className="uppercase tracking-widest">Beyond Authentic</span>
