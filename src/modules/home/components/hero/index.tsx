@@ -120,14 +120,14 @@ const Hero = () => {
                     height="20%"
                     className="object-cover mr-6"
                   />
-                            <div className="mt-2">
-                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-          </div>
+                            
                 </div>
               ))}
             </div>
           </div>
-
+<div className="mt-2">
+                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
+          </div>
           <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
             <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
           </div>
