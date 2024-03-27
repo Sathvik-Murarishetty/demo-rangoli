@@ -38,7 +38,7 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
+      <div style={{ padding: '10px', border: '1px solid #000', borderRadius: '10px' }}>
   <Thumbnail
     thumbnail={productPreview.thumbnail}
     size="square"
