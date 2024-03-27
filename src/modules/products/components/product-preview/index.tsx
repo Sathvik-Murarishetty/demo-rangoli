@@ -33,6 +33,20 @@ export default async function ProductPreview({
     region,
   })
 
+  const handleAddToCart = async () => {
+    if (!variant?.id) return null
+
+    setIsAdding(true)
+
+    await addToCart({
+      variantId: variant.id,
+      quantity: 1,
+      countryCode,
+    })
+
+    setIsAdding(false)
+  }
+
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
