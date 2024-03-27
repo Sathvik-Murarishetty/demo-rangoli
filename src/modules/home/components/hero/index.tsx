@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Heading } from "@medusajs/ui";
+import { Button } from "@medusajs/ui";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -98,44 +98,43 @@ const Hero = () => {
   }, [])
 
   const StatBox = ({ label, value }: { label: string; value: number }) => (
-  <li className="statBox" style={{ borderRadius: '10px', border: '1px solid var(--color-dark-60)', padding: '16px', minWidth: '100px', width: '100%', textAlign: 'center' }}>
-    <h4>{value}</h4>
-    <p>{label}</p>
-  </li>
-)
+    <li className="statBox" style={{ borderRadius: '10px', border: '1px solid var(--color-dark-60)', padding: '16px', minWidth: '100px', width: '100%', textAlign: 'center' }}>
+      <h4>{value}</h4>
+      <p>{label}</p>
+    </li>
+  )
 
   return (
     <div>
       <div>
-      <div className="w-full relative">
-        <div className='embla mx-auto relative'>
-          <div className='embla__viewport' ref={emblaRef}>
-            <div className='embla__container h-full'>
-              {slides.map((slide, index) => (
-                <div className='embla__slide flex flex-col items-center justify-center' key={index}>
-                  <img
-                    src={slide.image}
-                    alt={`Slide ${index + 1}`}
-                    width="100%"
-                    height="20%"
-                    className="object-cover mr-6"
-                  />
-                            
-                </div>
-              ))}
+        <div className="w-full relative bg-gray-200">
+          <div className='embla mx-auto relative'>
+            <div className='embla__viewport' ref={emblaRef}>
+              <div className='embla__container h-full'>
+                {slides.map((slide, index) => (
+                  <div className='embla__slide flex flex-col items-center justify-center' key={index}>
+                    <img
+                      src={slide.image}
+                      alt={`Slide ${index + 1}`}
+                      width="100%"
+                      height="20%"
+                      className="object-cover mr-6"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-2">
+              <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
+            </div>
+            <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
+              <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
+            </div>
+            <div className='absolute top-1/2 transform -translate-y-1/2 right-0 mr-4'>
+              <ChevronRight size={48} onClick={scrollNext} color="grey" />
             </div>
           </div>
-<div className="mt-2">
-                    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-          </div>
-          <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
-            <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
-          </div>
-          <div className='absolute top-1/2 transform -translate-y-1/2 right-0 mr-4'>
-            <ChevronRight size={48} onClick={scrollNext} color="grey" />
-          </div>
         </div>
-      </div>
         <section className="w-full mb-5">
           <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
             <div className="space-y-3 p-4">
@@ -149,15 +148,12 @@ const Hero = () => {
               </p>
             </div>
           </div>
-
         </section>
-      <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
+        <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
           <span className="uppercase tracking-widest">Beyond Authentic</span>
           <StarIcon className="h-6 w-6 text-white" />
-          <div className="text-white" />
           <span className="uppercase tracking-widest">Premium Ingredients</span>
           <StarIcon className="h-6 w-6 text-white" />
-          <div className="text-white" />
           <span className="uppercase tracking-widest">Meticulously Processed</span>
         </div>
       </div>
