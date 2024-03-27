@@ -1,3 +1,23 @@
+import { Text } from "@medusajs/ui"
+
+import { ProductPreviewType } from "types/global"
+
+import { retrievePricedProductById } from "@lib/data"
+import { getProductPrice } from "@lib/util/get-product-price"
+import { Region } from "@medusajs/medusa"
+import { Button } from "@medusajs/ui"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { isEqual } from "lodash"
+import { useParams } from "next/navigation"
+import { useEffect, useMemo, useRef, useState } from "react"
+
+import { useIntersection } from "@lib/hooks/use-in-view"
+import { addToCart } from "@modules/cart/actions"
+import Divider from "@modules/common/components/divider"
+import OptionSelect from "@modules/products/components/option-select"
+import Thumbnail from "../thumbnail"
+import PreviewPrice from "./price"
+
 export default function ProductPreview({
   productPreview,
   isFeatured,
