@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@medusajs/ui";
+import { Button, Heading } from "@medusajs/ui";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -107,7 +107,7 @@ const Hero = () => {
   return (
     <div>
       <div>
-        <div className="w-full relative bg-gray-200">
+        <div className="w-full relative">
           <div className='embla mx-auto relative'>
             <div className='embla__viewport' ref={emblaRef}>
               <div className='embla__container h-full'>
@@ -120,11 +120,12 @@ const Hero = () => {
                       height="20%"
                       className="object-cover mr-6"
                     />
+
                   </div>
                 ))}
               </div>
             </div>
-            <div className="mt-2">
+            <div className="mt-2 flex justify-center">
               <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
             </div>
             <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
@@ -148,12 +149,15 @@ const Hero = () => {
               </p>
             </div>
           </div>
+
         </section>
         <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
           <span className="uppercase tracking-widest">Beyond Authentic</span>
           <StarIcon className="h-6 w-6 text-white" />
+          <div className="text-white" />
           <span className="uppercase tracking-widest">Premium Ingredients</span>
           <StarIcon className="h-6 w-6 text-white" />
+          <div className="text-white" />
           <span className="uppercase tracking-widest">Meticulously Processed</span>
         </div>
       </div>
@@ -220,7 +224,7 @@ const Hero = () => {
           })}
         </div>
       </div>
-      <section className="promotion" style={{ display: 'grid', gridTemplateColumns: '50% 1fr', gap: '30px', marginBottom: '30px', padding: '80px',}}>
+      <section className="promotion" style={{ display: 'grid', gridTemplateColumns: '50% 1fr', gap: '30px', marginBottom: '30px', padding: '80px', }}>
         <div className="textBox" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px' }}>
           <h3 className="text-4xl font-bold text-black mb-4">Offer!!</h3>
           <p>
@@ -237,7 +241,7 @@ const Hero = () => {
         </div>
       </section>
     </div>
-    )
+  )
 }
 
 function StarIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
