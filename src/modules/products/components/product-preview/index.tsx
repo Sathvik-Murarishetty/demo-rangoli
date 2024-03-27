@@ -34,6 +34,7 @@ export default async function ProductPreview({
   })
 
   return (
+    <div>
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
       className="group"
@@ -50,7 +51,9 @@ export default async function ProductPreview({
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
-        <Button
+      </div>
+    </LocalizedClientLink>
+    <Button
           onClick={}
           disabled={!inStock || !variant}
           variant="primary"
@@ -74,7 +77,6 @@ export default async function ProductPreview({
           isAdding={isAdding}
           show={!inView}
         />
-      </div>
-    </LocalizedClientLink>
+          </div>
   )
 }
