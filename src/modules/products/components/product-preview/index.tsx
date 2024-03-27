@@ -48,6 +48,19 @@ export default async function ProductPreview({
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
+          <Button
+          onClick={handleAddToCart}
+          disabled={!inStock || !variant}
+          variant="primary"
+          className="w-full h-10"
+          isLoading={isAdding}
+        >
+          {!variant
+            ? "Select variant"
+            : !inStock
+            ? "Out of stock"
+            : "Add to cart"}
+        </Button>
         </div>
       </div>
     </LocalizedClientLink>
