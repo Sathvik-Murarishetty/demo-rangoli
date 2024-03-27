@@ -1,3 +1,5 @@
+"use client";
+
 import { Text } from "@medusajs/ui"
 
 import { ProductPreviewType } from "types/global"
