@@ -182,7 +182,7 @@ const Hero = () => {
                 alt="The process of making sweets"
                 className="w-full h-auto object-cover"
                 height="400"
-                src="/placeholder.svg"
+                src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711692061/rangoli_awydsf.jpg"
                 style={{
                   aspectRatio: "600/400",
                   objectFit: "cover",
