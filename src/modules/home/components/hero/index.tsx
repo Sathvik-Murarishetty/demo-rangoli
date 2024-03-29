@@ -125,9 +125,6 @@ const Hero = () => {
                 ))}
               </div>
             </div>
-            <div className="mt-2 flex justify-center">
-              <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-            </div>
             <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
               <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
             </div>
@@ -143,6 +140,9 @@ const Hero = () => {
                 Authentic Indian Sweets
               </div>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+              <div className="mt-5 flex justify-center">
+                <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
+              </div>
               <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Experience the rich and delightful taste of Indian sweets brought to your doorstep. Handcrafted with
                 love and tradition.
@@ -224,22 +224,6 @@ const Hero = () => {
           })}
         </div>
       </div>
-      <section className="promotion" style={{ display: 'grid', gridTemplateColumns: '50% 1fr', gap: '30px', marginBottom: '30px', padding: '80px', }}>
-        <div className="textBox" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px' }}>
-          <h3 className="text-4xl font-bold text-black mb-4">Offer!!</h3>
-          <p>
-            Get ready for an experience like never before with our Deals! Every
-            purchase comes with exclusive offers. Do not miss out! 🎁🛒 COUPON CODE: XXXXXX
-          </p>
-
-          <ul className="stats" style={{ display: 'grid', gap: '20px', gridTemplateColumns: 'repeat(4, 100px)' }}>
-            <StatBox label="Days" value={time.days} />
-            <StatBox label="Hours" value={time.hours} />
-            <StatBox label="Minutes" value={time.minutes} />
-            <StatBox label="Seconds" value={time.seconds} />
-          </ul>
-        </div>
-      </section>
     </div>
   )
 }
