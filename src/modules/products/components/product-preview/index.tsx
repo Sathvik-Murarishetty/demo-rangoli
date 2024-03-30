@@ -32,13 +32,15 @@ export default async function ProductPreview({
     region,
   });
 
-  const handleAddToCart = async () => {
+const handleAddToCart = async () => {
+  if (pricedProduct.variants[0]) { // Add null check
     await addToCart({
-      variantId: pricedProduct.variants[0].id, // Assuming the first variant is selected
+      variantId: pricedProduct.variants[0].id,
       quantity: 1,
       countryCode: region.country_code,
     });
-  };
+  }
+};
 
   return (
     <LocalizedClientLink
