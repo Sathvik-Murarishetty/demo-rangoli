@@ -24,21 +24,12 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              Rangoli Sweets
+              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/c_thumb,w_200,g_face/v1711774880/RL_xbfhzv.png"} alt="Rangoli Sweets" className="w-auto h-8" />
             </LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
-              {process.env.FEATURE_SEARCH_ENABLED && (
-                <LocalizedClientLink
-                  className="hover:text-ui-fg-base"
-                  href="/search"
-                  scroll={false}
-                >
-                  Search
-                </LocalizedClientLink>
-              )}
               <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/account"
