@@ -1,20 +1,20 @@
-import { Image as MedusaImage } from "@medusajs/medusa";
-import { Container } from "@medusajs/ui";
-import Image from "next/image";
+import { Image as MedusaImage } from "@medusajs/medusa"
+import { Container } from "@medusajs/ui"
+import Image from "next/image"
 
 type ImageGalleryProps = {
-  images: MedusaImage[];
-};
+  images: MedusaImage[]
+}
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
-    <div className="flex items-start relative overflow-x-auto">
-      <div className="flex gap-x-4">
+    <div className="flex items-start relative">
+      <div className="flex flex-col flex-1 small:mx-16 gap-y-4">
         {images.map((image, index) => {
           return (
             <Container
               key={image.id}
-              className="relative aspect-[1] flex-none"
+              className="relative aspect-[1]"
               id={image.id}
             >
               <Image
@@ -29,11 +29,9 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 }}
               />
             </Container>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
-
-export default ImageGallery;
+  )
+}
