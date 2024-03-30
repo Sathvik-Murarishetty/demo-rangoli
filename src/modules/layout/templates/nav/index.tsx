@@ -24,7 +24,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/c_thumb,w_200,g_face/v1711774880/RL_xbfhzv.png"} alt="Rangoli Sweets" className="w-auto h-8" />
+              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/c_thumb,w_200,g_face/v1711774880/RL_xbfhzv.png"} alt="Rangoli Sweets" className="w-auto" />
             </LocalizedClientLink>
           </div>
 
