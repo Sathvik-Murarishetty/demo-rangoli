@@ -1,3 +1,4 @@
+"use client"
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -33,7 +34,7 @@ export default async function ProductPreview({
 
   const handleAddToCart = async () => {
     await addToCart({
-      variantId: pricedProduct.variants[0].id,
+      variantId: pricedProduct.variants[0].id, // Assuming the first variant is selected
       quantity: 1,
       countryCode: region.country_code,
     });
@@ -54,9 +55,15 @@ export default async function ProductPreview({
           <Text className="text-ui-fg-subtle">{productPreview.title}</Text>
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
-            <Button onClick={handleAddToCart} variant="primary">Add to Cart</Button>
           </div>
         </div>
+        <Button
+          onClick={handleAddToCart}
+          variant="primary"
+          className="w-full h-10 mt-4"
+        >
+          Add to Cart
+        </Button>
       </div>
     </LocalizedClientLink>
   );
