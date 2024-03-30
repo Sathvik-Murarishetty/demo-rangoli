@@ -1,3 +1,5 @@
+"use client"
+
 import { getCustomer } from "@lib/data";
 import { useState, useEffect } from "react";
 import { Button, Heading } from "@medusajs/ui";
