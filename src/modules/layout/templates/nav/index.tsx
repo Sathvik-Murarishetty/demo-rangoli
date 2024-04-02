@@ -11,7 +11,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative h-16 mx-auto border-b duration-200 bg-orange-100 text-white text-lg border-ui-border-base">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
@@ -24,7 +24,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/c_thumb,w_200,g_face/v1711774880/RL_xbfhzv.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712083494/Rangoli-B_W_spt3zp.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
           </div>
 
