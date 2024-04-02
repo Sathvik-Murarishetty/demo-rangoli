@@ -146,15 +146,15 @@ const Hero = () => {
     </div>
   </section>
 
-  <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
-    <span className="uppercase tracking-widest">Beyond Authentic</span>
-    <StarIcon className="h-6 w-6 text-white" />
-    <div className="text-white" />
-    <span className="uppercase tracking-widest">Premium Ingredients</span>
-    <StarIcon className="h-6 w-6 text-white" />
-    <div className="text-white" />
-    <span className="uppercase tracking-widest">Meticulously Processed</span>
-  </div>
+<div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
+  <span className="uppercase tracking-widest">Beyond Authentic</span>
+  <StarIcon className="h-6 w-6 text-white" />
+  <div className="flex-grow"></div>
+  <span className="uppercase tracking-widest">Premium Ingredients</span>
+  <StarIcon className="h-6 w-6 text-white" />
+  <div className="flex-grow"></div>
+  <span className="uppercase tracking-widest">Meticulously Processed</span>
+</div>
 
   <div className="flex justify-center py-16">
     <div className="max-w-6xl w-full px-4">
@@ -167,8 +167,9 @@ const Hero = () => {
             <br />
             Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious service invites you to linger and enjoy your dining experience.
           </p>
+          <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
         </div>
-        <div>
+        <div className="flex items-center">
           <img
             alt="The process of making sweets"
             className="w-full h-auto object-cover"
