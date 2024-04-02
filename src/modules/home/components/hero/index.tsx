@@ -169,9 +169,7 @@ const Hero = () => {
             <br />
             Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious service invites you to linger and enjoy your dining experience.
           </p>
-          <<div className="mx-auto mt-10">
-    <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-  </div>
+          <Button className="mx-auto mt-4" onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
         </div>
         <div className="flex items-center">
           <img
