@@ -105,7 +105,7 @@ const Hero = () => {
   )
 
   return (
-    <div className="bg-orange-100>
+    <div className="bg-orange-100">
       <div>
         <div className="w-full relative">
           <div className='embla mx-auto relative'>
