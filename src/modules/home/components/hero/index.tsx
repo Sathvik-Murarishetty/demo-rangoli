@@ -105,6 +105,17 @@ const Hero = () => {
     </li>
   )
 
+  const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
+  };
+
   return (
 <div className="bg-orange-100">
 <div className="w-full relative">
@@ -158,6 +169,19 @@ const Hero = () => {
     </span>
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
 </div>
+
+  <div style={{ width: '80%', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', transition: 'transform 0.5s', transform: `translateX(-${currentSlide * 100}%)` }}>
+        <img src="image1.jpg" alt="Slide 1" style={{ width: '100%' }} />
+        <img src="image2.jpg" alt="Slide 2" style={{ width: '100%' }} />
+        <img src="image3.jpg" alt="Slide 3" style={{ width: '100%' }} />
+        <img src="image4.jpg" alt="Slide 4" style={{ width: '100%' }} />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+        <button onClick={prevSlide}>Prev</button>
+        <button onClick={nextSlide}>Next</button>
+      </div>
+    </div>
 
   <div className="flex justify-center py-16">
     <div className="max-w-6xl w-full px-4">
