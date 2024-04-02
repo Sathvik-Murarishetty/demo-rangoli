@@ -33,7 +33,7 @@ export default async function ProductPreview({
   })
 
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg p-10 rounded-lg">
       <LocalizedClientLink
         href={`/products/${productPreview.handle}`}
         className="group"
@@ -55,4 +55,3 @@ export default async function ProductPreview({
     </div>
   )
 }
-
