@@ -133,22 +133,22 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <section className="w-full mb-5">
-          <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
-            <div className="space-y-3 p-4">
-              <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm dark:bg-amber-800">
-                Authentic Indian Sweets
-              </div>
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
-              <div className="mt-5 flex justify-center">
-                <Button onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
-              </div>
-              <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Experience the rich and delightful taste of Indian sweets brought to your doorstep. Handcrafted with
-                love and tradition.
-              </p>
+<section className="w-full mb-5">
+        <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
+          <div className="space-y-3 p-4">
+            <div className="inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm dark:bg-amber-800">
+              Authentic Indian Sweets
             </div>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+            <div className="mt-5 flex justify-center">
+            </div>
+            <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Experience the rich and delightful taste of Indian sweets brought to your doorstep. Handcrafted with
+              love and tradition.
+            </p>
           </div>
+        </div>
+      </section>
 
         </section>
         <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center space-x-8">
