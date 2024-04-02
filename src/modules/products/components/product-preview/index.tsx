@@ -33,7 +33,7 @@ export default async function ProductPreview({
   })
 
   return (
-    <div className="shadow-lg p-3 rounded-lg">
+    <div className="shadow-lg p-3 rounded-lg bg-white">
       <LocalizedClientLink
         href={`/products/${productPreview.handle}`}
         className="group"
