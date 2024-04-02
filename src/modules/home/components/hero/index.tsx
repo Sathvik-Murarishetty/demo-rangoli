@@ -102,7 +102,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
     setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
   };
 
-  const goToSlide = (slideIndex) => {
+  const goToSlide = (slideIndex: number) => {
     setCurrentSlide(slideIndex);
   };
   
