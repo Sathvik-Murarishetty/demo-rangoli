@@ -147,15 +147,15 @@ const Hero = () => {
   </section>
 
 <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center">
-  <span className="uppercase tracking-widest">Beyond Authentic</span>
+  <span className="uppercase tracking-widest p-10">Beyond Authentic</span>
   <span>
-  <StarIcon className="h-6 w-6 text-white" />
+  <StarIcon className="h-6 w-6 text-white p-10" />
     </span>
-  <span className="uppercase tracking-widest">Premium Ingredients</span>
+  <span className="uppercase tracking-widest p-10">Premium Ingredients</span>
   <span>
-  <StarIcon className="h-6 w-6 text-white" />
+  <StarIcon className="h-6 w-6 text-white p-10" />
     </span>
-  <span className="uppercase tracking-widest">Meticulously Processed</span>
+  <span className="uppercase tracking-widest p-10">Meticulously Processed</span>
 </div>
 
   <div className="flex justify-center py-16">
