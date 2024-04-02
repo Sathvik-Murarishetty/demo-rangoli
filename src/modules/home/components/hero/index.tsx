@@ -106,7 +106,7 @@ const Hero = () => {
 
   return (
 <div className="bg-orange-100">
-  <div className="w-full relative">
+<div className="w-full relative">
   <div className='embla mx-auto relative'>
     <div className='embla__viewport' ref={emblaRef}>
       <div className='embla__container h-full'>
@@ -115,9 +115,7 @@ const Hero = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              width="100%"
-              height="20%"
-              className="object-cover mr-6"
+              className="w-full object-cover"
             />
           </div>
         ))}
