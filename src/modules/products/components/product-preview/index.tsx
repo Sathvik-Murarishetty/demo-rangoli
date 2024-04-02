@@ -32,22 +32,12 @@ export default async function ProductPreview({
     region,
   });
 
-const handleAddToCart = async () => {
-  if (pricedProduct.variants[0]) { // Add null check
-    await addToCart({
-      variantId: pricedProduct.variants[0].id,
-      quantity: 1,
-      countryCode: region.country_code,
-    });
-  }
-};
-
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div style={{ padding: "10px", border: "1px solid #000", borderRadius: "10px" }}>
+      <div>
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="square"
@@ -59,13 +49,6 @@ const handleAddToCart = async () => {
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
-        <Button
-          onClick={handleAddToCart}
-          variant="primary"
-          className="w-full h-10 mt-4"
-        >
-          Add to Cart
-        </Button>
       </div>
     </LocalizedClientLink>
   );
