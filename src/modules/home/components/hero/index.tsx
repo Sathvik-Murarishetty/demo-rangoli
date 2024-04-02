@@ -146,17 +146,15 @@ const Hero = () => {
     </div>
   </section>
 
-<div className="bg-[#D35400] text-white text-center py-4 flex justify-around items-center">
+<div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center">
   <span className="uppercase tracking-widest">Beyond Authentic</span>
   <span>
   <StarIcon className="h-6 w-6 text-white" />
     </span>
-  <div className="flex-grow"></div>
   <span className="uppercase tracking-widest">Premium Ingredients</span>
   <span>
   <StarIcon className="h-6 w-6 text-white" />
     </span>
-  <div className="flex-grow"></div>
   <span className="uppercase tracking-widest">Meticulously Processed</span>
 </div>
 
