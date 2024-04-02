@@ -189,31 +189,32 @@ const Hero = () => {
   </div>
 
   <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-    <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-      {achievementsList.map((achievement, index) => (
-        <div key={index} className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
-          <h2 className="text-black text-4xl font-bold flex flex-row">
-            <AnimatedNumbers
-              includeComma
-              animateToNumber={parseInt(achievement.value)}
-              locale="en-US"
-              className="text-black text-4xl font-bold"
-              transitions={(index) => ({
-                type: "spring",
-                duration: index + 0.3,
-              })}
-              fontStyle={{
-                fontSize: 40,
-                color: "black",
-              }}
-            />
-            {achievement.postfix}
-          </h2>
-          <p className="text-black text-base">{achievement.metric}</p>
-        </div>
-      ))}
-    </div>
+  <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+    {achievementsList.slice(0).reverse().map((achievement, index) => (
+      <div key={index} className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
+        <h2 className="text-black text-4xl font-bold flex flex-row">
+          <AnimatedNumbers
+            includeComma
+            animateToNumber={parseInt(achievement.value)}
+            locale="en-US"
+            className="text-black text-4xl font-bold"
+            transitions={(index) => ({
+              type: "spring",
+              duration: index + 0.3,
+            })}
+            fontStyle={{
+              fontSize: 40,
+              color: "black",
+            }}
+          />
+          {achievement.postfix}
+        </h2>
+        <p className="text-black text-base">{achievement.metric}</p>
+      </div>
+    ))}
   </div>
+</div>
+
 </div>
   )
 }
