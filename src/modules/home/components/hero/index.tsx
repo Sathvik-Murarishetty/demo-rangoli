@@ -84,6 +84,7 @@ const Hero = () => {
   )
   
 const [currentSlide, setCurrentSlide] = useState(0);
+  const images = ['https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035147_xbeeng.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035054_u42nwu.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096622/Screenshot_2024-04-03_035108_ftaceg.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035128_uwzopc.png'];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -101,10 +102,10 @@ const [currentSlide, setCurrentSlide] = useState(0);
     setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
   };
 
-const goToSlide = (slideIndex: number) => {
-  setCurrentSlide(slideIndex);
-};
-
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
+  };
+  
   return (
 <div className="bg-orange-100">
 <div className="w-full relative">
@@ -159,9 +160,13 @@ const goToSlide = (slideIndex: number) => {
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
 </div>
 
+  <div className="flex justify-center py-16">
+    <h1 className="mt-4 text-5xl font-bold text-gray-800">Our Best Sellers</h1>
+    </div>
+
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <div style={{ position: 'relative', width: '300px', height: '200px', overflow: 'hidden', marginBottom: '20px' }}>
-        <img src={`image${currentSlide + 1}.jpg`} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%' }} />
+        <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%' }} />
         <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
         </div>
       </div>
