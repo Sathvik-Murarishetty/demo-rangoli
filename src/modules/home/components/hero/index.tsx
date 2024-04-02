@@ -7,6 +7,9 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
+import { useRouter } from 'next/router';
+
+const router = useRouter();
 
 interface Achievement {
   metric: string;
@@ -169,7 +172,6 @@ const Hero = () => {
             <br />
             Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious service invites you to linger and enjoy your dining experience.
           </p>
-          <Button className="mx-auto mt-4" onClick={() => console.log("Shop Now")}><ShoppingCart />Order Now</Button>
         </div>
         <div className="flex items-center">
           <img
@@ -187,34 +189,11 @@ const Hero = () => {
       </div>
     </div>
   </div>
-
-  <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-    <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-      {achievementsList.map((achievement, index) => (
-        <div key={index} className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
-          <h2 className="text-black text-4xl font-bold flex flex-row">
-            <AnimatedNumbers
-              includeComma
-              animateToNumber={parseInt(achievement.value)}
-              locale="en-US"
-              className="text-black text-4xl font-bold"
-              transitions={(index) => ({
-                type: "spring",
-                duration: index + 0.3,
-              })}
-              fontStyle={{
-                fontSize: 40,
-                color: "black",
-              }}
-            />
-            {achievement.postfix}
-          </h2>
-          <p className="text-black text-base">{achievement.metric}</p>
-        </div>
-      ))}
-    </div>
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <Button onClick={() => router.push('/store')}>
+      <ShoppingCart /> Order Now
+    </Button>
   </div>
-
 </div>
   )
 }
