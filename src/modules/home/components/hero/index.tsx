@@ -115,6 +115,10 @@ const Hero = () => {
     setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
   };
 
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
+  };
+
   return (
 <div className="bg-orange-100">
 <div className="w-full relative">
@@ -169,19 +173,23 @@ const Hero = () => {
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
 </div>
 
-  <div style={{ width: '80%', overflow: 'hidden' }}>
-      <div style={{ display: 'flex', transition: 'transform 0.5s', transform: `translateX(-${currentSlide * 100}%)` }}>
-        <img src="image1.jpg" alt="Slide 1" style={{ width: '100%' }} />
-        <img src="image2.jpg" alt="Slide 2" style={{ width: '100%' }} />
-        <img src="image3.jpg" alt="Slide 3" style={{ width: '100%' }} />
-        <img src="image4.jpg" alt="Slide 4" style={{ width: '100%' }} />
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+      <div style={{ position: 'relative', width: '300px', height: '200px', overflow: 'hidden', marginBottom: '20px' }}>
+        <img src={`image${currentSlide + 1}.jpg`} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
+          <button onClick={prevSlide}>Prev</button>
+          <button onClick={nextSlide}>Next</button>
+        </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-        <button onClick={prevSlide}>Prev</button>
-        <button onClick={nextSlide}>Next</button>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {[0, 1, 2, 3].map((index) => (
+          <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '5px 10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
-
+  
   <div className="flex justify-center py-16">
     <div className="max-w-6xl w-full px-4">
       <div className="grid grid-cols-2 gap-8">
