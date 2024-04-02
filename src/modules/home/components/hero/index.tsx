@@ -101,9 +101,9 @@ const [currentSlide, setCurrentSlide] = useState(0);
     setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentSlide(slideIndex);
-  };
+const goToSlide = (slideIndex: number) => {
+  setCurrentSlide(slideIndex);
+};
 
   return (
 <div className="bg-orange-100">
