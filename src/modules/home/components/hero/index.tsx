@@ -76,36 +76,22 @@ const Hero = () => {
   const targetDate = new Date()
   targetDate.setDate(targetDate.getDate() + 3)
 
-  useEffect(() => {
-    const timerInterval = setInterval(() => {
-      const currentTime = new Date()
-      const timeDifference = Math.max(Number(targetDate) - Number(currentTime), 0)
-
-      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000)
-
-      setTime({ days, hours, minutes, seconds })
-
-      if (timeDifference === 0) {
-        clearInterval(timerInterval)
-      }
-    }, 1000)
-
-    return () => {
-      clearInterval(timerInterval)
-    }
-  }, [])
-
   const StatBox = ({ label, value }: { label: string; value: number }) => (
     <li className="statBox" style={{ borderRadius: '10px', border: '1px solid var(--color-dark-60)', padding: '16px', minWidth: '100px', width: '100%', textAlign: 'center' }}>
       <h4>{value}</h4>
       <p>{label}</p>
     </li>
   )
+  
+const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
@@ -115,9 +101,9 @@ const Hero = () => {
     setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
   };
 
-const goToSlide = (slideIndex: number) => {
-  setCurrentSlide(slideIndex);
-};
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
+  };
 
   return (
 <div className="bg-orange-100">
@@ -173,12 +159,10 @@ const goToSlide = (slideIndex: number) => {
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
 </div>
 
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <div style={{ position: 'relative', width: '300px', height: '200px', overflow: 'hidden', marginBottom: '20px' }}>
         <img src={`image${currentSlide + 1}.jpg`} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%' }} />
         <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
-          <button onClick={prevSlide}>Prev</button>
-          <button onClick={nextSlide}>Next</button>
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
