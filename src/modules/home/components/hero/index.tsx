@@ -7,9 +7,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
-import { useRouter } from 'next/router';
-
-const router = useRouter();
 
 interface Achievement {
   metric: string;
@@ -189,11 +186,7 @@ const Hero = () => {
       </div>
     </div>
   </div>
-  <div style={{ display: 'flex', justifyContent: 'center' }}>
-    <Button onClick={() => router.push('/store')}>
-      <ShoppingCart /> Order Now
-    </Button>
-  </div>
+
 </div>
   )
 }
