@@ -67,7 +67,7 @@ export default async function Home({
   }
 
   return (
-    <div className="bg-orange-400">
+    <div className="bg-orange-100">
       <Hero />
       <div className="py-12">
         <ul className="flex flex-col gap-x-6">
