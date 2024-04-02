@@ -105,7 +105,6 @@ const Hero = () => {
     </li>
   )
 
-  const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
