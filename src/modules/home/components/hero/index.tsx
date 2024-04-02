@@ -54,14 +54,6 @@ const slides = [
   },
 ];
 
-const sellers = [
-  {
-    image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485312/1_dkgpc1.png',
-  },
-  {
-    image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485314/2_siobkl.png',
-  },
-];
 
 const Hero = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
@@ -165,30 +157,6 @@ const Hero = () => {
   <StarIcon className="h-6 w-6 text-white" />
     </span>
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
-</div>
-
-  <div className="w-full relative">
-  <div className='embla mx-auto relative'>
-    <div className='embla__viewport' ref={emblaRef}>
-      <div className='embla__container h-full'>
-        {sellers.map((seller, index) => (
-          <div className='embla__slide flex flex-col items-center justify-center' key={index}>
-            <img
-              src={seller.image}
-              alt={`Slide ${index + 1}`}
-              className="w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-    <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
-      <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
-    </div>
-    <div className='absolute top-1/2 transform -translate-y-1/2 right-0 mr-4'>
-      <ChevronRight size={48} onClick={scrollNext} color="grey" />
-    </div>
-  </div>
 </div>
 
   <div className="flex justify-center py-16">
