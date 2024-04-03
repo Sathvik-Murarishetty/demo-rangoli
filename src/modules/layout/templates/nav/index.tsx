@@ -35,21 +35,18 @@ export default async function Nav() {
                 Account
               </LocalizedClientLink>
             </div>
-            <section className="hover:text-ui-fg-base flex gap-2 text-xl">
             <Suspense
   fallback={
-     {/* Applied className to a div */}
-      <LocalizedClientLink
-        href="/cart"
-      >
-        Cart (0)
-      </LocalizedClientLink>
-
+    <LocalizedClientLink
+      href="/cart"
+      style={{ fontSize: '1.25rem' }} // Adjust the font size as needed
+    >
+      Cart (0)
+    </LocalizedClientLink>
   }
 >
   <CartButton />
 </Suspense>
-                </section>
           </div>
         </nav>
       </header>
