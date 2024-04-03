@@ -27,7 +27,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
             <>
               <div className="relative flex h-full">
                 <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                  <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712161848/menu_e64pid.svg"} alt="Menu" className="w-auto h-15" />
+                  <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712161848/menu_e64pid.svg"} alt="Menu" className="w-auto h-7" />
                 </Popover.Button>
               </div>
 
