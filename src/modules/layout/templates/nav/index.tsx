@@ -28,25 +28,29 @@ export default async function Nav() {
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
-              <LocalizedClientLink
-                className="hover:text-ui-fg-base text-xl" // Increased text size to xl
-                href="/account"
-              >
-                Account
-              </LocalizedClientLink>
+              <div className="text-xl"> {/* Apply text-xl class to the div */}
+                <LocalizedClientLink
+                  className="hover:text-ui-fg-base"
+                  href="/account"
+                >
+                  Account
+                </LocalizedClientLink>
+              </div>
             </div>
             <Suspense
-  fallback={
-    <LocalizedClientLink
-      href="/cart"
-      className="larger-text"
-    >
-      Cart (0)
-    </LocalizedClientLink>
-  }
->
-  <CartButton />
-</Suspense>
+              fallback={
+                <div className="text-xl"> {/* Apply text-xl class to the div */}
+                  <LocalizedClientLink
+                    className="hover:text-ui-fg-base flex gap-2"
+                    href="/cart"
+                  >
+                    Cart (0)
+                  </LocalizedClientLink>
+                </div>
+              }
+            >
+              <CartButton />
+            </Suspense>
           </div>
         </nav>
       </header>
