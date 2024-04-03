@@ -40,13 +40,9 @@ export default async function Nav() {
       <Suspense
        fallback={
         <div className="text-xl"> {/* Apply text-xl class to the div */}
-         <LocalizedClientLink
-          style = {{ fontSize: '1.25rem !important' }}
-          className="hover:text-ui-fg-base flex gap-2"
-          href="/cart"
-         >
-          Cart (0)
-         </LocalizedClientLink>
+         <LocalizedClientLink className="hover:text-ui-fg-base flex gap-2" href="/cart">
+  <span style={{ fontSize: '20px' }}>Cart (0)</span>
+</LocalizedClientLink>
         </div>
        }
       >
