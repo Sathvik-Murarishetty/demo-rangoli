@@ -37,20 +37,20 @@ export default async function Nav() {
                 </LocalizedClientLink>
               </div>
             </div>
-            <Suspense
-              fallback={
-                <div className="text-xl"> {/* Apply text-xl class to the div */}
-                  <LocalizedClientLink
-                    className="hover:text-ui-fg-base flex gap-2"
-                    href="/cart"
-                  >
-                    Cart (0)
-                  </LocalizedClientLink>
-                </div>
-              }
-            >
-              <CartButton />
-            </Suspense>
+            <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end"> 
+      <Suspense fallback={
+        <div className="cart-fallback text-xl"> {/* Apply text-xl more specifically */}
+          <LocalizedClientLink
+            className="hover:text-ui-fg-base flex gap-2"
+            href="/cart"
+          > 
+            Cart (0)  
+          </LocalizedClientLink>
+        </div>
+      }>
+        <CartButton />
+      </Suspense>
+    </div>   
           </div>
         </nav>
       </header>
