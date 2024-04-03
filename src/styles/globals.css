@@ -123,3 +123,7 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.larger-text {
+  font-size: 1.25rem;
+}
