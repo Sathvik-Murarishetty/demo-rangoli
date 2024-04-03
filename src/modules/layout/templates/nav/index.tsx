@@ -41,6 +41,7 @@ export default async function Nav() {
        fallback={
         <div className="text-xl"> {/* Apply text-xl class to the div */}
          <LocalizedClientLink
+          style = {{ fontSize: '1.25rem !important' }}
           className="hover:text-ui-fg-base flex gap-2"
           href="/cart"
          >
