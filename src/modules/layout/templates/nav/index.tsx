@@ -22,7 +22,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase text-xl" // Increased text size to xl
             >
-              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712083494/Rangoli-B_W_spt3zp.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712083494/Rangoli-B_W_spt3zp.png"} alt="Rangoli Sweets" className="w-auto h-25" />
             </LocalizedClientLink>
           </div>
 
@@ -36,17 +36,18 @@ export default async function Nav() {
               </LocalizedClientLink>
             </div>
             <Suspense
-              fallback={
-                <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2 text-xl" // Increased text size to xl
-                  href="/cart"
-                >
-                  Cart (0)
-                </LocalizedClientLink>
-              }
-            >
-              <CartButton />
-            </Suspense>
+  fallback={
+    <div className="hover:text-ui-fg-base flex gap-2 text-xl"> {/* Applied className to a div */}
+      <LocalizedClientLink
+        href="/cart"
+      >
+        Cart (0)
+      </LocalizedClientLink>
+    </div>
+  }
+>
+  <CartButton />
+</Suspense>
           </div>
         </nav>
       </header>
