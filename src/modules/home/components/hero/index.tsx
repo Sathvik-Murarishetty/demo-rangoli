@@ -134,9 +134,6 @@ const [currentSlide, setCurrentSlide] = useState(0);
   <section className="w-full mb-5 flex justify-center">
     <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
       <div className="space-y-3 p-4">
-        <div className="inline-block rounded-lg px-3 py-1 text-sm dark:bg-amber-800">
-          Authentic Indian Sweets
-        </div>
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
         <div className="mt-5 flex justify-center">
           {/* Any additional content you want to add here */}
