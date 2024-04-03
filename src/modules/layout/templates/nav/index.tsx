@@ -39,7 +39,7 @@ export default async function Nav() {
   fallback={
     <LocalizedClientLink
       href="/cart"
-      style={{ fontSize: '1.25rem' }} // Adjust the font size as needed
+      className="larger-text"
     >
       Cart (0)
     </LocalizedClientLink>
