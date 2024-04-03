@@ -35,7 +35,7 @@ export default async function Nav() {
                 Account
               </LocalizedClientLink>
             </div>
-            <div className="hover:text-ui-fg-base flex gap-2 text-xl">
+            <section className="hover:text-ui-fg-base flex gap-2 text-xl">
             <Suspense
   fallback={
      {/* Applied className to a div */}
@@ -49,7 +49,7 @@ export default async function Nav() {
 >
   <CartButton />
 </Suspense>
-                </div>
+                </section>
           </div>
         </nav>
       </header>
