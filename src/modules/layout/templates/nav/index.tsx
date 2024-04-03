@@ -1,6 +1,4 @@
-import { headers } from "next/headers"
 import { Suspense } from "react"
-
 import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
@@ -22,7 +20,7 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase text-xl" // Increased text size to xl
             >
               <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712083494/Rangoli-B_W_spt3zp.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
@@ -31,7 +29,7 @@ export default async function Nav() {
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-ui-fg-base text-xl" // Increased text size to xl
                 href="/account"
               >
                 Account
@@ -40,7 +38,7 @@ export default async function Nav() {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
+                  className="hover:text-ui-fg-base flex gap-2 text-xl" // Increased text size to xl
                   href="/cart"
                 >
                   Cart (0)
