@@ -170,7 +170,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {[0, 1, 2, 3].map((index) => (
           <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '5px 10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
-            {index + 1}
+            {.}
           </button>
         ))}
       </div>
