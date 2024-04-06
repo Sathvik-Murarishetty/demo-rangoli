@@ -22,11 +22,6 @@ const StoreTemplate = ({
       <div className="flex justify-center py-10">
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <RefinementList sortBy={sortBy || "created_at"} />
-      <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1>All products</h1>
-        </div>
-        <div>
             <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
     </div>
 <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
