@@ -139,7 +139,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
           {/* Any additional content you want to add here */}
         </div>
         <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          Experience the rich and delightful taste of Indian sweets brought to your doorstep. Handcrafted with love and tradition.
+          Experience the rich and delightful taste of Indian sweets brought to your doorstep.<br /> Handcrafted with love and tradition.
         </p>
       </div>
     </div>
