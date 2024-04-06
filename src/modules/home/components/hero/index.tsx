@@ -145,7 +145,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
     </div>
   </section>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-      <div style={{ position: 'relative', width: '70%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
+      <div style={{ position: 'relative', width: '70%', height: 'auto', overflow: 'hidden' }}>
         <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712420326/line_01_aqnpm4.png"} alt="------" style={{ width: '100%', height: '100%' }} />
       </div>
     </div>
