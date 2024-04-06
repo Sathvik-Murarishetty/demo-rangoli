@@ -168,7 +168,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
       </div>
     </div>
   
-  <div className="flex justify-center py-16">
+  <div className="flex justify-center py-20">
     <div className="max-w-6xl w-full px-4">
       <div className="grid grid-cols-2 gap-8">
         <div>
