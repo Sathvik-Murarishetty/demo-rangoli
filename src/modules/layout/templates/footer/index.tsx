@@ -20,6 +20,9 @@ export default async function Footer() {
             >
               Rangoli Sweets
             </LocalizedClientLink>
+            <span className="txt-small-plus txt-ui-fg-base">
+                  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
+            </span>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
