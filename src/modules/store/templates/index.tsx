@@ -20,7 +20,14 @@ const StoreTemplate = ({
   return (
     <div>
       <div className="flex justify-center py-10">
-    <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
+    <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
+      <RefinementList sortBy={sortBy || "created_at"} />
+      <div className="w-full">
+        <div className="mb-8 text-2xl-semi">
+          <h1>All products</h1>
+        </div>
+        <div>
+            <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
     </div>
 <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-80 mx-auto md:w-full">
@@ -46,19 +53,7 @@ const StoreTemplate = ({
   </div>
 </div>
   </section>
-    <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
-      <RefinementList sortBy={sortBy || "created_at"} />
-      <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1>All products</h1>
         </div>
-        <Suspense fallback={<SkeletonProductGrid />}>
-          <PaginatedProducts
-            sortBy={sortBy || "created_at"}
-            page={pageNumber}
-            countryCode={countryCode}
-          />
-        </Suspense>
       </div>
     </div>
           </div>
