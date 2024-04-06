@@ -131,22 +131,11 @@ const [currentSlide, setCurrentSlide] = useState(0);
     </div>
   </div>
 </div>
-  <div className="bg-[#D35400] text-white text-center py-4 flex justify-center items-center">
-  <span className="uppercase tracking-widest pr-10">Beyond Authentic</span>
-  <span>
-  <StarIcon className="h-6 w-6 text-white" />
-    </span>
-  <span className="uppercase tracking-widest pr-10 pl-10">Premium Ingredients</span>
-  <span>
-  <StarIcon className="h-6 w-6 text-white" />
-    </span>
-  <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
-</div>
   <section className="w-full mt-5 flex justify-center">
     <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
       <div className="space-y-3 p-4">
         <h1 className="text-3xl font-cormorant-garamond-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
-        <div className="mt-5 flex justify-center">
+        <div className="mt-10 flex justify-center">
           {/* Any additional content you want to add here */}
         </div>
         <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -204,25 +193,6 @@ const [currentSlide, setCurrentSlide] = useState(0);
   </div>
 
 </div>
-  )
-}
-
-function StarIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    </svg>
   )
 }
 
