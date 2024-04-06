@@ -142,7 +142,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
     </span>
   <span className="uppercase tracking-widest pl-10">Meticulously Processed</span>
 </div>
-  <section className="w-full mb-5 flex justify-center">
+  <section className="w-full mt-5 flex justify-center">
     <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
       <div className="space-y-3 p-4">
         <h1 className="text-3xl font-cormorant-garamond-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
