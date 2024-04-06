@@ -107,7 +107,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
   };
   
   return (
-<div className="bg-orange-100">
+<div className="bg-orange-50">
 <div className="w-full relative">
   <div className='embla mx-auto relative'>
     <div className='embla__viewport' ref={emblaRef}>
