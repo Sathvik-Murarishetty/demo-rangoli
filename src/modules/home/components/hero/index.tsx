@@ -145,7 +145,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
   <section className="w-full mb-5 flex justify-center">
     <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
       <div className="space-y-3 p-4">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+        <h1 className="text-3xl font-cormorant-garamond-bold tracking-tighter sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
         <div className="mt-5 flex justify-center">
           {/* Any additional content you want to add here */}
         </div>
@@ -157,7 +157,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
   </section>
 
   <div className="flex justify-center py-16">
-    <h1 className="mt-4 text-5xl font-bold text-gray-800">Our Best Sellers</h1>
+    <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
     </div>
 
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
@@ -178,8 +178,8 @@ const [currentSlide, setCurrentSlide] = useState(0);
     <div className="max-w-6xl w-full px-4">
       <div className="grid grid-cols-2 gap-8">
         <div>
-          <h3 className="text-sm uppercase tracking-wider text-gray-500">• Our Story •</h3>
-          <h1 className="mt-4 text-5xl font-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
+          <h3 className="text-sm uppercase font-cormorant-garamond-bold tracking-wider text-gray-500">• Our Story •</h3>
+          <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
           <p className="mt-6 text-lg text-gray-700">
             When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian style of art featuring patterns and designs in rich, jewel-like colors.
             <br />
