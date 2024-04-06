@@ -127,3 +127,8 @@
 .larger-text {
   font-size: 1.25rem;
 }
+
+.font-cormorant-garamond-bold {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
