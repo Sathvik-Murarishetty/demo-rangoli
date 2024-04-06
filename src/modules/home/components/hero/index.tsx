@@ -155,18 +155,18 @@ const [currentSlide, setCurrentSlide] = useState(0);
     </div>
 
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-      <div style={{ position: 'relative', width: '70%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
-        <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%' }} />
-        <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
-        </div>
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        {[0, 1, 2, 3].map((index) => (
-          <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
-          </button>
-        ))}
-      </div>
+  <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
+    <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
+    <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
     </div>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    {[0, 1, 2, 3].map((index) => (
+      <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
+      </button>
+    ))}
+  </div>
+</div>
   
   <div className="flex justify-center py-20">
     <div className="max-w-6xl w-full px-4">
