@@ -22,7 +22,7 @@ export default async function Nav() {
        href="/"
        className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase text-xl" // Increased text size to xl
       >
-       <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712083494/Rangoli-B_W_spt3zp.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+       <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712384048/Rangoli-B_W_cropped_gvlqbh.png"} alt="Rangoli Sweets" className="w-auto h-20" />
       </LocalizedClientLink>
      </div>
 
