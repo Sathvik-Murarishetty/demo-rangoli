@@ -150,7 +150,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
       </div>
     </div>
 
-  <div className="flex justify-center py-16">
+  <div className="flex justify-center py-10">
     <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
     </div>
 
