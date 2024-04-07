@@ -25,6 +25,7 @@ export default async function CollectionTemplate({
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
+    <div>
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <div>
             {product_categories && product_categories?.length > 0 && (
