@@ -52,7 +52,8 @@ const StoreTemplate = ({
   </section>
 </div>
     </div>
-    <div className="w-full px-15">
+  </div>
+      <div className="w-full px-15">
         <div className="mb-8 text-2xl-semi">
           <h1>All products</h1>
         </div>
@@ -64,7 +65,6 @@ const StoreTemplate = ({
           />
         </Suspense>
       </div>
-  </div>
 </div>
   )
 }
