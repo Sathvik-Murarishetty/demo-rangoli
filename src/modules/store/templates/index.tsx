@@ -23,7 +23,7 @@ const StoreTemplate = ({
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <RefinementList sortBy={sortBy || "created_at"} />
     </div>
-  </div>
+  
       <div>
         <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
   <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -51,6 +51,7 @@ const StoreTemplate = ({
     </div>
   </section>
         </div>
+    </div>
 </div>
 
   )
