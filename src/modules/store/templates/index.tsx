@@ -52,6 +52,18 @@ const StoreTemplate = ({
   </section>
 </div>
     </div>
+    <div className="w-80">
+        <div className="mb-8 text-2xl-semi">
+          <h1>All products</h1>
+        </div>
+        <Suspense fallback={<SkeletonProductGrid />}>
+          <PaginatedProducts
+            sortBy={sortBy || "created_at"}
+            page={pageNumber}
+            countryCode={countryCode}
+          />
+        </Suspense>
+      </div>
   </div>
 </div>
   )
