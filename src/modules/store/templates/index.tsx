@@ -53,6 +53,7 @@ const StoreTemplate = ({
         </div>
       </section>
     </div>
+  </div>
 </div>
   )
 }
