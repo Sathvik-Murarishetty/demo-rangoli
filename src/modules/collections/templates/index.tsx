@@ -9,7 +9,7 @@ import RefinementList from "@modules/store/components/refinement-list"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 
-export default function CollectionTemplate({
+export default async function CollectionTemplate({
   sortBy,
   collection,
   page,
