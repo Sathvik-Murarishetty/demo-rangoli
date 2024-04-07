@@ -24,7 +24,7 @@ const StoreTemplate = ({
       <RefinementList sortBy={sortBy || "created_at"} />
       <div>
   <div className="flex justify-center">
-    <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
+    <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800 mb-5">Shop by Category</h1>
   </div>
   <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-80 mx-auto md:w-full">
