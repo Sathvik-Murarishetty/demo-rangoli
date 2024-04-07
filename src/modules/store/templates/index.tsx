@@ -18,13 +18,13 @@ const StoreTemplate = ({
   const pageNumber = page ? parseInt(page) : 1
 
   return (
-    <div>
+    <div className = "bg-orange-50">
   <div className="flex justify-center py-10">
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <RefinementList sortBy={sortBy || "created_at"} />
     
   <div>
-  <div className="flex justify-center py-10">
+  <div className="flex justify-center w-full">
     <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
   </div>
   <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -52,6 +52,17 @@ const StoreTemplate = ({
     </div>
   </section>
     </div>
+      <div className="mb-8 text-2xl-semi">
+          <h1>All products</h1>
+        </div>
+        <Suspense fallback={<SkeletonProductGrid />}>
+          <PaginatedProducts
+            sortBy={sortBy || "created_at"}
+            page={pageNumber}
+            countryCode={countryCode}
+          />
+        </Suspense>
+      </div>
 </div>
     </div>
 </div>
