@@ -53,7 +53,7 @@ const StoreTemplate = ({
 </div>
     </div>
   </div>
-      <div className = "pr-10">
+      <div className = "pl-20 pr-20">
 <div className="w-full mx-auto">
     <div className="mb-8 text-2xl-semi">
       <h1>All products</h1>
