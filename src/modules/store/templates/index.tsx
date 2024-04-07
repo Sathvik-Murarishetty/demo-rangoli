@@ -18,7 +18,6 @@ const StoreTemplate = ({
   const pageNumber = page ? parseInt(page) : 1
 
   return (
-    <div>
     <div className="bg-orange-50">
   <div className="flex justify-center py-10">
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
@@ -53,9 +52,7 @@ const StoreTemplate = ({
   </section>
 </div>
     </div>
-  </div>
-</div>
-    <div className="w-80">
+    <div className="w-full px-15">
         <div className="mb-8 text-2xl-semi">
           <h1>All products</h1>
         </div>
@@ -68,6 +65,7 @@ const StoreTemplate = ({
         </Suspense>
       </div>
   </div>
+</div>
   )
 }
 
