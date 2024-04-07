@@ -22,9 +22,10 @@ const StoreTemplate = ({
   <div className="flex justify-center py-10">
     <div className="flex flex-col small:flex-row small:items-start py-6 content-container">
       <RefinementList sortBy={sortBy || "created_at"} />
-      <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1> {/* Increased mt (margin-top) */}
     </div>
   </div>
+      <div>
+        <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
   <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-80 mx-auto md:w-full">
       <div className="relative aspect-w-1 aspect-h-1">
@@ -49,6 +50,7 @@ const StoreTemplate = ({
       </div>
     </div>
   </section>
+        </div>
 </div>
 
   )
