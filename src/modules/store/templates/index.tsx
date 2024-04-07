@@ -53,6 +53,7 @@ const StoreTemplate = ({
         </div>
       </section>
     </div>
+    </div>
     <div className="mb-8 text-2xl-semi">
       <h1>All products</h1>
     </div>
@@ -63,7 +64,6 @@ const StoreTemplate = ({
         countryCode={countryCode}
       />
     </Suspense>
-  </div>
 </div>
 
   )
