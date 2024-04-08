@@ -16,7 +16,7 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-3xl text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="txt-3xl-regular text-black hover:text-ui-fg-base uppercase"
             >
               Rangoli Sweets
             </LocalizedClientLink>
