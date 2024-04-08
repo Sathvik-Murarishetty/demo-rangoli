@@ -85,7 +85,7 @@ export default async function Footer() {
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle text-large-regular",
+                    "grid grid-cols-1 gap-2 text-orange-50 text-large-regular",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
