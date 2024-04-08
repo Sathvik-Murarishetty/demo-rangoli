@@ -24,13 +24,13 @@ export default async function Footer() {
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+          <div className=" gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+                <span className="text-2xl-semi txt-ui-fg-base">
                   Categories
                 </span>
-                <ul className="grid grid-cols-1 gap-2">
+                <ul className="text-large-regular grid grid-cols-1 gap-2">
                   {product_categories?.slice(0, 6).map((c) => {
                     if (c.parent_category) {
                       return
