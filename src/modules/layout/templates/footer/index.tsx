@@ -45,13 +45,13 @@ export default async function Footer() {
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        className="flex flex-col gap-2 text-ui-fg-subtle text-large-regular"
                         key={c.id}
                       >
                         <LocalizedClientLink
                           className={clx(
                             "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
+                            children && "text-large-regular"
                           )}
                           href={`/categories/${c.handle}`}
                         >
@@ -80,8 +80,8 @@ export default async function Footer() {
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
+                <span className="text-2xl-semi txt-ui-fg-base">
+                  Categories
                 </span>
                 <ul
                   className={clx(
