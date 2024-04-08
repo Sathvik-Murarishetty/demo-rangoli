@@ -30,7 +30,7 @@ export default async function Nav() {
       <div className="hidden small:flex items-center gap-x-10 h-full">
                <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="font-bold text-[#D35400] hover:text-black"
+         className="font-medium text-[#D35400] hover:text-black"
          href="/store"
         >
          Store
@@ -38,7 +38,7 @@ export default async function Nav() {
        </div>
        <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="font-bold text-[#D35400] hover:text-black"
+         className="font-medium text-[#D35400] hover:text-black"
          href="/account"
         >
          Account
