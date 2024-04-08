@@ -9,7 +9,7 @@ export default async function Nav() {
 
  return (
   <div className="sticky top-0 inset-x-0 z-50 group">
-   <header className="relative h-20 mx-auto duration-200 bg-orange-200 text-[#D35400] text-xl border-ui-border-base">
+   <header className="relative h-20 mx-auto duration-200 bg-orange-50 text-[#D35400] text-xl border-ui-border-base">
     <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
      <div className="flex-1 basis-0 h-full flex items-center">
       <div className="h-full">
@@ -30,7 +30,7 @@ export default async function Nav() {
       <div className="hidden small:flex items-center gap-x-10 h-full">
                <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="text-[#D35400] hover:text-black"
+         className="font-bold text-[#D35400] hover:text-black"
          href="/store"
         >
          Store
@@ -38,7 +38,7 @@ export default async function Nav() {
        </div>
        <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="text-[#D35400] hover:text-black"
+         className="font-bold text-[#D35400] hover:text-black"
          href="/account"
         >
          Account
