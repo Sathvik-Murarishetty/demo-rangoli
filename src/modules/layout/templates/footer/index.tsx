@@ -16,11 +16,11 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="text-3xl-regular text-black hover:text-ui-fg-base uppercase"
+              className="text-3xl-semi text-black hover:text-ui-fg-base uppercase"
             >
               Rangoli Sweets
             </LocalizedClientLink>
-            <span className="txt-small-plus txt-ui-fg-base">
+            <span className="text-base-regular txt-ui-fg-base">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
