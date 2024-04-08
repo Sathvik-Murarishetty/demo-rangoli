@@ -45,7 +45,7 @@ export default async function Footer() {
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle text-large-regular"
+                        className="flex flex-col gap-2 text-large-regular"
                         key={c.id}
                       >
                         <LocalizedClientLink
@@ -80,12 +80,12 @@ export default async function Footer() {
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="text-2xl-semi txt-ui-fg-base">
+                <span className="text-xl-semi text-black">
                   Categories
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle text-large-regular",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
