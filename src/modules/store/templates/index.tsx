@@ -1,3 +1,5 @@
+"use client";
+
 import { Suspense } from "react"
 
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
