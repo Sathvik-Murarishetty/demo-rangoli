@@ -20,7 +20,7 @@ export default async function Footer() {
             >
               Rangoli Sweets
             </LocalizedClientLink>
-            <span className="text-large-regular txt-ui-fg-base">
+            <span className="text-large-regular text-white">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
@@ -105,11 +105,11 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Rangoli Sweets</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+              <span className="text-xl-semi txt-ui-fg-base">Rangoli Sweets</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-white text-large-regular">
                 <li>
                   <a
-                    href="https://github.com/medusajs"
+                    href="/"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -119,7 +119,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://docs.medusajs.com"
+                    href="/"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -129,7 +129,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
+                    href="/"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -141,7 +141,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex w-full mb-16 justify-between text-black">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Rangoli Sweets. All rights reserved.
           </Text>
