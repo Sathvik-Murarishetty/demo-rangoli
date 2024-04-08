@@ -94,7 +94,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="hover:text-ui-fg-base"
+                        className="text-orange-50 hover:text-ui-fg-base"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
