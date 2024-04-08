@@ -20,7 +20,7 @@ export default async function Footer() {
             >
               Rangoli Sweets
             </LocalizedClientLink>
-            <span className="text-base-regular txt-ui-fg-base">
+            <span className="text-large-regular txt-ui-fg-base">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
