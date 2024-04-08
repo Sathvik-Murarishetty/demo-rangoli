@@ -89,11 +89,11 @@ const StoreTemplate = ({
       </div>
     </div>
         </div>
-<div className="pb-15">
+
   <div className="flex justify-center py-10">
     <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
     </div>
-
+<div className="py-10">
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
   <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
     <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
