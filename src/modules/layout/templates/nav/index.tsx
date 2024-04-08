@@ -22,7 +22,7 @@ export default async function Nav() {
        href="/"
        className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase text-xl" // Increased text size to xl
       >
-       <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712387474/Rangoli-B_W-removebg-preview_v0tqya.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+       <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712603343/Rangoli-O_B_0.2_ea6rqm.png"} alt="Rangoli Sweets" className="w-auto h-20" />
       </LocalizedClientLink>
      </div>
 
@@ -30,7 +30,7 @@ export default async function Nav() {
       <div className="hidden small:flex items-center gap-x-10 h-full">
                <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="text-black hover:text-white"
+         className="text-[#D35400] hover:text-black"
          href="/store"
         >
          Store
@@ -38,7 +38,7 @@ export default async function Nav() {
        </div>
        <div className="text-xl"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
-         className="text-black hover:text-white"
+         className="text-[#D35400] hover:text-black"
          href="/account"
         >
          Account
@@ -47,7 +47,7 @@ export default async function Nav() {
        <Suspense
        fallback={
         <div className="text-xl"> {/* Apply text-xl class to the div */}
-         <LocalizedClientLink className="text-black hover:text-white flex gap-2" href="/cart">
+         <LocalizedClientLink className="text-[#D35400] hover:text-black flex gap-2" href="/cart">
   <span style={{ fontSize: '20px' }}>Cart (0)</span>
 </LocalizedClientLink>
         </div>
