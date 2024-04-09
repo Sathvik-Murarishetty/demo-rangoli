@@ -85,7 +85,7 @@ export default async function Footer() {
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-msubtle text-large-regular",
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle text-large-regular",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -94,7 +94,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="text-ui-fg-muted hover:text-ui-fg-base"
+                        className="text-ui-fg-subtle hover:text-ui-fg-base"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
