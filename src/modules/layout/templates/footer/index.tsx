@@ -57,7 +57,7 @@ export default async function Footer() {
                           {c.name}
                         </LocalizedClientLink>
                         {children && (
-                          <ul className="grid grid-cols-1 ml-3 gap-2">
+                          <ul className="grid grid-cols-1 ml-13 gap-2">
                             {children &&
                               children.map((child) => (
                                 <li key={child.id}>
