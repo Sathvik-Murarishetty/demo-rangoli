@@ -16,13 +16,13 @@ export default async function Footer() {
               href="/"
               className="text-black hover:text-ui-fg-base uppercase poppins-semibold p-0"
             >
-              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712687716/Rangoli-B_W-removebg-preview_acf2fq.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712690817/Rangoli-B_W-removebg-preview_dl2jac.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
             <span className="text-large-regular text-orange-50 poppins-regular">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
-          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 px-15">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="text-2xl txt-ui-fg-base poppins-bold">
