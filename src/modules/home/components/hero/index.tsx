@@ -85,10 +85,10 @@ const Hero = () => {
   
 const [currentSlide, setCurrentSlide] = useState(0);
 const images = [
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035147_xbeeng.png',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035054_u42nwu.png',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096622/Screenshot_2024-04-03_035108_ftaceg.png',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035128_uwzopc.png'
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.50_jslmza.jpg',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_1_oczoxz.jpg',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg'
 ];
 
 const links = [
