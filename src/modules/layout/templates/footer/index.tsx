@@ -22,8 +22,8 @@ export default async function Footer() {
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
-          <div className="pl-50">
-          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+          <div>
+          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 justify-self-end">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2 pt-10 px-20">
                 <span className="text-2xl txt-ui-fg-base poppins-bold">
