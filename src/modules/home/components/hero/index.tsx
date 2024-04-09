@@ -84,27 +84,39 @@ const Hero = () => {
   )
   
 const [currentSlide, setCurrentSlide] = useState(0);
-  const images = ['https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035147_xbeeng.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035054_u42nwu.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096622/Screenshot_2024-04-03_035108_ftaceg.png', 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035128_uwzopc.png'];
+const images = [
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035147_xbeeng.png',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035054_u42nwu.png',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096622/Screenshot_2024-04-03_035108_ftaceg.png',
+  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712096621/Screenshot_2024-04-03_035128_uwzopc.png'
+];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
-    }, 3000);
+const links = [
+  '/products/products/ghee-jalebi',
+  '/products/motichoor',
+  '/products/kalakand',
+  '/products/kaju-katlii'
+];
 
-    return () => clearInterval(intervalId);
-  }, [currentSlide]);
-
-  const nextSlide = () => {
+useEffect(() => {
+  const intervalId = setInterval(() => {
     setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
-  };
+  }, 3000);
 
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
-  };
+  return () => clearInterval(intervalId);
+}, [currentSlide]);
 
-  const goToSlide = (slideIndex: number) => {
-    setCurrentSlide(slideIndex);
-  };
+const nextSlide = () => {
+  setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
+};
+
+const prevSlide = () => {
+  setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
+};
+
+const goToSlide = (slideIndex: number) => {
+  setCurrentSlide(slideIndex);
+};
   
   return (
 <div className="bg-orange-50">
@@ -155,11 +167,13 @@ const [currentSlide, setCurrentSlide] = useState(0);
     </div>
 
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-  <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
+<div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
+  <a href={links[currentSlide]} target="_blank" rel="noopener noreferrer">
     <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
-    <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
-    </div>
+  </a>
+  <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
   </div>
+</div>
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     {[0, 1, 2, 3].map((index) => (
       <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
