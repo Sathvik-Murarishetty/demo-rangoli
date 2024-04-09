@@ -23,7 +23,7 @@ export default async function Footer() {
             </span>
           </div>
           <div className="flex justify-end items-center">
-          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 px-15">
+          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2 pt-10 px-20">
                 <span className="text-2xl txt-ui-fg-base poppins-bold">
@@ -78,7 +78,7 @@ export default async function Footer() {
               </div>
             )}
             {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2 pt-10 px-20">
+              <div className="flex flex-col gap-y-2 pt-10">
                 <span className="text-xl text-black poppins-medium">
                   Categories
                 </span>
