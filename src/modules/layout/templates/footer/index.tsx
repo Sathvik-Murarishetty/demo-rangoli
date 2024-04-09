@@ -18,7 +18,7 @@ export default async function Footer() {
             >
               Rangoli Sweets
             </LocalizedClientLink>
-            <span className="text-large-regular text-ui-fg-subtle poppins-regular">
+            <span className="text-large-regular text-white poppins-regular">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
@@ -83,7 +83,7 @@ export default async function Footer() {
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle text-large-regular",
+                    "grid grid-cols-1 gap-2 text-white text-large-regular",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -92,7 +92,7 @@ export default async function Footer() {
                   {collections?.slice(0, 6).map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
-                        className="text-ui-fg-subtle poppins-regular hover:text-ui-fg-base"
+                        className="text-white poppins-regular hover:text-ui-fg-base"
                         href={`/collections/${c.handle}`}
                       >
                         {c.title}
@@ -104,7 +104,7 @@ export default async function Footer() {
             )}
             <div className="flex flex-col gap-y-2">
               <span className="text-xl txt-ui-fg-base poppins-medium">Rangoli Sweets</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle text-large-regular">
+              <ul className="grid grid-cols-1 gap-y-2 text-white text-large-regular">
                 <li>
                   <a
                     href="/"
