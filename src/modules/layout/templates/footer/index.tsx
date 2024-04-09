@@ -16,7 +16,7 @@ export default async function Footer() {
               href="/"
               className="text-3xl-semi text-black hover:text-ui-fg-base uppercase poppins-semibold"
             >
-              Rangoli Sweets
+              R<img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712387474/Rangoli-B_W-removebg-preview_v0tqya.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
             <span className="text-large-regular text-orange-50 poppins-regular">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
