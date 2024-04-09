@@ -78,7 +78,7 @@ export default async function Footer() {
               </div>
             )}
             {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-10 pt-10 px-20">
+              <div className="flex flex-col gap-y-2 pt-10 px-20">
                 <span className="text-xl text-black poppins-medium">
                   Categories
                 </span>
