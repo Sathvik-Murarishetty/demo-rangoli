@@ -92,7 +92,7 @@ const images = [
 ];
 
 const links = [
-  '/products/products/ghee-jalebi',
+  '/products/ghee-jalebi',
   '/products/motichoor',
   '/products/kalakand',
   '/products/kaju-katlii'
@@ -168,7 +168,7 @@ const goToSlide = (slideIndex: number) => {
 
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
 <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
-  <a href={links[currentSlide]} target="_blank" rel="noopener noreferrer">
+  <a href={links[currentSlide]} rel="noopener noreferrer">
     <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
   </a>
   <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
