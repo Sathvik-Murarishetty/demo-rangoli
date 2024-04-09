@@ -20,7 +20,7 @@ export default async function Footer() {
             >
               Rangoli Sweets
             </LocalizedClientLink>
-            <span className="text-large-regular text-ui-fg-muted">
+            <span className="text-large-regular text-ui-fg-subtle">
                 <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
@@ -85,7 +85,7 @@ export default async function Footer() {
                 </span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-muted text-large-regular",
+                    "grid grid-cols-1 gap-2 text-ui-fg-msubtle text-large-regular",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -106,7 +106,7 @@ export default async function Footer() {
             )}
             <div className="flex flex-col gap-y-2">
               <span className="text-xl-semi txt-ui-fg-base">Rangoli Sweets</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-muted text-large-regular">
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle text-large-regular">
                 <li>
                   <a
                     href="/"
@@ -141,7 +141,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex w-full mb-16 justify-between text-ui-fg-subtle">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Rangoli Sweets. All rights reserved.
           </Text>
