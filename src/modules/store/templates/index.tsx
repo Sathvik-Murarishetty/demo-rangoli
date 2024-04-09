@@ -94,18 +94,18 @@ const links = [
     </div>
   </div>
 </section>
-      <div className="pt-10">
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+      <div className="py-10">
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <div style={{ position: 'relative', width: '70%', height: 'auto', overflow: 'hidden' }}>
         <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712420326/line_01_aqnpm4.png"} alt="------" style={{ width: '100%', height: '100%' }} />
       </div>
     </div>
-        </div>
 
   <div className="flex justify-center py-10">
     <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
     </div>
-<div className="py-10">
+
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
 <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
   <a href={links[currentSlide]} rel="noopener noreferrer">
     <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
@@ -120,6 +120,7 @@ const links = [
     ))}
   </div>
 </div>
+        </div>
   </div>
       
   )
