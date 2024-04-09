@@ -122,7 +122,6 @@ const links = [
 </div>
   </div>
       
-    </div>
   )
 }
 
