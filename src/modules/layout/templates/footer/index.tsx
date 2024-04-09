@@ -11,18 +11,20 @@ export default async function Footer() {
     <footer className="border-t border-ui-border-base w-full bg-[#D35400]">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-3 xsmall:flex-row items-start justify-between py-10">
-          <div>
+          <div className="flex items-start">
             <LocalizedClientLink
               href="/"
               className="text-black hover:text-ui-fg-base uppercase poppins-semibold p-0"
             >
               <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712690817/Rangoli-B_W-removebg-preview_dl2jac.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
-            <span className="text-large-regular text-orange-50 poppins-regular">
-                <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
-            </span>
+            <div className="ml-5">
+              <span className="text-large-regular text-orange-50 poppins-regular">
+                  <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
+              </span>
+            </div>
           </div>
-          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 px-15">
+          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 px-15 justify-between">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="text-2xl txt-ui-fg-base poppins-bold">
@@ -104,13 +106,13 @@ export default async function Footer() {
             )}
             <div className="flex flex-col gap-y-2">
               <span className="text-xl txt-ui-fg-base poppins-medium">Rangoli Sweets</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
+              <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular justify-center">
                 <li>
                   <a
                     href="/"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
+                    className="hover:text-ui-fg-base poppins-regular text-center"
                   >
                     Terms & Conditions
                   </a>
@@ -120,7 +122,7 @@ export default async function Footer() {
                     href="/"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
+                    className="hover:text-ui-fg-base poppins-regular text-center"
                   >
                     Customer Care
                   </a>
@@ -130,7 +132,7 @@ export default async function Footer() {
                     href="/"
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
+                    className="hover:text-ui-fg-base poppins-regular text-center"
                   >
                     Contact Us
                   </a>
