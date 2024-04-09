@@ -27,7 +27,7 @@ export default async function Footer() {
           <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="text-2xl-semi txt-ui-fg-base">
+                <span className="text-2xl txt-ui-fg-base">
                   Categories
                 </span>
                 <ul className="text-large-regular grid grid-cols-1 gap-2">
@@ -80,7 +80,7 @@ export default async function Footer() {
             )}
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
-                <span className="text-xl-semi text-black">
+                <span className="text-xl text-black">
                   Categories
                 </span>
                 <ul
@@ -105,7 +105,7 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="text-xl-semi txt-ui-fg-base">Rangoli Sweets</span>
+              <span className="text-xl txt-ui-fg-base">Rangoli Sweets</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle text-large-regular">
                 <li>
                   <a
