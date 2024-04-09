@@ -36,7 +36,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
         <div className="block w-full relative">
           <ImageGallery images={product?.images || []} />
         </div>
-        <div className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-12">
+        <div className="flex flex-col bg-orange-50 small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-12">
           <ProductOnboardingCta />
           <Suspense
             fallback={<ProductActions product={product} region={region} />}
