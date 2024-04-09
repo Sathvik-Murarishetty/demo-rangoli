@@ -14,7 +14,7 @@ export default async function Footer() {
           <div>
             <LocalizedClientLink
               href="/"
-              className="text-3xl-semi text-black hover:text-ui-fg-base uppercase poppins-semibold"
+              className="text-black hover:text-ui-fg-base uppercase poppins-semibold p-0"
             >
               <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712687716/Rangoli-B_W-removebg-preview_acf2fq.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
