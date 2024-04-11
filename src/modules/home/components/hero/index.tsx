@@ -8,6 +8,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
 
+// Define the props interface for AnimatedNumbers
 interface AnimatedNumbersProps {
   includeComma: boolean;
   animateToNumber: number;
@@ -20,10 +21,12 @@ interface AnimatedNumbersProps {
   };
 }
 
+// Define a loader function for AnimatedNumbers
+const AnimatedNumbersLoader = () => import("react-animated-numbers");
+
+// Import the AnimatedNumbers component dynamically
 const AnimatedNumbers = dynamic<AnimatedNumbersProps>(
-  () => {
-    return import("react-animated-numbers");
-  },
+  AnimatedNumbersLoader,
   { ssr: false }
 );
 
