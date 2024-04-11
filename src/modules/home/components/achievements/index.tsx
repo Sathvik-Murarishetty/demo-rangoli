@@ -39,7 +39,7 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
+              <h2 className="text-[#D35400] text-4xl font-bold flex flex-row">
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
@@ -50,7 +50,7 @@ const AchievementsSection = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="text-black text-base">{achievement.metric}</p>
             </div>
           );
         })}
