@@ -205,25 +205,6 @@ const goToSlide = (slideIndex: number) => {
     </div>
   </div>
 </section>
-
-  <div className="grid w-full px-20 pt-10 rounded-lg md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5">
-      <div className="flex flex-col bg-orange-50 items-center gap-1.5 text-center border border-gray-200 rounded-md px-4 py-2 md:px-6 md:gap-4 md:gap-1.5 md:rounded-lg md:border">
-        <div className="text-sm font-medium">Delicious Dinners</div>
-        <div className="text-lg font-semibold">5245 +</div>
-      </div>
-      <div className="flex flex-col bg-orange-50 items-center gap-1.5 text-center border border-gray-200 rounded-md px-4 py-2 md:px-6 md:gap-4 md:gap-1.5 md:rounded-lg md:border">
-        <div className="text-sm font-medium">Experienced Chef</div>
-        <div className="text-lg font-semibold">60 +</div>
-      </div>
-      <div className="flex flex-col bg-orange-50 items-center gap-1.5 text-center border border-gray-200 rounded-md px-4 py-2 md:px-6 md:gap-4 md:gap-1.5 md:rounded-lg md:border">
-        <div className="text-sm font-medium">Our Awards</div>
-        <div className="text-lg font-semibold">1359 +</div>
-      </div>
-      <div className="flex flex-col bg-orange-50 items-center gap-1.5 text-center border border-gray-200 rounded-md px-4 py-2 md:px-6 md:gap-4 md:gap-1.5 md:rounded-lg md:border">
-        <div className="text-sm font-medium">Happy Customers</div>
-        <div className="text-lg font-semibold">6560 +</div>
-      </div>
-    </div>
   
 </div>
   )
