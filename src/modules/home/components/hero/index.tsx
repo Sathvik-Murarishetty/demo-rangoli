@@ -7,7 +7,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
-import dynamic from "next/dynamic";
 
 const AnimatedNumbers = dynamic(
   () => {
