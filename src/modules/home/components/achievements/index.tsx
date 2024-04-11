@@ -10,22 +10,24 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Projects",
-    value: "100",
+    metric: "Delicious Dinners",
+    value: "5245",
     postfix: "+",
   },
   {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
+    metric: "Experienced Chef",
+    value: "60",
+    postfix: "+",
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: "Our Awards",
+    value: "1359",
+    postfix: "+",
   },
   {
-    metric: "Years",
-    value: "5",
+    metric: "Happy Customers",
+    value: "6560",
+    postfix: "+",
   },
 ];
 
@@ -46,7 +48,6 @@ const AchievementsSection = () => {
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
                   className="text-[#D35400] text-4xl font-bold"
-                  // Remove `configs` prop if it's not recognized by AnimatedNumbers
                 />
                 {achievement.postfix}
               </h2>
