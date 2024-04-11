@@ -8,43 +8,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
 
-interface Achievement {
-  metric: string;
-  value: string;
-  postfix?: string;
-  prefix?: string;
-}
-
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
-
-const achievementsList = [
-  {
-    metric: "DELICOUS DINNERS",
-    value: "5245",
-    postfix: "+",
-  },
-  {
-    metric: "EXPERIENCED CHEF",
-    value: "60",
-    postfix: "+",
-  },
-  {
-    metric: "OUR AWARDS",
-    value: "1359",
-    postfix: "+",
-  },
-  {
-    metric: "HAPPY CUSTOMERS",
-    value: "6560",
-    postfix: "+",
-  },
-];
-
 const slides = [
   {
     image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485312/1_dkgpc1.png',
@@ -65,23 +28,6 @@ const Hero = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
-
-  const [time, setTime] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
-
-  const targetDate = new Date()
-  targetDate.setDate(targetDate.getDate() + 3)
-
-  const StatBox = ({ label, value }: { label: string; value: number }) => (
-    <li className="statBox" style={{ borderRadius: '10px', border: '1px solid var(--color-dark-60)', padding: '16px', minWidth: '100px', width: '100%', textAlign: 'center' }}>
-      <h4>{value}</h4>
-      <p>{label}</p>
-    </li>
-  )
   
 const [currentSlide, setCurrentSlide] = useState(0);
 const images = [
