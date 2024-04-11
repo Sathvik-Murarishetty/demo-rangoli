@@ -45,12 +45,12 @@ const AchievementsSection = () => {
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white text-4xl font-bold"
+                  className="text-[#D35400] text-4xl font-bold"
                   // Remove `configs` prop if it's not recognized by AnimatedNumbers
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-black text-base">{achievement.metric}</p>
+              <p className="text-black text-2xl"> {achievement.metric}</p>
             </div>
           );
         })}
