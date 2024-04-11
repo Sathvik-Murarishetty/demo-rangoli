@@ -23,7 +23,7 @@ const OrderOverview = ({ orders }: { orders: Order[] }) => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center gap-y-4">
+    <div className="w-full flex flex-col items-center gap-y-4 p-5 bg-orange-50">
       <h2 className="text-large-semi">Nothing to see here</h2>
       <p className="text-base-regular">
         You don&apos;t have any orders yet, let us change that {":)"}
