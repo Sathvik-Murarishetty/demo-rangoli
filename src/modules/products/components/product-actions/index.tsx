@@ -146,7 +146,7 @@ export default function ProductActions({
           )}
         </div>
 
-        <ProductPrice product={product} variant={variant} region={region} />
+        <ProductPrice product={product} variant={variant} region={region} collectionId={collectionId} />
 
         <Button
           onClick={handleAddToCart}
