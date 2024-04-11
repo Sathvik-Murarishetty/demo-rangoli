@@ -29,7 +29,7 @@ const images = [
 ];
 
 const links = [
-  '/products/ghee-jalebi',
+  '/products/mysore-pak',
   '/products/motichoor',
   '/products/kalakand',
   '/products/kaju-katlii'
@@ -91,6 +91,12 @@ const links = [
         <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/c_fill,w_400,h_400/v1712431927/pexels-photo-14509267_g7s4u7.jpg" alt="Beverages" className="w-full h-full object-cover rounded-md shadow-md" />
       </a>
       <p className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-50 text-white text-center py-2 rounded-b-md">Beverages</p>
+    </div>
+    <div className="relative aspect-w-1 aspect-h-1">
+      <a href="/collections/bengali-sweets">
+        <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712805976/1200-by-1200-images_bbrzf4.jpg" alt="Bengali Sweets" className="w-full h-full object-cover rounded-md shadow-md" />
+      </a>
+      <p className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-50 text-white text-center py-2 rounded-b-md">Bengali Sweets</p>
     </div>
   </div>
 </section>
