@@ -7,6 +7,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
+import AchievementsSection from "../components/achievements";
 
 const slides = [
   {
@@ -156,6 +157,8 @@ const goToSlide = (slideIndex: number) => {
       </div>
     </div>
   </div>
+
+  <AchievementsSection />
 
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <div style={{ position: 'relative', width: '70%', height: 'auto', overflow: 'hidden' }}>
