@@ -11,9 +11,9 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   const getUniqueText = (collectionTitle: string) => {
     switch (collectionTitle) {
       case "Sweets":
-        return "Per 1 lb";
+        return " (1 lb)";
       case "Beverages":
-        return "Per 1 Pc";
+        return " (1 Pc)";
       // Add cases for other collection titles as needed
       default:
         return ""; // Default text if collection title doesn't match any case
@@ -37,10 +37,9 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           </LocalizedClientLink>
         )}
         <Heading level="h2" className="text-3xl leading-10 text-ui-fg-base">
-          {product.title}
+          {product.title}{uniqueText}
         </Heading>
         {/* Display unique text based on the collection title */}
-        <Text className="text-large text-ui-fg-subtle">{uniqueText}</Text>
         <Text className="text-medium text-ui-fg-subtle">
           {product.description}
         </Text>
