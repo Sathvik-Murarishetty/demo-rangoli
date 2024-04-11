@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import dynamic from "next/dynamic";
 
@@ -47,13 +46,7 @@ const AchievementsSection = () => {
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
                   className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
+                  // Remove `configs` prop if it's not recognized by AnimatedNumbers
                 />
                 {achievement.postfix}
               </h2>
