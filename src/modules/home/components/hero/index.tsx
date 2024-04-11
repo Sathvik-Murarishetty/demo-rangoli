@@ -8,50 +8,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import dynamic from "next/dynamic";
 
-// Define the props interface for AnimatedNumbers
-interface AnimatedNumbersProps {
-  includeComma: boolean;
-  animateToNumber: number;
-  locale: string;
-  className: string;
-  configs: (index: number) => {
-    mass: number;
-    friction: number;
-    tensions: number;
-  };
-}
-
-// Define a loader function for AnimatedNumbers
-const AnimatedNumbersLoader = () => import("react-animated-numbers");
-
-// Import the AnimatedNumbers component dynamically
-const AnimatedNumbers = dynamic<AnimatedNumbersProps>(
-  AnimatedNumbersLoader,
-  { ssr: false }
-);
-
-const achievementsList = [
-  {
-    metric: "Delicious Dinners",
-    value: "5245",
-    postfix: "+",
-  },
-  {
-    prefix: "~",
-    metric: "Experienced Chef",
-    value: "60",
-  },
-  {
-    metric: "Our Awards",
-    value: "1359",
-  },
-  {
-    metric: "Happy Customers",
-    value: "6560",
-    postfix: "+",
-  },
-];
-
 const slides = [
   {
     image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711485312/1_dkgpc1.png',
@@ -249,25 +205,6 @@ const goToSlide = (slideIndex: number) => {
     </div>
   </div>
 </section>
-
-  <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-        {achievementsList.map((achievement, index) => (
-        <AnimatedNumbers
-          key={index}
-          includeComma
-          animateToNumber={parseInt(achievement.value)}
-          locale="en-US"
-          className="text-white text-4xl font-bold"
-          configs={(index) => ({
-            mass: 1,
-            friction: 100,
-            tensions: 140 * (index + 1),
-          })}
-        />
-      ))}
-      </div>
-    </div>
   
 </div>
   )
