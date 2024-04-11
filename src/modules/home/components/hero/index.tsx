@@ -213,8 +213,8 @@ const goToSlide = (slideIndex: number) => {
   <div className="p-10 rounded-xl">
     <iframe
       src={"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25372.200567792454!2d-121.99970499999999!3d37.353751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5f0a2e0bd7d%3A0x5b6ae1a6d05d2ce2!2sRangoli%20Sweets!5e0!3m2!1sen!2sus!4v1712841261125!5m2!1sen!2sus"}
-      width="70%" // Setting width to 70%
-      height="450" // You can adjust the height as needed
+      width="900" // Setting width to 70%
+      height="300" // You can adjust the height as needed
       style={{ border: "0" }}
       allowFullScreen={true}
       loading="lazy"
