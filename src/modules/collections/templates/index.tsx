@@ -20,7 +20,7 @@ export default function CollectionTemplate({
   const pageNumber = page ? parseInt(page) : 1
 
   return (
-    <div className="bg-orange-50 w-full p-0 m-0 mb-20">
+    <div className="bg-orange-50 w-full p-0 m-0 pb-20">
     <div className="flex flex-col bg-orange-50 small:flex-row small:items-start content-container">
       <RefinementList sortBy={sortBy || "created_at"} />
       <div className="w-full">
