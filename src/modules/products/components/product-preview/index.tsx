@@ -37,7 +37,14 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div className="border rounded shadow p-2 flex justify-between">
+      <div className="border rounded shadow p-2">
+        <div className="border rounded shadow p-2">
+        <Thumbnail
+          thumbnail={productPreview.thumbnail}
+          size="square"
+          isFeatured={isFeatured}
+        />
+          <div className="flex justify-between">
         <div className="flex txt-compact-medium mt-4 justify-between flex-col">
           <Text className="text-ui-fg-subtle text-large">{productPreview.title}</Text>
           <div className="flex items-center gap-x-2">
@@ -45,6 +52,7 @@ export default async function ProductPreview({
           </div>
         </div>
         <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712979290/shopping-bag_xldxzg.png" alt="Add to Cart" />
+            </div>
       </div>
     </LocalizedClientLink>
   )
