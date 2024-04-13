@@ -60,7 +60,7 @@ const getCollectionsWithProducts = cache(
   }
 )
 
-const StoreTemplate = async ({
+const StoreTemplate = ({
   sortBy,
   page,
   countryCode,
