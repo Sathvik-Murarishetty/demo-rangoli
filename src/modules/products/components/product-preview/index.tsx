@@ -35,13 +35,13 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div className="border rounded shadow p-2">
+      <div className="border rounded shadow p-2 flex flex-col h-full">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="square"
           isFeatured={isFeatured}
         />
-        <div className="flex justify-between">
+        <div className="flex-grow flex justify-between flex-col">
           <div className="flex txt-compact-medium mt-4 justify-between flex-col">
             <Text className="text-ui-fg-subtle text-large">
               {productPreview.title}
@@ -52,7 +52,7 @@ export default async function ProductPreview({
           </div>
           <Button
             variant="primary"
-            className="w-full h-10"
+            className="w-24 h-10 self-end mt-auto"
           >
             Cart
           </Button>
