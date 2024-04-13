@@ -56,12 +56,6 @@ const links = [
     setCurrentSlide(slideIndex);
   };
 
-  const collections = await getCollectionsWithProducts(countryCode)
-  const region = await getRegion(countryCode)
-
-  if (!collections || !region) {
-    return null
-  }
 
   return (
     <div className="bg-orange-50">
