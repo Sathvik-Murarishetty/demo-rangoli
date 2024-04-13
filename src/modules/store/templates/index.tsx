@@ -63,7 +63,7 @@ const StoreTemplate = ({
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712983839/Black_Elegant_Minimalist_Profile_LinkedIn_Banner_seha2o.png" alt="Your Image" className="w-full h-full object-cover" />
     </div>
     <div className="flex justify-center py-10">
-      <div className="flex" style={{ width: '80%' }}>
+      <div className="flex justify-between gap-4" style={{ width: '90%' }}>
         <div style={{ width: '30%' }}>
           <div className="flex justify-center py-10">
             <h1 className="mt-4 text-3xl font-cormorant-garamond-bold text-gray-800">Categories</h1>
