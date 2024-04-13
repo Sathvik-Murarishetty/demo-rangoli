@@ -68,6 +68,16 @@ const StoreTemplate = ({
           <div className="flex justify-center py-10">
             <h1 className="mt-4 text-3xl font-cormorant-garamond-bold text-gray-800">Categories</h1>
           </div>
+          <div>
+            <ul className="list-disc text-xl font-cormorant-garamond-bold text-gray-800 pl-5">
+              <li>Bengali Sweets</li>
+              <li>Bakery</li>
+              <li>Beverages</li>
+              <li>Sweets</li>
+              <li>Namkeen</li>
+              <li>Snacks</li>
+            </ul>
+          </div>
         </div>
         <div style={{ width: '70%' }}>
           <div className="flex justify-center py-10">
