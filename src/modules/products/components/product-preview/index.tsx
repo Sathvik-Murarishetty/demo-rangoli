@@ -50,7 +50,14 @@ export default async function ProductPreview({
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
-        <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712979290/shopping-bag_xldxzg.png" alt="Add to Cart" />
+        <Button
+          onClick={}
+          variant="primary"
+          className="w-full h-10"
+          isLoading={}
+        >
+            Cart
+        </Button>
             </div>
       </div>
     </LocalizedClientLink>
