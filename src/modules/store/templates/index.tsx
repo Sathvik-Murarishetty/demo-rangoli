@@ -39,24 +39,25 @@ const getCollectionsWithProducts = cache(
         })
       )
     ).then((responses) =>
-      responses.forEach(({ response, queryParams }) => {
-        let collection
+    //   responses.forEach(({ response, queryParams }) => {
+    //     let collection
 
-        if (collections) {
-          collection = collections.find(
-            (collection) => collection.id === queryParams?.collection_id?.[0]
-          )
-        }
+    //     if (collections) {
+    //       collection = collections.find(
+    //         (collection) => collection.id === queryParams?.collection_id?.[0]
+    //       )
+    //     }
 
-        if (!collection) {
-          return
-        }
+    //     if (!collection) {
+    //       return
+    //     }
 
-        collection.products = response.products as unknown as Product[]
-      })
-    )
+    //     collection.products = response.products as unknown as Product[]
+    //   })
+    // )
 
-    return collections as unknown as ProductCollectionWithPreviews[]
+    // return collections as unknown as ProductCollectionWithPreviews[]
+      return <h2>there</h2>
   }
 )
 
