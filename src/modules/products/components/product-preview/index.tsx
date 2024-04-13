@@ -52,5 +52,6 @@ export default async function ProductPreview({
 </div>
       </LocalizedClientLink>
     </div>
+      </div>
   )
 }
