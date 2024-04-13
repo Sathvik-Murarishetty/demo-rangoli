@@ -74,7 +74,7 @@ const StoreTemplate = ({
             <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <div style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
+            <div style={{ position: 'relative', width: '95%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
               <a href={links[currentSlide]} rel="noopener noreferrer">
                 <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
               </a>
