@@ -59,6 +59,9 @@ const links = [
 
   return (
     <div className="bg-orange-50">
+      <div className="h-40vw w-screen overflow-hidden">
+        <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712983839/Black_Elegant_Minimalist_Profile_LinkedIn_Banner_seha2o.png" alt="Your Image" className="w-full h-full object-cover" />
+      </div>
   <div className="flex justify-center py-10">
 <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Categories</h1>
 </div>
