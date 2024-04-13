@@ -51,10 +51,8 @@ export default async function ProductPreview({
             </div>
           </div>
           <Button
-            onClick={}
             variant="primary"
             className="w-full h-10"
-            isLoading={false}
           >
             Cart
           </Button>
