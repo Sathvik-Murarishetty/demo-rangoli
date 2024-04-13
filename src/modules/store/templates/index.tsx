@@ -21,20 +21,20 @@ const StoreTemplate = ({
 }) => {
   const pageNumber = page ? parseInt(page) : 1
 
-const [currentSlide, setCurrentSlide] = useState(0);
-const images = [
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.50_jslmza.jpg',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_1_oczoxz.jpg',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
-  'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg'
-];
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [
+    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.50_jslmza.jpg',
+    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_1_oczoxz.jpg',
+    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
+    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg'
+  ];
 
-const links = [
-  '/products/mysore-pak',
-  '/products/motichoor',
-  '/products/kalakand',
-  '/products/kaju-katlii'
-];
+  const links = [
+    '/products/mysore-pak',
+    '/products/motichoor',
+    '/products/kalakand',
+    '/products/kaju-katlii'
+  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -63,7 +63,7 @@ const links = [
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712983839/Black_Elegant_Minimalist_Profile_LinkedIn_Banner_seha2o.png" alt="Your Image" className="w-full h-full object-cover" />
     </div>
     <div className="flex justify-center py-10">
-      <div style={{ width: '80%' }}>
+      <div className="flex" style={{ width: '80%' }}>
         <div style={{ width: '30%' }}>
           Categories
         </div>
