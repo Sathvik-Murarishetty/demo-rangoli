@@ -65,11 +65,11 @@ const StoreTemplate = ({
     <div className="flex justify-center py-10">
       <div className="flex justify-between gap-4" style={{ width: '90%' }}>
         <div style={{ width: '30%' }}>
-          <div className="flex justify-center py-10">
+          <div className="py-10">
             <h1 className="mt-4 text-3xl font-cormorant-garamond-bold text-gray-800">Categories</h1>
           </div>
           <div>
-            <ul className="list-disc text-xl font-cormorant-garamond-bold text-gray-800 pl-5">
+            <ul className="text-xl font-cormorant-garamond-bold text-gray-800 pl-5">
               <li>Bengali Sweets</li>
               <li>Bakery</li>
               <li>Beverages</li>
