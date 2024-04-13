@@ -37,7 +37,6 @@ export default async function ProductPreview({
       href={`/products/${productPreview.handle}`}
       className="group"
     >
-      <div className="border rounded shadow p-2">
         <div className="border rounded shadow p-2">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
