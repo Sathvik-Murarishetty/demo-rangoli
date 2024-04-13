@@ -30,11 +30,6 @@ export default async function ProductPreview({
     region,
   });
 
-  const handleAddToCart = () => {
-    // Handle adding product to the cart here
-    console.log("Product added to cart:", productPreview.title);
-  };
-
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
@@ -56,10 +51,10 @@ export default async function ProductPreview({
             </div>
           </div>
           <Button
-            onClick={handleAddToCart}
+            onClick={}
             variant="primary"
             className="w-full h-10"
-            isLoading={false} // You need to set isLoading to true when adding to cart
+            isLoading={false}
           >
             Cart
           </Button>
