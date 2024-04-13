@@ -90,7 +90,8 @@ const links = [
       </div>
     </div>
   </div>
-);
+)
+}
 
 
 export default StoreTemplate
