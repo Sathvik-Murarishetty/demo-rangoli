@@ -24,6 +24,7 @@ export default function ProductPreview({
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<any>(null);
   const [cheapestPrice, setCheapestPrice] = useState<any>(null);
+  const [dataFetched, setDataFetched] = useState(false); // State to track if data is fetched
   const countryCode = useParams().countryCode as string; // Extracting country code
 
   const handleAddToCart = async () => {
@@ -42,25 +43,28 @@ export default function ProductPreview({
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const fetchedProduct = await retrievePricedProductById({
-        id: productPreview.id,
-        regionId: region.id,
-      });
-
-      if (fetchedProduct) {
-        const { cheapestPrice } = getProductPrice({
-          product: fetchedProduct,
-          region,
+    if (!dataFetched) { // Check if data is not already fetched
+      const fetchData = async () => {
+        const fetchedProduct = await retrievePricedProductById({
+          id: productPreview.id,
+          regionId: region.id,
         });
 
-        setPricedProduct(fetchedProduct);
-        setCheapestPrice(cheapestPrice);
-      }
-    };
+        if (fetchedProduct) {
+          const { cheapestPrice } = getProductPrice({
+            product: fetchedProduct,
+            region,
+          });
 
-    fetchData();
-  }, [productPreview, region]);
+          setPricedProduct(fetchedProduct);
+          setCheapestPrice(cheapestPrice);
+          setDataFetched(true); // Set dataFetched to true after fetching data
+        }
+      };
+
+      fetchData();
+    }
+  }, [productPreview, region, dataFetched]);
 
   if (!pricedProduct) {
     return null;
