@@ -1,6 +1,4 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -10,7 +8,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
-import { useParams } from "next/navigation"; // Adding this line
+import { useParams } from "next/navigation";
 
 export default function ProductPreview({
   productPreview,
@@ -24,26 +22,32 @@ export default function ProductPreview({
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<any>(null);
   const [cheapestPrice, setCheapestPrice] = useState<any>(null);
-  const [dataFetched, setDataFetched] = useState(false); // State to track if data is fetched
-  const countryCode = useParams().countryCode as string; // Extracting country code
+  const [dataFetched, setDataFetched] = useState(false);
+  const [addToCartError, setAddToCartError] = useState("");
+
+  const countryCode = useParams().countryCode as string;
 
   const handleAddToCart = async () => {
     if (pricedProduct && pricedProduct.variants.length === 1) {
       const variant = pricedProduct.variants[0];
       setIsAdding(true);
 
-      await addToCart({
-        variantId: variant.id,
-        quantity: 1,
-        countryCode,
-      });
-
-      setIsAdding(false);
+      try {
+        await addToCart({
+          variantId: variant.id,
+          quantity: 1,
+          countryCode,
+        });
+      } catch (error) {
+        setAddToCartError("Error adding item to cart");
+      } finally {
+        setIsAdding(false);
+      }
     }
   };
 
   useEffect(() => {
-    if (!dataFetched) { // Check if data is not already fetched
+    if (!dataFetched) {
       const fetchData = async () => {
         const fetchedProduct = await retrievePricedProductById({
           id: productPreview.id,
@@ -58,7 +62,7 @@ export default function ProductPreview({
 
           setPricedProduct(fetchedProduct);
           setCheapestPrice(cheapestPrice);
-          setDataFetched(true); // Set dataFetched to true after fetching data
+          setDataFetched(true);
         }
       };
 
@@ -98,10 +102,7 @@ export default function ProductPreview({
             </div>
           </div>
           {pricedProduct.variants.length !== 1 && (
-            <Button
-              variant="primary"
-              className="w-24 h-10 self-end mt-auto"
-            >
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
               View Item
             </Button>
           )}
@@ -109,14 +110,14 @@ export default function ProductPreview({
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
-              onClick={(event) => {
-                event.preventDefault(); // Prevent the default behavior of the link
-                handleAddToCart(); // Call the handleAddToCart function
-              }}
+              onClick={handleAddToCart}
               disabled={isAdding}
             >
               {isAdding ? "Adding..." : "Add to Cart"}
             </Button>
+          )}
+          {addToCartError && (
+            <div className="text-red-500 mt-2">{addToCartError}</div>
           )}
         </div>
       </div>
