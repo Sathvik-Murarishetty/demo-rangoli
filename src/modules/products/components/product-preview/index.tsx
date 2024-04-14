@@ -6,8 +6,9 @@ import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
+import { addToCart } from "@modules/cart/actions";
 
-export default async function ProductPreview({
+export default function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -16,22 +17,49 @@ export default async function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const pricedProduct = await retrievePricedProductById({
-    id: productPreview.id,
-    regionId: region.id,
-  }).then((product) => product);
+  const [isAdding, setIsAdding] = useState(false);
+
+  const handleAddToCart = async () => {
+    if (pricedProduct.variants.length === 1) {
+      const variant = pricedProduct.variants[0];
+      setIsAdding(true);
+
+      await addToCart({
+        variantId: variant.id,
+        quantity: 1,
+        countryCode,
+      });
+
+      setIsAdding(false);
+    }
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const pricedProduct = await retrievePricedProductById({
+        id: productPreview.id,
+        regionId: region.id,
+      });
+
+      if (!pricedProduct) {
+        return null;
+      }
+
+      const { cheapestPrice } = getProductPrice({
+        product: pricedProduct,
+        region,
+      });
+
+      setPricedProduct(pricedProduct);
+      setCheapestPrice(cheapestPrice);
+    };
+
+    fetchData();
+  }, [productPreview, region]);
 
   if (!pricedProduct) {
     return null;
   }
-
-  const { cheapestPrice } = getProductPrice({
-    product: pricedProduct,
-    region,
-  });
-
-  // Check if there's only one variant
-  const hasSingleVariant = pricedProduct.variants.length === 1;
 
   return (
     <LocalizedClientLink
@@ -50,7 +78,7 @@ export default async function ProductPreview({
               {productPreview.title}
             </Text>
             <div className="flex items-center gap-x-2">
-              {hasSingleVariant && (
+              {pricedProduct.variants.length === 1 && (
                 <Text className="text-gray-600">
                   {pricedProduct.variants[0].title}
                 </Text>
@@ -60,7 +88,7 @@ export default async function ProductPreview({
               </div>
             </div>
           </div>
-          {!hasSingleVariant && (
+          {pricedProduct.variants.length !== 1 && (
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
@@ -68,9 +96,14 @@ export default async function ProductPreview({
               View Item
             </Button>
           )}
-          {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
-              Add to Cart
+          {pricedProduct.variants.length === 1 && (
+            <Button
+              variant="primary"
+              className="w-24 h-10 self-end mt-auto"
+              onClick={handleAddToCart}
+              disabled={isAdding}
+            >
+              {isAdding ? "Adding..." : "Add to Cart"}
             </Button>
           )}
         </div>
