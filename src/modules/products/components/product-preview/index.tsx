@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react"; // Import useState and useEffect hooks
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
