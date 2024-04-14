@@ -30,6 +30,9 @@ export default async function ProductPreview({
     region,
   });
 
+  // Check if there's only one variant
+  const hasSingleVariant = pricedProduct.variants.length === 1;
+
   return (
     <LocalizedClientLink
       href={`/products/${productPreview.handle}`}
@@ -47,13 +50,16 @@ export default async function ProductPreview({
               {productPreview.title}
             </Text>
             <div className="flex items-center gap-x-2">
+              {/* Display variant if there's only one variant */}
+              {hasSingleVariant && (
+                <Text className="text-sm text-gray-500">
+                  Variant: {pricedProduct.variants[0].title}
+                </Text>
+              )}
               {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
             </div>
           </div>
-          <Button
-            variant="primary"
-            className="w-24 h-10 self-end mt-auto"
-          >
+          <Button variant="primary" className="w-24 h-10 self-end mt-auto">
             Cart
           </Button>
         </div>
