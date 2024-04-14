@@ -38,19 +38,30 @@ export default async function ProductPreview({
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
+  const [isAdding, setIsAdding] = useState(false); // State for handling loading state of "Add to Cart" button
+  const [selectedVariantId, setSelectedVariantId] = useState<string | undefined>(undefined); // State for storing the selected variant ID
+
   const handleAddToCart = async () => {
-    if (!variant?.id) return null
+    if (!selectedVariantId) return null; // Check if a variant is selected
 
-    setIsAdding(true)
+    setIsAdding(true); // Set loading state to true
 
+    // Add the selected variant to the cart
     await addToCart({
-      variantId: variant.id,
+      variantId: selectedVariantId,
       quantity: 1,
-      countryCode,
-    })
+      countryCode: region.countryCode,
+    });
 
-    setIsAdding(false)
-  }
+    setIsAdding(false); // Set loading state back to false
+  };
+
+  useEffect(() => {
+    // If there's only one variant, select it automatically
+    if (hasSingleVariant) {
+      setSelectedVariantId(pricedProduct.variants[0].id);
+    }
+  }, [hasSingleVariant, pricedProduct.variants]);
 
   return (
     <LocalizedClientLink
@@ -91,8 +102,9 @@ export default async function ProductPreview({
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
-              onClick={() => handleAddToCart(pricedProduct.variants[0].id)}
-              isLoading={isAdding}>
+              onClick={handleAddToCart}
+              isLoading={isAdding}
+            >
               Cart
             </Button>
           )}
