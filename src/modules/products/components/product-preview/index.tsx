@@ -109,10 +109,7 @@ export default function ProductPreview({
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
-              onClick={(event) => {
-                event.preventDefault(); // Prevent the default behavior of the link
-                handleAddToCart(); // Call the handleAddToCart function
-              }}
+              onClick={handleAddToCart}
               disabled={isAdding}
             >
               {isAdding ? "Adding..." : "Add to Cart"}
