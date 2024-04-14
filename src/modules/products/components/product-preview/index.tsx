@@ -14,6 +14,7 @@ import Divider from "@modules/common/components/divider";
 import { isEqual } from "lodash";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 
 export default function ProductPreview({
   productPreview,
