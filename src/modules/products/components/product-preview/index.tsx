@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"; // Import useState and useEffect hooks
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -17,7 +18,7 @@ export default function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const [isAdding, setIsAdding] = useState(false);
+  const [isAdding, setIsAdding] = useState(false); // Initialize state using useState
 
   const handleAddToCart = async () => {
     if (pricedProduct.variants.length === 1) {
