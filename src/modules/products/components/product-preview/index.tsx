@@ -6,8 +6,9 @@ import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
+import { addToCart } from "@modules/cart/actions";
 
-export default async function ProductPreview({
+export default function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -16,6 +17,28 @@ export default async function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
+  const handleAddToCart = async () => {
+    const pricedProduct = await retrievePricedProductById({
+      id: productPreview.id,
+      regionId: region.id,
+    });
+
+    if (!pricedProduct) {
+      return;
+    }
+
+    const { variants } = pricedProduct;
+
+    if (variants.length === 1 && variants[0].id) {
+      const variantId = variants[0].id;
+      await addToCart({
+        variantId,
+        quantity: 1,
+        countryCode: region.country_code,
+      });
+    }
+  };
+
   const pricedProduct = await retrievePricedProductById({
     id: productPreview.id,
     regionId: region.id,
@@ -69,7 +92,11 @@ export default async function ProductPreview({
             </Button>
           )}
           {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
+            <Button
+              variant="primary"
+              className="w-24 h-10 self-end mt-auto"
+              onClick={handleAddToCart}
+            >
               Add to Cart
             </Button>
           )}
