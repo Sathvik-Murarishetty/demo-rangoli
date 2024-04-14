@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -8,15 +6,8 @@ import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
-import { useIntersection } from "@lib/hooks/use-in-view";
-import { addToCart } from "@modules/cart/actions";
-import Divider from "@modules/common/components/divider";
-import { isEqual } from "lodash";
-import { useParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 
-export default function ProductPreview({
+export default async function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -25,47 +16,22 @@ export default function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const { countryCode } = useParams();
-  const [isAdding, setIsAdding] = useState(false);
-  const [selectedVariantId, setSelectedVariantId] = useState<string | undefined>(undefined);
-  const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
+  const pricedProduct = await retrievePricedProductById({
+    id: productPreview.id,
+    regionId: region.id,
+  }).then((product) => product);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const product = await retrievePricedProductById({
-          id: productPreview.id,
-          regionId: region.id,
-        });
-        setPricedProduct(product);
-      } catch (error) {
-        console.error("Error fetching priced product:", error);
-      }
-    };
-    fetchData();
-  }, [productPreview, region]);
+  if (!pricedProduct) {
+    return null;
+  }
 
-  useEffect(() => {
-    if (pricedProduct) {
-      const hasSingleVariant = pricedProduct.variants.length === 1;
-      if (hasSingleVariant) {
-        setSelectedVariantId(pricedProduct.variants[0].id);
-      }
-    }
-  }, [pricedProduct]);
+  const { cheapestPrice } = getProductPrice({
+    product: pricedProduct,
+    region,
+  });
 
-  const handleAddToCart = async (variantId: string, countryCode: string) => {
-    if (!selectedVariantId || !countryCode) return;
-    setIsAdding(true);
-    await addToCart({
-      variantId: selectedVariantId,
-      quantity: 1,
-      countryCode,
-    });
-    setIsAdding(false);
-  };
-
-  const hasSingleVariant = pricedProduct && pricedProduct.variants.length === 1;
+  // Check if there's only one variant
+  const hasSingleVariant = pricedProduct.variants.length === 1;
 
   return (
     <LocalizedClientLink
@@ -86,11 +52,11 @@ export default function ProductPreview({
             <div className="flex items-center gap-x-2">
               {hasSingleVariant && (
                 <Text className="text-gray-600">
-                  {pricedProduct?.variants[0].title}
+                  {pricedProduct.variants[0].title}
                 </Text>
               )}
               <div>
-                {pricedProduct && <PreviewPrice price={getProductPrice(pricedProduct)} />}
+                {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
               </div>
             </div>
           </div>
@@ -99,17 +65,12 @@ export default function ProductPreview({
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
             >
-              View
+              View Product
             </Button>
           )}
           {hasSingleVariant && (
-            <Button
-              variant="primary"
-              className="w-24 h-10 self-end mt-auto"
-              onClick={() => handleAddToCart(selectedVariantId, countryCode)}
-              isLoading={isAdding}
-            >
-              Cart
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
+              Add to Cart
             </Button>
           )}
         </div>
