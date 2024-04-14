@@ -10,6 +10,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
+import { useParams } from "next/navigation"; // Adding this line
 
 export default function ProductPreview({
   productPreview,
@@ -23,6 +24,7 @@ export default function ProductPreview({
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<any>(null);
   const [cheapestPrice, setCheapestPrice] = useState<any>(null);
+  const countryCode = useParams().countryCode as string; // Extracting country code
 
   const handleAddToCart = async () => {
     if (pricedProduct && pricedProduct.variants.length === 1) {
