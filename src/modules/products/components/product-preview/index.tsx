@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react"; // Import useState and useEffect hooks
+import { useState, useEffect } from "react";
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -20,10 +20,12 @@ export default function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const [isAdding, setIsAdding] = useState(false); // Initialize state using useState
+  const [isAdding, setIsAdding] = useState(false);
+  const [pricedProduct, setPricedProduct] = useState<any>(null);
+  const [cheapestPrice, setCheapestPrice] = useState<any>(null);
 
   const handleAddToCart = async () => {
-    if (pricedProduct.variants.length === 1) {
+    if (pricedProduct && pricedProduct.variants.length === 1) {
       const variant = pricedProduct.variants[0];
       setIsAdding(true);
 
@@ -39,22 +41,20 @@ export default function ProductPreview({
 
   useEffect(() => {
     const fetchData = async () => {
-      const pricedProduct = await retrievePricedProductById({
+      const fetchedProduct = await retrievePricedProductById({
         id: productPreview.id,
         regionId: region.id,
       });
 
-      if (!pricedProduct) {
-        return null;
+      if (fetchedProduct) {
+        const { cheapestPrice } = getProductPrice({
+          product: fetchedProduct,
+          region,
+        });
+
+        setPricedProduct(fetchedProduct);
+        setCheapestPrice(cheapestPrice);
       }
-
-      const { cheapestPrice } = getProductPrice({
-        product: pricedProduct,
-        region,
-      });
-
-      setPricedProduct(pricedProduct);
-      setCheapestPrice(cheapestPrice);
     };
 
     fetchData();
