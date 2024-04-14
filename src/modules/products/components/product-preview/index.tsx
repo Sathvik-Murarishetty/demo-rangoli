@@ -1,3 +1,4 @@
+User
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -6,9 +7,8 @@ import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
-import { addToCart } from "@modules/cart/actions";
 
-export default function ProductPreview({
+export default async function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -17,32 +17,10 @@ export default function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const handleAddToCart = async () => {
-    const pricedProduct = await retrievePricedProductById({
-      id: productPreview.id,
-      regionId: region.id,
-    });
-
-    if (!pricedProduct) {
-      return;
-    }
-
-    const { variants } = pricedProduct;
-
-    if (variants.length === 1 && variants[0].id) {
-      const variantId = variants[0].id;
-      await addToCart({
-        variantId,
-        quantity: 1,
-        countryCode: region.countryCode,
-      });
-    }
-  };
-
-  const pricedProduct = retrievePricedProductById({
+  const pricedProduct = await retrievePricedProductById({
     id: productPreview.id,
     regionId: region.id,
-  });
+  }).then((product) => product);
 
   if (!pricedProduct) {
     return null;
@@ -92,11 +70,7 @@ export default function ProductPreview({
             </Button>
           )}
           {hasSingleVariant && (
-            <Button
-              variant="primary"
-              className="w-24 h-10 self-end mt-auto"
-              onClick={handleAddToCart}
-            >
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
               Add to Cart
             </Button>
           )}
