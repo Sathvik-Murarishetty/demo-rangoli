@@ -6,6 +6,12 @@ import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
+import { useIntersection } from "@lib/hooks/use-in-view"
+import { addToCart } from "@modules/cart/actions"
+import Divider from "@modules/common/components/divider"
+import { isEqual } from "lodash"
+import { useParams } from "next/navigation"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 export default async function ProductPreview({
   productPreview,
@@ -31,6 +37,34 @@ export default async function ProductPreview({
   });
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
+
+  const handleAddToCart = async () => {
+    if (!variant?.id) return null
+
+    setIsAdding(true)
+
+    await addToCart({
+      variantId: variant.id,
+      quantity: 1,
+      countryCode,
+    })
+
+    setIsAdding(false)
+  }
+
+  const handleAddToCart = async () => {
+    if (!variant?.id) return null
+
+    setIsAdding(true)
+
+    await addToCart({
+      variantId: variant.id,
+      quantity: 1,
+      countryCode,
+    })
+
+    setIsAdding(false)
+  }
 
   return (
     <LocalizedClientLink
@@ -68,7 +102,11 @@ export default async function ProductPreview({
             </Button>
           )}
           {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
+            <Button
+              variant="primary"
+              className="w-24 h-10 self-end mt-auto"
+              onClick={() => handleAddToCart(pricedProduct.variants[0].id)}
+              isLoading={isAdding}>
               Cart
             </Button>
           )}
