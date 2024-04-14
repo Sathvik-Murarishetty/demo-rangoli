@@ -1,5 +1,3 @@
-"use client";
-
 import { Suspense } from "react"
 
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
@@ -29,43 +27,6 @@ const StoreTemplate = async ({
   page?: string
   countryCode: string
 }) => {
-  const pageNumber = page ? parseInt(page) : 1
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [
-    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.50_jslmza.jpg',
-    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_1_oczoxz.jpg',
-    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
-    'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg'
-  ];
-
-  const links = [
-    '/products/mysore-pak',
-    '/products/motichoor',
-    '/products/kalakand',
-    '/products/kaju-katlii'
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [currentSlide]);
-
-  const nextSlide = () => {
-    setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
-  };
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentSlide(slideIndex);
-  };
-
   
  return (
   <div className="bg-orange-50">
@@ -96,19 +57,6 @@ const StoreTemplate = async ({
             <h1 className="mt-4 text-5xl font-poppins-bold text-gray-800">Our Best Sellers</h1>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <div style={{ position: 'relative', width: '95%', height: 'auto', overflow: 'hidden', marginBottom: '20px' }}>
-              <a href={links[currentSlide]} rel="noopener noreferrer">
-                <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
-              </a>
-              <div style={{ position: 'absolute', top: '50%', left: '0', transform: 'translateY(-50%)', width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
-              </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              {[0, 1, 2, 3].map((index) => (
-                <button key={index} onClick={() => goToSlide(index)} style={{ margin: '0 5px', padding: '10px', backgroundColor: currentSlide === index ? '#333' : '#ccc', color: '#fff', border: 'none', borderRadius: '50%', cursor: 'pointer' }}>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
