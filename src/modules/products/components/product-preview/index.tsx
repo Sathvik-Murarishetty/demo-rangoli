@@ -71,11 +71,12 @@ export default function ProductPreview({
   }
 
   return (
-    <LocalizedClientLink
-      href={`/products/${productPreview.handle}`}
-      className="group"
-    >
+    <>
       <div className="border rounded shadow p-2 flex flex-col h-full">
+        <LocalizedClientLink
+          href={`/products/${productPreview.handle}`}
+          className="group"
+        >
         <Thumbnail
           thumbnail={productPreview.thumbnail}
           size="square"
@@ -97,7 +98,9 @@ export default function ProductPreview({
               </div>
             </div>
           </div>
-          {pricedProduct.variants.length !== 1 && (
+        </div>
+              </LocalizedClientLink>
+                  {pricedProduct.variants.length !== 1 && (
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
@@ -115,8 +118,8 @@ export default function ProductPreview({
               {isAdding ? "Adding..." : "Add to Cart"}
             </Button>
           )}
-        </div>
       </div>
-    </LocalizedClientLink>
+
+    </>
   );
 }
