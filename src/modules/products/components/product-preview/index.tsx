@@ -34,7 +34,7 @@ export default function ProductPreview({
       await addToCart({
         variantId,
         quantity: 1,
-        countryCode: region.country_code,
+        countryCode: region.countryCode,
       });
     }
   };
