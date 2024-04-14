@@ -90,7 +90,7 @@ export default function ProductPreview({
                 </Text>
               )}
               <div>
-                {pricedProduct && cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+                {pricedProduct && <PreviewPrice price={getProductPrice(pricedProduct)} />}
               </div>
             </div>
           </div>
