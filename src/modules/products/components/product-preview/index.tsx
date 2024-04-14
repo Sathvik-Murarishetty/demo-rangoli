@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -27,10 +25,22 @@ export default function ProductPreview({
   const { countryCode } = useParams();
   const [isAdding, setIsAdding] = useState(false);
   const [selectedVariantId, setSelectedVariantId] = useState<string | undefined>(undefined);
-  const pricedProduct = retrievePricedProductById({
-    id: productPreview.id,
-    regionId: region.id,
-  });
+  const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const product = await retrievePricedProductById({
+          id: productPreview.id,
+          regionId: region.id,
+        });
+        setPricedProduct(product);
+      } catch (error) {
+        console.error("Error fetching priced product:", error);
+      }
+    };
+    fetchData();
+  }, [productPreview, region]);
 
   useEffect(() => {
     if (pricedProduct) {
@@ -42,7 +52,7 @@ export default function ProductPreview({
   }, [pricedProduct]);
 
   const handleAddToCart = async () => {
-    if (!selectedVariantId) return null;
+    if (!selectedVariantId || !countryCode) return;
     setIsAdding(true);
     await addToCart({
       variantId: selectedVariantId,
