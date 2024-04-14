@@ -53,7 +53,7 @@ export default function ProductPreview({
     }
   }, [pricedProduct]);
 
-  const handleAddToCart = async () => {
+  const handleAddToCart = async (variantId: string, countryCode: string) => {
     if (!selectedVariantId || !countryCode) return;
     setIsAdding(true);
     await addToCart({
@@ -105,7 +105,7 @@ export default function ProductPreview({
             <Button
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
-              onClick={handleAddToCart}
+              onClick={() => handleAddToCart(selectedVariantId, countryCode)}
               isLoading={isAdding}
             >
               Cart
