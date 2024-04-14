@@ -8,7 +8,7 @@ import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
 
-export default function ProductPreview({
+export async default function ProductPreview({
   productPreview,
   isFeatured,
   region,
