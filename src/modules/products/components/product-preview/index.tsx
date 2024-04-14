@@ -1,3 +1,5 @@
+"use client";
+
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
