@@ -102,13 +102,17 @@ export default function ProductPreview({
             </Button>
           )}
           {pricedProduct.variants.length === 1 && (
-            <div
-              onClick={() => handleAddToCart()}
-              className="w-24 h-10 self-end mt-auto cursor-pointer bg-blue-500 text-white text-center rounded p-2"
-              style={{ pointerEvents: isAdding ? 'none' : 'auto' }}
+            <Button
+              variant="primary"
+              className="w-24 h-10 self-end mt-auto"
+              onClick={(event) => {
+                event.preventDefault(); // Prevent the default behavior of the link
+                handleAddToCart(); // Call the handleAddToCart function
+              }}
+              disabled={isAdding}
             >
               {isAdding ? "Adding..." : "Add to Cart"}
-            </div>
+            </Button>
           )}
         </div>
       </div>
