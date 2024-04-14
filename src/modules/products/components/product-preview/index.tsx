@@ -65,7 +65,7 @@ export default async function ProductPreview({
               variant="primary"
               className="w-24 h-10 self-end mt-auto"
             >
-              View Product
+              View Item
             </Button>
           )}
           {hasSingleVariant && (
