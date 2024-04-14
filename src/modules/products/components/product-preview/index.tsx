@@ -8,7 +8,7 @@ import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
 
-export async default function ProductPreview({
+export default function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -39,10 +39,10 @@ export async default function ProductPreview({
     }
   };
 
-  const pricedProduct = await retrievePricedProductById({
+  const pricedProduct = retrievePricedProductById({
     id: productPreview.id,
     regionId: region.id,
-  }).then((product) => product);
+  });
 
   if (!pricedProduct) {
     return null;
