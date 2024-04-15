@@ -90,7 +90,7 @@ export default function ProductPreview({
             <div className="flex items-center gap-x-2">
               {cheapestPrice && (
                 <div>
-                  <PreviewPrice price={cheapestPrice} />
+                  {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
                 </div>
               )}
             </div>
