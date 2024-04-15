@@ -4,14 +4,12 @@ import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
 import { getProductPrice } from "@lib/util/get-product-price";
-import { Region } from "@medusajs/medusa";
+import { Region, PricedProduct } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions"
-import Divider from "@modules/common/components/divider"
-import OptionSelect from "@modules/products/components/option-select"
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function ProductPreview({
   productPreview,
@@ -37,6 +35,23 @@ export default function ProductPreview({
     fetchProduct();
   }, [productPreview.id, region.id]);
 
+  const handleAddToCart = async () => {
+    if (!pricedProduct || !pricedProduct.variants.length) return;
+
+    setIsAdding(true);
+    try {
+      // Assuming you want to add the first variant to the cart
+      await addToCart({
+        variantId: pricedProduct.variants[0].id,
+        quantity: 1,
+        countryCode: region.country_code,
+      });
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+    }
+    setIsAdding(false);
+  }
+
   if (!pricedProduct) {
     return null;
   }
@@ -47,16 +62,6 @@ export default function ProductPreview({
   });
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
-
-  const handleAddToCart = async () => {
-    setIsAdding(true);
-    await addToCart({
-      variantId: pricedProduct.variants[0].id,
-      quantity: 1,
-      countryCode: region.country_code,
-    });
-    setIsAdding(false);
-  }
 
   return (
     <LocalizedClientLink
