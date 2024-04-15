@@ -23,16 +23,25 @@ export default function ProductPreview({
   region: Region;
 }) {
   const [isAdding, setIsAdding] = useState(false);
-  const pricedProduct = retrievePricedProductById({
-    id: productPreview.id,
-    regionId: region.id,
-  }).then((product) => product);
+  const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const product = await retrievePricedProductById({
+        id: productPreview.id,
+        regionId: region.id,
+      });
+      setPricedProduct(product);
+    };
+
+    fetchProduct();
+  }, [productPreview.id, region.id]);
 
   if (!pricedProduct) {
     return null;
   }
 
-  const { cheapestPrice, variants } = getProductPrice({
+  const cheapestPrice = getProductPrice({
     product: pricedProduct,
     region,
   });
@@ -42,9 +51,9 @@ export default function ProductPreview({
   const handleAddToCart = async () => {
     setIsAdding(true);
     await addToCart({
-      variantId: variants[0].id,
+      variantId: pricedProduct.variants[0].id,
       quantity: 1,
-      countryCode,
+      countryCode: region.country_code,
     });
     setIsAdding(false);
   }
