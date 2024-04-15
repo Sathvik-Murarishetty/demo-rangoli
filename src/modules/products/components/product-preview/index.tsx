@@ -13,7 +13,7 @@ import Divider from "@modules/common/components/divider"
 import OptionSelect from "@modules/products/components/option-select"
 import { useEffect, useMemo, useRef, useState } from "react"
 
-export default async function ProductPreview({
+export default function ProductPreview({
   productPreview,
   isFeatured,
   region,
@@ -22,7 +22,8 @@ export default async function ProductPreview({
   isFeatured?: boolean;
   region: Region;
 }) {
-  const pricedProduct = await retrievePricedProductById({
+  const [isAdding, setIsAdding] = useState(false);
+  const pricedProduct = retrievePricedProductById({
     id: productPreview.id,
     regionId: region.id,
   }).then((product) => product);
@@ -31,26 +32,21 @@ export default async function ProductPreview({
     return null;
   }
 
-  const { cheapestPrice } = getProductPrice({
+  const { cheapestPrice, variants } = getProductPrice({
     product: pricedProduct,
     region,
   });
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
-  const [isAdding, setIsAdding] = useState(false)
-
   const handleAddToCart = async () => {
-
-    setIsAdding(true)
-
+    setIsAdding(true);
     await addToCart({
       variantId: variants[0].id,
       quantity: 1,
       countryCode,
-    })
-
-    setIsAdding(false)
+    });
+    setIsAdding(false);
   }
 
   return (
@@ -81,16 +77,13 @@ export default async function ProductPreview({
             </div>
           </div>
           {!hasSingleVariant && (
-            <Button
-              variant="primary"
-              className="w-24 h-10 self-end mt-auto"
-            >
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
               View Item
             </Button>
           )}
           {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
-              Add to Cart
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto" onClick={handleAddToCart}>
+              {isAdding ? "Adding..." : "Add to Cart"}
             </Button>
           )}
         </div>
@@ -98,5 +91,3 @@ export default async function ProductPreview({
     </LocalizedClientLink>
   );
 }
-
-
