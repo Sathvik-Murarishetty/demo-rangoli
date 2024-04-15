@@ -24,7 +24,7 @@ export default function ProductPreview({
 }) {
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
-  const { countryCode } = useParams(); // Move this inside the component
+  const countryCode = useParams().countryCode as string
 
   useEffect(() => {
     const fetchProduct = async () => {
