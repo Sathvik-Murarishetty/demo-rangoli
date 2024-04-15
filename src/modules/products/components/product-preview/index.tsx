@@ -23,7 +23,8 @@ export default function ProductPreview({
 }) {
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
-  
+  const { countryCode } = useParams(); // Move this inside the component
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -59,7 +60,7 @@ export default function ProductPreview({
       await addToCart({
         variantId,
         quantity: 1,
-        countryCode: useParams().countryCode,
+        countryCode, // Now use the countryCode from the component scope
       });
     } catch (error) {
       console.error("Error adding to cart:", error);
