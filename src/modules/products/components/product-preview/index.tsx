@@ -7,6 +7,14 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
 
+import { useIntersection } from "@lib/hooks/use-in-view";
+import { addToCart } from "@modules/cart/actions";
+import Divider from "@modules/common/components/divider";
+import OptionSelect from "@modules/products/components/option-select";
+
+import MobileActions from "../mobile-actions";
+import ProductPrice from "../product-price";
+
 export default async function ProductPreview({
   productPreview,
   isFeatured,
@@ -30,8 +38,27 @@ export default async function ProductPreview({
     region,
   });
 
-  // Check if there's only one variant
+  let variant;
+
   const hasSingleVariant = pricedProduct.variants.length === 1;
+
+  if (hasSingleVariant) {
+    variant = pricedProduct.variants[0];
+  }
+
+  const handleAddToCart = async (selectedVariant) => {
+    if (!selectedVariant?.id) return null;
+  
+    setIsAdding(true);
+  
+    await addToCart({
+      variantId: selectedVariant.id,
+      quantity: 1,
+      countryCode,
+    });
+  
+    setIsAdding(false);
+  };
 
   return (
     <LocalizedClientLink
@@ -69,7 +96,11 @@ export default async function ProductPreview({
             </Button>
           )}
           {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
+            <Button
+              onClick={() => handleAddToCart(variant)}
+              variant="primary"
+              className="w-24 h-10 self-end mt-auto"
+            >
               Add to Cart
             </Button>
           )}
