@@ -38,12 +38,15 @@ export default function ProductPreview({
 
   const handleAddToCart = async () => {
     if (!pricedProduct || !pricedProduct.variants.length) return;
-
+  
     setIsAdding(true);
     try {
-      // Assuming you want to add the first variant to the cart
+      // Ensure that pricedProduct.variants[0] is defined before accessing its id property
+      const variantId = pricedProduct.variants[0]?.id;
+      if (!variantId) return; // If variantId is undefined, exit the function
+  
       await addToCart({
-        variantId: pricedProduct.variants[0].id,
+        variantId,
         quantity: 1,
         countryCode: region.country_code,
       });
@@ -51,10 +54,6 @@ export default function ProductPreview({
       console.error("Error adding to cart:", error);
     }
     setIsAdding(false);
-  }
-
-  if (!pricedProduct) {
-    return null;
   }
 
   const cheapestPrice = getProductPrice({
