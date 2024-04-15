@@ -1,5 +1,5 @@
 import { Text, Button } from "@medusajs/ui";
-import { ProductPreviewType } from "types/global";
+import { ProductPreviewType, ProductVariantType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
 import { getProductPrice } from "@lib/util/get-product-price";
 import { Region } from "@medusajs/medusa";
@@ -38,7 +38,7 @@ export default async function ProductPreview({
     region,
   });
 
-  let variant;
+  let variant: ProductVariantType | undefined; // Explicitly define variant type
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
@@ -46,7 +46,7 @@ export default async function ProductPreview({
     variant = pricedProduct.variants[0];
   }
 
-  const handleAddToCart = async (selectedVariant) => {
+  const handleAddToCart = async (selectedVariant: ProductVariantType) => { // Adjust type here as well
     if (!selectedVariant?.id) return null;
   
     setIsAdding(true);
