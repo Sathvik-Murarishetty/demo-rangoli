@@ -63,7 +63,7 @@ export default function ProductPreview({
     region,
   }) : null;
 
-  const hasSingleVariant = pricedProduct.variants.length === 1;
+  const hasSingleVariant = pricedProduct && pricedProduct.variants.length === 1;
 
   return (
     <LocalizedClientLink
