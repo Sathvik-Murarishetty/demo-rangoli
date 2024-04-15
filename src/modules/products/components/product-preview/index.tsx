@@ -9,8 +9,9 @@ import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
-import { addToCart } from "@modules/cart/actions"
-import { useEffect, useState } from "react"
+import { addToCart } from "@modules/cart/actions";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 export default function ProductPreview({
   productPreview,
@@ -23,6 +24,7 @@ export default function ProductPreview({
 }) {
   const [isAdding, setIsAdding] = useState(false);
   const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
+  const countryCode = useParams().countryCode as string
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -48,7 +50,7 @@ export default function ProductPreview({
       await addToCart({
         variantId,
         quantity: 1,
-        countryCode: region.country_code,
+        countryCode,
       });
     } catch (error) {
       console.error("Error adding to cart:", error);
