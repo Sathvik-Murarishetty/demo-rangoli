@@ -1,21 +1,14 @@
 import { Text, Button } from "@medusajs/ui";
-import { ProductPreviewType } from "types/global"; // Update import
+import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
 import { getProductPrice } from "@lib/util/get-product-price";
-import { Region, ProductVariant } from "@medusajs/medusa"; // Import ProductVariant
+import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
-
-import { useIntersection } from "@lib/hooks/use-in-view";
-import { addToCart } from "@modules/cart/actions";
-import Divider from "@modules/common/components/divider";
-import OptionSelect from "@modules/products/components/option-select";
-
-import MobileActions from "../mobile-actions";
-import ProductPrice from "../product-price";
-
-type ProductVariantType = ProductVariant; // Define ProductVariantType
+import { addToCart } from "@modules/cart/actions"
+import Divider from "@modules/common/components/divider"
+import OptionSelect from "@modules/products/components/option-select"
 
 export default async function ProductPreview({
   productPreview,
@@ -40,27 +33,21 @@ export default async function ProductPreview({
     region,
   });
 
-  let variant: ProductVariantType | undefined;
-
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
-  if (hasSingleVariant) {
-    variant = pricedProduct.variants[0];
-  }
+  const handleAddToCart = async () => {
+    if (!variant?.id) return null
 
-  const handleAddToCart = async (selectedVariant: ProductVariantType) => {
-    if (!selectedVariant?.id) return null;
-  
-    setIsAdding(true);
-  
+    setIsAdding(true)
+
     await addToCart({
-      variantId: selectedVariant.id,
+      variantId: variants[0].id,
       quantity: 1,
       countryCode,
-    });
-  
-    setIsAdding(false);
-  };
+    })
+
+    setIsAdding(false)
+  }
 
   return (
     <LocalizedClientLink
@@ -98,11 +85,7 @@ export default async function ProductPreview({
             </Button>
           )}
           {hasSingleVariant && (
-            <Button
-              onClick={() => handleAddToCart(variant)}
-              variant="primary"
-              className="w-24 h-10 self-end mt-auto"
-            >
+            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
               Add to Cart
             </Button>
           )}
