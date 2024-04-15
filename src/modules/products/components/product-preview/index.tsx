@@ -57,7 +57,9 @@ export default function ProductPreview({
   
     setIsAdding(true);
     try {
-      const variantId = pricedProduct.variants[0].id;
+      const variantId = pricedProduct.variants[0]?.id; // Use optional chaining to handle potential undefined
+      if (!variantId) return; // If variantId is undefined, exit the function
+  
       await addToCart({
         variantId,
         quantity: 1,
