@@ -40,13 +40,13 @@ export default function ProductPreview({
 
   const handleAddToCart = async () => {
     if (!pricedProduct || !pricedProduct.variants.length) return;
-  
+
     setIsAdding(true);
     try {
       // Ensure that pricedProduct.variants[0] is defined before accessing its id property
       const variantId = pricedProduct.variants[0]?.id;
       if (!variantId) return; // If variantId is undefined, exit the function
-  
+
       await addToCart({
         variantId,
         quantity: 1,
@@ -92,7 +92,7 @@ export default function ProductPreview({
                   <PreviewPrice price={cheapestPrice as PriceType} />
                 </div>
               )}
-              </div>
+            </div>
           </div>
           {!hasSingleVariant && (
             <Button variant="primary" className="w-24 h-10 self-end mt-auto">
