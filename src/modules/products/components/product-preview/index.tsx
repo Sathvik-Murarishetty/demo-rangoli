@@ -5,7 +5,6 @@ import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
 import { getProductPrice } from "@lib/util/get-product-price";
 import { Region} from "@medusajs/medusa";
-import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
@@ -23,9 +22,9 @@ export default function ProductPreview({
   region: Region;
 }) {
   const [isAdding, setIsAdding] = useState(false);
-  const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
-  const countryCode = useParams().countryCode as string
-
+  const [pricedProduct, setPricedProduct] = useState(null);
+  const countryCode = useParams().countryCode as string;
+  
   useEffect(() => {
     const fetchProduct = async () => {
       const product = await retrievePricedProductById({
@@ -38,15 +37,17 @@ export default function ProductPreview({
     fetchProduct();
   }, [productPreview.id, region.id]);
 
+  const cheapestPrice = pricedProduct ? getProductPrice({
+    product: pricedProduct,
+    region,
+  }) : null;
+
   const handleAddToCart = async () => {
     if (!pricedProduct || !pricedProduct.variants.length) return;
-
+  
     setIsAdding(true);
     try {
-      // Ensure that pricedProduct.variants[0] is defined before accessing its id property
-      const variantId = pricedProduct.variants[0]?.id;
-      if (!variantId) return; // If variantId is undefined, exit the function
-
+      const variantId = pricedProduct.variants[0].id;
       await addToCart({
         variantId,
         quantity: 1,
@@ -57,13 +58,6 @@ export default function ProductPreview({
     }
     setIsAdding(false);
   }
-
-  const cheapestPrice = pricedProduct ? getProductPrice({
-    product: pricedProduct,
-    region,
-  }) : null;
-
-  const hasSingleVariant = pricedProduct && pricedProduct.variants.length === 1;
 
   return (
     <LocalizedClientLink
@@ -82,28 +76,21 @@ export default function ProductPreview({
               {productPreview.title}
             </Text>
             <div className="flex items-center gap-x-2">
-              {hasSingleVariant && (
-                <Text className="text-gray-600">
-                  {pricedProduct.variants[0].title}
-                </Text>
-              )}
-              {cheapestPrice && 'calculated_price' in cheapestPrice && (
+              {cheapestPrice && (
                 <div>
-                  <PreviewPrice price={cheapestPrice as PriceType} />
+                  <PreviewPrice price={cheapestPrice} />
                 </div>
               )}
             </div>
           </div>
-          {!hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto">
-              View Item
-            </Button>
-          )}
-          {hasSingleVariant && (
-            <Button variant="primary" className="w-24 h-10 self-end mt-auto" onClick={handleAddToCart}>
-              {isAdding ? "Adding..." : "Add to Cart"}
-            </Button>
-          )}
+          <Button
+            variant="primary"
+            className="w-24 h-10 self-end mt-auto"
+            onClick={handleAddToCart}
+            disabled={!pricedProduct || !pricedProduct.variants.length}
+          >
+            {isAdding ? "Adding..." : "Add to Cart"}
+          </Button>
         </div>
       </div>
     </LocalizedClientLink>
