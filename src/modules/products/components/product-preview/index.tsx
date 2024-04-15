@@ -4,7 +4,7 @@ import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
 import { getProductPrice } from "@lib/util/get-product-price";
-import { Region} from "@medusajs/medusa";
+import { Region } from "@medusajs/medusa";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import Thumbnail from "../thumbnail";
 import PreviewPrice from "./price";
@@ -22,12 +22,12 @@ export default function ProductPreview({
   region: Region;
 }) {
   const [isAdding, setIsAdding] = useState(false);
-  const [pricedProduct, setPricedProduct] = useState(null);
-  const countryCode = useParams().countryCode as string;
+  const [pricedProduct, setPricedProduct] = useState<PricedProduct | null>(null);
   
   useEffect(() => {
-  const fetchProduct = async () => {
-    const product = await retrievePricedProductById({
+    const fetchProduct = async () => {
+      try {
+        const product = await retrievePricedProductById({
           id: productPreview.id,
           regionId: region.id,
         });
@@ -36,10 +36,14 @@ export default function ProductPreview({
         } else {
           setPricedProduct(null); // Set to null if product is not found
         }
-      };
-    
-      fetchProduct();
-    }, [productPreview.id, region.id]);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+        setPricedProduct(null); // Set to null if an error occurs
+      }
+    };
+
+    fetchProduct();
+  }, [productPreview.id, region.id]);
 
   const cheapestPrice = pricedProduct ? getProductPrice({
     product: pricedProduct,
@@ -55,7 +59,7 @@ export default function ProductPreview({
       await addToCart({
         variantId,
         quantity: 1,
-        countryCode,
+        countryCode: useParams().countryCode,
       });
     } catch (error) {
       console.error("Error adding to cart:", error);
