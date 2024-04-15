@@ -12,7 +12,7 @@ import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
 import { useParams } from "next/navigation"; // Adding this line
 
-export default function ProductPreview({
+export default async function ProductPreview({
   productPreview,
   isFeatured,
   region,
