@@ -1,3 +1,5 @@
+"use client";
+
 import { Text, Button } from "@medusajs/ui";
 import { ProductPreviewType } from "types/global";
 import { retrievePricedProductById } from "@lib/data";
@@ -9,6 +11,7 @@ import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions"
 import Divider from "@modules/common/components/divider"
 import OptionSelect from "@modules/products/components/option-select"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 export default async function ProductPreview({
   productPreview,
@@ -34,6 +37,8 @@ export default async function ProductPreview({
   });
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
+
+  const [isAdding, setIsAdding] = useState(false)
 
   const handleAddToCart = async () => {
 
