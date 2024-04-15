@@ -58,10 +58,10 @@ export default function ProductPreview({
     setIsAdding(false);
   }
 
-  const cheapestPrice = getProductPrice({
+  const cheapestPrice = pricedProduct ? getProductPrice({
     product: pricedProduct,
     region,
-  });
+  }) : null;
 
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
