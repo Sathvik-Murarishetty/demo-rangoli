@@ -87,10 +87,12 @@ export default function ProductPreview({
                   {pricedProduct.variants[0].title}
                 </Text>
               )}
-              <div>
-                {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
+              {cheapestPrice && 'calculated_price' in cheapestPrice && (
+                <div>
+                  <PreviewPrice price={cheapestPrice} />
+                </div>
+              )}
               </div>
-            </div>
           </div>
           {!hasSingleVariant && (
             <Button variant="primary" className="w-24 h-10 self-end mt-auto">
