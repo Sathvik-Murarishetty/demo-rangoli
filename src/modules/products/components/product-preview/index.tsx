@@ -89,7 +89,7 @@ export default function ProductPreview({
               )}
               {cheapestPrice && 'calculated_price' in cheapestPrice && (
                 <div>
-                  <PreviewPrice price={cheapestPrice} />
+                  <PreviewPrice price={cheapestPrice as PriceType} />
                 </div>
               )}
               </div>
