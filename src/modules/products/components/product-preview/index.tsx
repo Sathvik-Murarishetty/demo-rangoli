@@ -36,7 +36,6 @@ export default async function ProductPreview({
   const hasSingleVariant = pricedProduct.variants.length === 1;
 
   const handleAddToCart = async () => {
-    if (!variant?.id) return null
 
     setIsAdding(true)
 
