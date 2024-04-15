@@ -26,16 +26,20 @@ export default function ProductPreview({
   const countryCode = useParams().countryCode as string;
   
   useEffect(() => {
-    const fetchProduct = async () => {
-      const product = await retrievePricedProductById({
-        id: productPreview.id,
-        regionId: region.id,
-      });
-      setPricedProduct(product);
-    };
-
-    fetchProduct();
-  }, [productPreview.id, region.id]);
+  const fetchProduct = async () => {
+    const product = await retrievePricedProductById({
+          id: productPreview.id,
+          regionId: region.id,
+        });
+        if (product) {
+          setPricedProduct(product);
+        } else {
+          setPricedProduct(null); // Set to null if product is not found
+        }
+      };
+    
+      fetchProduct();
+    }, [productPreview.id, region.id]);
 
   const cheapestPrice = pricedProduct ? getProductPrice({
     product: pricedProduct,
