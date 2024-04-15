@@ -11,6 +11,7 @@ import PreviewPrice from "./price";
 import { addToCart } from "@modules/cart/actions";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
 
 export default function ProductPreview({
   productPreview,
