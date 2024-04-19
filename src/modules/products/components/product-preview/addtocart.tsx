@@ -92,7 +92,6 @@ export default function ProductActions({
                                             updateOption={() => { }}
                                             title={option.title}
                                             data-testid="product-options"
-                                            disabled={isAdding}
                                         />
                                     </div>
                                 )
