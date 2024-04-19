@@ -131,6 +131,15 @@ export default async function Footer() {
           © {new Date().getFullYear()} Rangoli Sweets. All rights reserved.
         </Text>
       </div>
+      <div className="flex flex-col items-center justify-center w-full mb-8">
+          <div className="flex items-center justify-center">
+            <span className="text-ui-fg-base text-lg font-bold mr-4">PAYMENT OPTIONS:</span>
+            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/visa_wmsud6.svg" alt="Payment Option 1" className="w-8 h-8 mx-2" />
+            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/mastercard_f5tjh5.svg" alt="Payment Option 2" className="w-8 h-8 mx-2" />
+            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/amex_k7p377.svg" alt="Payment Option 3" className="w-8 h-8 mx-2" />
+            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/paypal_efm9e1.svg" alt="Payment Option 4" className="w-8 h-8 mx-2" />
+          </div>
+        </div>
     </footer>
   );
 }
