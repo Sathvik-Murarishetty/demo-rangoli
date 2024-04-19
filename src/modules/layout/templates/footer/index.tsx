@@ -8,7 +8,7 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6);
 
   return (
-    <footer className="border-t border-ui-border-base w-full bg-[#D35400]">
+    <footer className="border-t border-ui-border-base w-full bg-[#D35400] mb-0">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-3 xsmall:flex-row items-start justify-between py-10">
           <div>
@@ -22,10 +22,10 @@ export default async function Footer() {
               <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
-          <div>
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Categories</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+          <div className="flex gap-x-10 pr-10">
+            <div className="flex flex-col gap-y-2 pt-10">
+              <span className="text-xl txt-ui-fg-base poppins-medium">Categories</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
                 <li>
                   <a
                     href=""
@@ -126,7 +126,7 @@ export default async function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex w-full mb-16 justify-between text-orange-50">
+      <div className="flex w-full pl-10 pb-16 justify-between text-orange-50">
         <Text className="txt-compact-small poppins-regular">
           © {new Date().getFullYear()} Rangoli Sweets. All rights reserved.
         </Text>
