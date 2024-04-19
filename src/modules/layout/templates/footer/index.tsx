@@ -56,53 +56,71 @@ export default async function Footer() {
                         >
                           {c.name}
                         </LocalizedClientLink>
-                        {children && (
-                          <ul className="grid grid-cols-1 ml-13 gap-2">
-                            {children &&
-                              children.map((child) => (
-                                <li key={child.id}>
-                                  <LocalizedClientLink
-                                    className="hover:text-ui-fg-base"
-                                    href={`/categories/${child.handle}`}
-                                  >
-                                    {child.name}
-                                  </LocalizedClientLink>
-                                </li>
-                              ))}
-                          </ul>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            )}
-            {collections && collections.length > 0 && (
-              <div className="flex flex-col gap-y-2 gap-x-5 pt-10">
-                <span className="text-xl text-black poppins-medium">
-                  Categories
-                </span>
-                <ul
-                  className={clx(
-                    "grid grid-cols-1 gap-5 text-orange-50 text-large-regular",
-                    {
-                      "grid-cols-2": (collections?.length || 0) > 3,
-                    }
-                  )}
-                >
-                  {collections?.slice(0, 6).map((c) => (
-                    <li key={c.id}>
-                      <LocalizedClientLink
-                        className="text-orange-50 poppins-regular hover:text-ui-fg-base"
-                        href={`/collections/${c.handle}`}
-                      >
-                        {c.title}
-                      </LocalizedClientLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">Categories</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Sweets
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Snacks
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Namkeen
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Bengali Sweets
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Bakery
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Beverages
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col gap-y-2 pt-10">
               <span className="text-xl txt-ui-fg-base poppins-medium">Rangoli Sweets</span>
               <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
