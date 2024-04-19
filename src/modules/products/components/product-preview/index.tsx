@@ -14,12 +14,10 @@ export default async function ProductPreview({
   productPreview,
   isFeatured,
   region,
-  product,
 }: {
   productPreview: ProductPreviewType;
   isFeatured?: boolean;
   region: Region;
-  product: PricedProduct;
 }) {
   const pricedProduct = await retrievePricedProductById({
     id: productPreview.id,
