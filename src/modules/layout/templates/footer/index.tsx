@@ -19,145 +19,151 @@ export default async function Footer() {
               <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712690817/Rangoli-B_W-removebg-preview_dl2jac.png"} alt="Rangoli Sweets" className="w-auto h-20" />
             </LocalizedClientLink>
             <span className="text-large-regular text-orange-50 poppins-regular">
-                <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
+              <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
             </span>
           </div>
           <div>
-          <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 justify-self-end">
-            {product_categories && product_categories?.length > 0 && (
-              <div className="flex flex-col gap-y-2 pt-10 px-20">
-                <span className="text-2xl txt-ui-fg-base poppins-bold">
-                  Categories
-                </span>
-                <ul className="text-large-regular grid grid-cols-1 gap-2">
-                  {product_categories?.slice(0, 6).map((c) => {
-                    if (c.parent_category) {
-                      return null;
-                    }
+            <div className="text-large-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 justify-self-end">
+              {product_categories && product_categories?.length > 0 && (
+                <div className="flex flex-col gap-y-2 pt-10 px-20">
+                  <span className="text-2xl txt-ui-fg-base poppins-bold">
+                    Categories
+                  </span>
+                  <ul className="text-large-regular grid grid-cols-1 gap-2">
+                    {product_categories?.slice(0, 6).map((c) => {
+                      if (c.parent_category) {
+                        return null;
+                      }
 
-                    const children =
-                      c.category_children?.map((child) => ({
-                        name: child.name,
-                        handle: child.handle,
-                        id: child.id,
-                      })) || null;
+                      const children =
+                        c.category_children?.map((child) => ({
+                          name: child.name,
+                          handle: child.handle,
+                          id: child.id,
+                        })) || null;
 
-                    return (
-                      <li
-                        className="flex flex-col gap-2 text-large-regular"
-                        key={c.id}
-                      >
-                        <LocalizedClientLink
-                          className={clx(
-                            "hover:text-ui-fg-base",
-                            children && "text-large-regular"
-                          )}
-                          href={`/categories/${c.handle}`}
+                      return (
+                        <li
+                          className="flex flex-col gap-2 text-large-regular"
+                          key={c.id}
                         >
-                          {c.name}
-                        </LocalizedClientLink>
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Categories</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Sweets
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Snacks
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Namkeen
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Bengali Sweets
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Bakery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Beverages
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-y-2 pt-10">
-              <span className="text-xl txt-ui-fg-base poppins-medium">Rangoli Sweets</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
-                <li>
-                  <a
-                    href="/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
-                  >
-                    Customer Care
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base poppins-regular"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
+                          <LocalizedClientLink
+                            className={clx(
+                              "hover:text-ui-fg-base",
+                              children && "text-large-regular"
+                            )}
+                            href={`/categories/${c.handle}`}
+                          >
+                            {c.name}
+                          </LocalizedClientLink>
+                          <div className="flex flex-col gap-y-2">
+                            <span className="txt-small-plus txt-ui-fg-base">Categories</span>
+                            <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Sweets
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Snacks
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Namkeen
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Bengali Sweets
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Bakery
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base"
+                                >
+                                  Beverages
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="flex flex-col gap-y-2 pt-10">
+                            <span className="text-xl txt-ui-fg-base poppins-medium">Rangoli Sweets</span>
+                            <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
+                              <li>
+                                <a
+                                  href="/"
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base poppins-regular"
+                                >
+                                  Terms & Conditions
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="/"
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base poppins-regular"
+                                >
+                                  Customer Care
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="/"
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="hover:text-ui-fg-base poppins-regular"
+                                >
+                                  Contact Us
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
-        </div>
         </div>
         <div className="flex w-full mb-16 justify-between text-orange-50">
           <Text className="txt-compact-small poppins-regular">
