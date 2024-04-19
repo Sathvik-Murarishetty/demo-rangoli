@@ -128,6 +128,9 @@ export default async function Footer() {
       </div>
       <div className="flex flex-col items-center justify-center w-full mb-8">
           <div className="flex pl-10">
+            <span className="text-large-regular text-orange-50 poppins-regular">
+              Payment Options:
+            </span>
             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/visa_wmsud6.svg" alt="Payment Option 1" className="h-10 mx-2" />
             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/mastercard_f5tjh5.svg" alt="Payment Option 2" className="h-10 mx-2" />
             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/amex_k7p377.svg" alt="Payment Option 3" className="h-10 mx-2" />
