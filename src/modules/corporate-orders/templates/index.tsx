@@ -7,14 +7,32 @@ const Corporateorder = () => {
                     At our Indian sweet shop in Santa Clara, California, we celebrate the timeless tradition of expressing love and appreciation through sweets. Each treat from our shop is more than just a delicacy. It is a symbol of joy and cultural heritage. We use only the finest ingredients and a perfect blend of traditional recipes and modern techniques to create sweets that are not just delicious, but also meaningful. Whether it is celebrating a special occasion or sharing a piece of our culture, our sweets are crafted to bring people together and make every moment sweeter.
                 </p>
             </div>
-            <div className="flex flex-col items-center">
-              <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">How it Works</h1>
-              <div className="flex justify-between gap-x-10 py-10">
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-20" />
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-20" />
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-20" />
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/google_nfm7g3.svg" alt="Brand 4" className="w-auto h-20" />
-              </div>
+            <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">How it Works</h1>
+            <div className="flex flex-wrap justify-center gap-8 px-10">
+                {/* Grid Item 1 */}
+                <div className="max-w-sm">
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/send_uo6ose.png" alt="Image 1" className="w-full h-auto" />
+                    <h2 className="text-2xl font-bold mt-4">1. SUBMIT YOUR SPECIFICATIONS</h2>
+                    <p className="mt-2 text-lg text-gray-700"> Provide us with details including the quantity, size, color, and type of packaging required for your gift hampers.</p>
+                </div>
+                {/* Grid Item 2 */}
+                <div className="max-w-sm">
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/quote_sumpay.png" alt="Image 2" className="w-full h-auto" />
+                    <h2 className="text-2xl font-bold mt-4">2. RECEIVE A CUSTOM QUOTE</h2>
+                    <p className="mt-2 text-lg text-gray-700">We will review your specifications and respond promptly with a personalized quote.</p>
+                </div>
+                {/* Grid Item 3 */}
+                <div className="max-w-sm">
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/order-place_gs1idy.png" alt="Image 3" className="w-full h-auto" />
+                    <h2 className="text-2xl font-bold mt-4">3. CONFIRM YOUR ORDER</h2>
+                    <p className="mt-2 text-lg text-gray-700">Once you are satisfied with the details and the quote, confirm your order to proceed.</p>
+                </div>
+                {/* Grid Item 4 */}
+                <div className="max-w-sm">
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/box_jyk32c.png" alt="Image 4" className="w-full h-auto" />
+                    <h2 className="text-2xl font-bold mt-4">4. HASSLE-FREE DELIVERY</h2>
+                    <p className="mt-2 text-lg text-gray-700">Your gift hampers will be delivered directly to you or to your specified recipients, anywhere without limitations.</p>
+                </div>
             </div>
         </div>
     )
