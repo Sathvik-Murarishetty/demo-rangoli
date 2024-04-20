@@ -154,7 +154,7 @@ const Hero = () => {
               As delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
             </p>
           </div>
-<div className="flex flex-wrap justify-center gap-x-10 w-full">
+<div className="flex flex-wrap justify-evenly w-70vh">
   <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between md:gap-x-10">
     <div className="flex flex-col items-center mb-8 md:mb-0">
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
@@ -182,6 +182,7 @@ const Hero = () => {
     </div>
   </div>
 </div>
+
 
         </div>
       </section>
