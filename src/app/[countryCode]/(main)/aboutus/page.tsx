@@ -1,5 +1,5 @@
 import AboutUs from "@modules/about-us/templates"
 
-export default function AboutUs() {
+export default function Aboutus() {
   return <AboutUs />
 }
