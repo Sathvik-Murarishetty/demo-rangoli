@@ -146,13 +146,43 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="flex justify-center py-10">
-          <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Responsile Indulgence</h1>
+      <section className="w-full mt-5 flex justify-center">
+        <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
+          <div className="space-y-3 p-4">
+            <h1 className="text-3xl font-cormorant-garamond-bold sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+            <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              As delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center w-full">
+            <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between">
+              <div className="flex flex-col items-center mb-4 md:mb-0">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png alt="Image 1" className="w-24 h-24" />
+                <p className="mt-2 text-sm">100% Vegetarian</p>
+              </div>
+              <div className="flex flex-col items-center mb-4 md:mb-0">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/less-sugar-sm_mx2khu.png" alt="Image 2" className="w-24 h-24" />
+                <p className="mt-2 text-sm">Less Sugar</p>
+              </div>
+              <div className="flex flex-col items-center mb-4 md:mb-0">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/transfat_hipz7j.png" alt="Image 3" className="w-24 h-24" />
+                <p className="mt-2 text-sm">Transfat Free</p>
+              </div>
+              <div className="flex flex-col items-center mb-4 md:mb-0">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/eggless-sm_kxzb0n.png" alt="Image 4" className="w-24 h-24" />
+                <p className="mt-2 text-sm">Eggless</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegan-sm_keehyz.png" alt="Image 5" className="w-24 h-24" />
+                <p className="mt-2 text-sm">Vegan*</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/gulten-free_bntv96.png" alt="Image 5" className="w-24 h-24" />
+                <p className="mt-2 text-sm">Gluten Free*</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          EAs delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
-        </p>
       </section>
     </div>
   )
