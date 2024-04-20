@@ -1,4 +1,4 @@
-import Slider from '@modules/about-us/templates/slider.tsx'
+import Slider from '../Slider'
 
 const AboutUs = () => {
     return (
