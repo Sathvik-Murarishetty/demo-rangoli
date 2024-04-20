@@ -55,16 +55,16 @@ const AboutUs = () => {
                     <div className="grid grid-cols-1 gap-8">
                         <div className="flex justify-between items-center">
                         <div>
-                            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-12" />
+                            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-16" />
                         </div>
                         <div>
-                             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-12"/>
+                             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-16"/>
                         </div>
                         <div>
-                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-12" />
+                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-16" />
                         </div>
                         <div>
-                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/google_nfm7g3.svg" alt="Brand 4" className="w-auto h-12" />
+                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/google_nfm7g3.svg" alt="Brand 4" className="w-auto h-16" />
                         </div>
                         </div>
                     </div>
