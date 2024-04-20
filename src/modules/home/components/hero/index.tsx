@@ -156,23 +156,23 @@ const Hero = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 w-full">
   <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between" style={{ alignItems: "flex-end" }}>
-    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "1rem" }}>
+    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "3rem" }}>
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
       <p className="mt-2 text-sm">100% Vegetarian</p>
     </div>
-    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "1rem" }}>
+    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "3rem" }}>
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/less-sugar-sm_mx2khu.png" alt="Image 2" className="h-18" />
       <p className="mt-2 text-sm">Less Sugar</p>
     </div>
-    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "1rem" }}>
+    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "3rem" }}>
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/transfat_hipz7j.png" alt="Image 3" className="h-18" />
       <p className="mt-2 text-sm">Transfat Free</p>
     </div>
-    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "1rem" }}>
+    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "3rem" }}>
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/eggless-sm_kxzb0n.png" alt="Image 4" className="h-18" />
       <p className="mt-2 text-sm">Eggless</p>
     </div>
-    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "1rem" }}>
+    <div className="flex flex-col items-center mb-8 md:mb-0" style={{ marginRight: "3rem" }}>
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegan-sm_keehyz.png" alt="Image 5" className="h-18" />
       <p className="mt-2 text-sm">Vegan*</p>
     </div>
