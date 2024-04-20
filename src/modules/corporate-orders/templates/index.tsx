@@ -3,12 +3,20 @@ import React from 'react';
 const Corporateorder = () => {
     return (
         <div className="bg-orange-50">
+
             <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">The TASTEMAKERS of California</h1>
-            <div className="flex flex-col items-center justify-center px-20">
-                <p className="mt-6 text-lg text-gray-700 w-80vh">
-                    At our Indian sweet shop in Santa Clara, California, we celebrate the timeless tradition of expressing love and appreciation through sweets. Each treat from our shop is more than just a delicacy. It is a symbol of joy and cultural heritage. We use only the finest ingredients and a perfect blend of traditional recipes and modern techniques to create sweets that are not just delicious, but also meaningful. Whether it is celebrating a special occasion or sharing a piece of our culture, our sweets are crafted to bring people together and make every moment sweeter.
-                </p>
+            <div className="flex justify-center py-20">
+        <div className="max-w-6xl w-full px-4">
+          <div className="grid grid-cols-1 gap-8">
+            <div>
+              <p className="mt-6 text-lg text-gray-700">
+                  At our Indian sweet shop in Santa Clara, California, we celebrate the timeless tradition of expressing love and appreciation through sweets. Each treat from our shop is more than just a delicacy. It is a symbol of joy and cultural heritage. We use only the finest ingredients and a perfect blend of traditional recipes and modern techniques to create sweets that are not just delicious, but also meaningful. Whether it is celebrating a special occasion or sharing a piece of our culture, our sweets are crafted to bring people together and make every moment sweeter.
+  </p>
+
             </div>
+              </div>
+            </div>
+                </div>
             <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">How it Works</h1>
             <div className="flex justify-center items-center w-80vh">
             <div className="grid grid-cols-2 gap-8 px-10">
