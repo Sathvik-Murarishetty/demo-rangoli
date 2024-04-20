@@ -10,31 +10,33 @@ const Corporateorder = () => {
                 </p>
             </div>
             <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">How it Works</h1>
+            <div className="flex justify-center items-center w-80vh">
             <div className="grid grid-cols-2 gap-8 px-10">
                 {/* Grid Item 1 */}
                 <div className="max-w-sm">
-                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/send_uo6ose.png" alt="Image 1" className="w-full h-20" />
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/send_uo6ose.png" alt="Image 1" className="w-auto h-20" />
                     <h2 className="text-2xl font-bold mt-4">1. SUBMIT YOUR SPECIFICATIONS</h2>
                     <p className="mt-2 text-lg text-gray-700"> Provide us with details including the quantity, size, color, and type of packaging required for your gift hampers.</p>
                 </div>
                 {/* Grid Item 2 */}
                 <div className="max-w-sm">
-                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/quote_sumpay.png" alt="Image 2" className="w-full h-20" />
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/quote_sumpay.png" alt="Image 2" className="w-auto h-20" />
                     <h2 className="text-2xl font-bold mt-4">2. RECEIVE A CUSTOM QUOTE</h2>
                     <p className="mt-2 text-lg text-gray-700">We will review your specifications and respond promptly with a personalized quote.</p>
                 </div>
                 {/* Grid Item 3 */}
                 <div className="max-w-sm">
-                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/order-place_gs1idy.png" alt="Image 3" className="w-full h-20" />
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/order-place_gs1idy.png" alt="Image 3" className="w-auto h-20" />
                     <h2 className="text-2xl font-bold mt-4">3. CONFIRM YOUR ORDER</h2>
                     <p className="mt-2 text-lg text-gray-700">Once you are satisfied with the details and the quote, confirm your order to proceed.</p>
                 </div>
                 {/* Grid Item 4 */}
                 <div className="max-w-sm">
-                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/box_jyk32c.png" alt="Image 4" className="w-full h-20" />
+                    <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609642/box_jyk32c.png" alt="Image 4" className="w-auto h-20" />
                     <h2 className="text-2xl font-bold mt-4">4. HASSLE-FREE DELIVERY</h2>
                     <p className="mt-2 text-lg text-gray-700">Your gift hampers will be delivered directly to you or to your specified recipients, anywhere without limitations.</p>
                 </div>
+            </div>
             </div>
         </div>
     )
