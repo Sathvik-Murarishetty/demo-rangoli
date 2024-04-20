@@ -98,12 +98,12 @@ const StoreTemplate = async ({
               </div>
               <div>
                 <ul className="text-xl font-poppins-bold text-gray-800 pl-5 pb-10">
-                  <li>Bengali Sweets</li>
-                  <li>Bakery</li>
-                  <li>Beverages</li>
-                  <li>Sweets</li>
-                  <li>Namkeen</li>
-                  <li>Snacks</li>
+                  <li><a href="/collections/sweets">Sweets</a></li>
+                  <li><a href="/collections/snacks">Snacks</a></li>
+                  <li><a href="/collections/bengali-sweets">Bengali Sweets</a></li>
+                  <li><a href="/collections/bakery">Bakery</a></li>
+                  <li><a href="/collections/namkeen">Namkeen</a></li>
+                  <li><a href="/collections/beverages">Beverages</a></li>
                 </ul>
               </div>
             </div>
