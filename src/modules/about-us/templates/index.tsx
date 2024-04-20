@@ -39,7 +39,7 @@ const AboutUs = () => {
                     At Rangoli Sweets in Santa Clara, California, we celebrate the art of traditional Indian sweets with a commitment to purity in every bite. Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies. 
                 </p>
                 <p className="mt-6 text-lg text-gray-700">
-                    At Rangoli Sweets in Santa Clara, California, we celebrate the art of traditional Indian sweets with a commitment to purity in every bite. Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies. 
+                    We uphold the highest quality standards, favoring natural ingredients over artificial additives. This dedication extends to our unique practice of producing our own milk, ensuring that each sweet is crafted with the freshest, most wholesome milk available. At Rangoli Sweets, safety and satisfaction go hand in hand, offering our customers a taste of authentic, safe, and delightful Indian tradition.
                 </p>
             </div>
             <div className="flex flex-col items-center">
