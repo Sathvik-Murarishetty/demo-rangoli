@@ -49,7 +49,7 @@ const AboutUs = () => {
             </div>
                 </div>
               <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">Our Clients</h1>
-              <div className="flex justify-between py-10">
+              <div className="flex justify-between py-10 w-70vh">
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-10" />
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-10" />
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-10" />
