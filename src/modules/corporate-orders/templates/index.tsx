@@ -5,7 +5,7 @@ const Corporateorder = () => {
         <div className="bg-orange-50">
             <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">The TASTEMAKERS of California</h1>
             <div className="flex flex-col items-center justify-center w-80vh px-10">
-                <p className="mt-6 text-lg text-gray-700">
+                <p className="mt-6 text-lg text-gray-700 w-80vh">
                     At our Indian sweet shop in Santa Clara, California, we celebrate the timeless tradition of expressing love and appreciation through sweets. Each treat from our shop is more than just a delicacy. It is a symbol of joy and cultural heritage. We use only the finest ingredients and a perfect blend of traditional recipes and modern techniques to create sweets that are not just delicious, but also meaningful. Whether it is celebrating a special occasion or sharing a piece of our culture, our sweets are crafted to bring people together and make every moment sweeter.
                 </p>
             </div>
