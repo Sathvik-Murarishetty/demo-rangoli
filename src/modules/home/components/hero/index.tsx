@@ -157,7 +157,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center w-full">
             <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between">
               <div className="flex flex-col items-center mb-4 md:mb-0">
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png alt="Image 1" className="w-24 h-24" />
+                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="w-24 h-24" />
                 <p className="mt-2 text-sm">100% Vegetarian</p>
               </div>
               <div className="flex flex-col items-center mb-4 md:mb-0">
