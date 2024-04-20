@@ -127,14 +127,14 @@ export default async function Footer() {
         </div>
       </div>
       <div className="flex flex-col w-full pl-10 mb-8">
-        <div className="flex items-center">
-          <span className="text-large-regular text-orange-50 poppins-regular">
+        <div className="flex flex-wrap items-center w-full">
+          <span className="text-large-regular text-orange-50 poppins-regular mb-2 sm:mb-0 sm:mr-4">
             PAYMENT OPTIONS:
           </span>
-          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/visa_wmsud6.svg" alt="Payment Option 1" className="h-10 mx-2" />
-          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/mastercard_f5tjh5.svg" alt="Payment Option 2" className="h-10 mx-2" />
-          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/amex_k7p377.svg" alt="Payment Option 3" className="h-10 mx-2" />
-          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/paypal_efm9e1.svg" alt="Payment Option 4" className="h-10 mx-2" />
+          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/visa_wmsud6.svg" alt="Payment Option 1" className="h-10 mx-2 mb-2 sm:mb-0" />
+          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/mastercard_f5tjh5.svg" alt="Payment Option 2" className="h-10 mx-2 mb-2 sm:mb-0" />
+          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/amex_k7p377.svg" alt="Payment Option 3" className="h-10 mx-2 mb-2 sm:mb-0" />
+          <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713561678/paypal_efm9e1.svg" alt="Payment Option 4" className="h-10 mx-2 mb-2 sm:mb-0" />
         </div>
       </div>
       <div className="flex w-full pl-10 pb-16 justify-between text-orange-50">
