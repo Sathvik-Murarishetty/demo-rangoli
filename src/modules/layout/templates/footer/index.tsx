@@ -10,18 +10,23 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full bg-[#D35400] mb-0">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-3 xsmall:flex-row items-start justify-between py-10">
-          <div>
-            <LocalizedClientLink
-              href="/"
-              className="text-black hover:text-ui-fg-base uppercase poppins-semibold p-0"
-            >
-              <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712690817/Rangoli-B_W-removebg-preview_dl2jac.png"} alt="Rangoli Sweets" className="w-auto h-20" />
-            </LocalizedClientLink>
-            <span className="text-large-regular text-orange-50 poppins-regular">
-              <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
-            </span>
-          </div>
+<div className="flex flex-col gap-y-3 xsmall:flex-row items-start justify-between py-10">
+  <div>
+    <LocalizedClientLink
+      href="/"
+      className="text-black hover:text-ui-fg-base uppercase poppins-semibold p-0"
+    >
+      <img src={"https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712690817/Rangoli-B_W-removebg-preview_dl2jac.png"} alt="Rangoli Sweets" className="w-auto h-20" />
+    </LocalizedClientLink>
+    <div className="flex gap-x-4 mt-4">
+      {/* Social media icons */}
+      <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713588411/instagram_bmkjlc.svg" alt="Facebook" className="w-auto h-8" />
+      <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713588410/location_s795nz.svg" alt="Twitter" className="w-auto h-8" />
+    </div>
+    <span className="text-large-regular text-orange-50 poppins-regular">
+      <br />  1584 Halford Ave, <br />Santa Clara, CA - 95051 <br /> (408) 244-1160
+    </span>
+  </div>
           <div className="flex gap-x-10 pr-10">
             <div className="flex flex-col gap-y-2 pt-10">
               <span className="text-xl txt-ui-fg-base poppins-medium">Categories</span>
