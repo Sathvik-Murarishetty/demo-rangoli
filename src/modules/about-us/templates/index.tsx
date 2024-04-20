@@ -1,3 +1,5 @@
+import slider from '@modules/about-us/templates'
+
 const AboutUs = () => {
     return (
         <div className="bg-orange-50">
@@ -29,57 +31,10 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+          </div>
             <h1 className="mt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">Our Kitchen</h1>
-            <div className="flex justify-center py-20">
-                <div className="max-w-6xl w-full px-4">
-                    <div className="grid grid-cols-2 gap-8">
-                        {/* First Row: Image on the left, Paragraph on the right */}
-                        <div className="flex items-center">
-                            <img
-                                alt="The process of making sweets"
-                                className="w-full h-auto object-cover"
-                                height="400"
-                                src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711692061/rangoli_awydsf.jpg"
-                                style={{
-                                    aspectRatio: "600/400",
-                                    objectFit: "cover",
-                                }}
-                                width="600"
-                            />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                            <p className="text-lg text-gray-700">
-                                Commitment to purity in every bite. Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies.
-                            </p>
-                            <p className="mt-6 text-lg text-gray-700">
-                                We uphold the highest quality standards, favoring natural ingredients over artificial additives. This dedication extends to our unique practice of producing our own milk, ensuring that each sweet is crafted with the freshest, most wholesome milk available. At Rangoli Sweets, safety and satisfaction go hand in hand, offering our customers a taste of authentic, safe, and delightful Indian tradition.
-                            </p>
-                        </div>
-                        {/* Second Row: Paragraph on the left, Image on the right */}
-                        <div className="flex flex-col justify-center">
-                            <p className="text-lg text-gray-700">
-                                Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies. We uphold the highest quality standards, favoring natural ingredients over artificial additives.
-                            </p>
-                            <p className="mt-6 text-lg text-gray-700">
-                                This dedication extends to our unique practice of producing our own milk, ensuring that each sweet is crafted with the freshest, most wholesome milk available. At Rangoli Sweets, safety and satisfaction go hand in hand, offering our customers a taste of authentic, safe, and delightful Indian tradition.
-                            </p>
-                        </div>
-                        <div className="flex items-center">
-                            <img
-                                alt="The process of making sweets"
-                                className="w-full h-auto object-cover"
-                                height="400"
-                                src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711692061/rangoli_awydsf.jpg"
-                                style={{
-                                    aspectRatio: "600/400",
-                                    objectFit: "cover",
-                                }}
-                                width="600"
-                            />
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <Slider />
             </div>
         </div>
     )
