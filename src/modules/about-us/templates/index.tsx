@@ -37,6 +37,7 @@ const AboutUs = () => {
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-1 gap-8">
             <div>
+                <Slider />
               <p className="mt-6 text-lg text-gray-700">
                     At Rangoli Sweets in Santa Clara, California, we celebrate the art of traditional Indian sweets with a commitment to purity in every bite. Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies. 
                 </p>
