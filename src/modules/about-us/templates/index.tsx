@@ -52,18 +52,20 @@ const AboutUs = () => {
             <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">Our Clients</h1>
             <div className="flex justify-center py-20">
                 <div className="max-w-6xl w-full px-4">
-                    <div className="grid grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 gap-8">
+                        <div className="flex justify-between items-center">
                         <div>
                             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-12" />
                         </div>
-                                                <div>
+                        <div>
                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-12"/>
                         </div>
-                                                <div>
-                <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-12" />
+                        <div>
+                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-12" />
                         </div>
-                                                <div>
-                                            <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/google_nfm7g3.svg" alt="Brand 4" className="w-auto h-12" />
+                        <div>
+                              <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/google_nfm7g3.svg" alt="Brand 4" className="w-auto h-12" />
+                        </div>
                         </div>
                     </div>
                 </div>
