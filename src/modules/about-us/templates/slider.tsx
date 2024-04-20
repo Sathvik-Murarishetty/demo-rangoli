@@ -32,7 +32,7 @@ const Slider = () => {
     }, [emblaApi])
 
     return (
-        <div class="flex justify-center items-center w-70vh">
+        <div className="flex justify-center items-center w-70vh">
             <div className='embla mx-auto relative'>
                 <div className='embla__viewport' ref={emblaRef}>
                     <div className='embla__container h-full'>
