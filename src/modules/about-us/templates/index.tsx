@@ -33,7 +33,7 @@ const AboutUs = () => {
         </div>
           </div>
             <h1 className="mt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">Our Kitchen</h1>
-            <div className="flex flex-col items-center justify-center w-80vh">
+            <div className="flex flex-col items-center justify-center w-full px-4">
                 <Slider />
                 <p className="mt-6 text-lg text-gray-700">
                     At Rangoli Sweets in Santa Clara, California, we celebrate the art of traditional Indian sweets with a commitment to purity in every bite. Our Experiential Commercial Kitchen, equipped with top-tier facilities, allows customers to witness the meticulous process behind our beloved delicacies. 
@@ -44,7 +44,7 @@ const AboutUs = () => {
             </div>
             <div className="flex flex-col items-center">
               <h1 className="mt-8 text-5xl font-cormorant-garamond-bold text-gray-800">Our Clients</h1>
-              <div className="flex justify-between w-80vh">
+              <div className="flex justify-between gap-x-10">
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-20" />
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/apple_tzi1bw.svg" alt="Brand 2" className="w-auto h-20" />
                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/nvidia_evjxou.svg" alt="Brand 3" className="w-auto h-20" />
