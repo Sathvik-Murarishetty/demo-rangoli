@@ -1,67 +1,34 @@
-"use client";
-
-import { Button, Heading } from "@medusajs/ui";
-import Image from "next/image";
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
-import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const slides = [
-    {
-        image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.50_jslmza.jpg',
-        link: '/products/mysore-pak',
-    },
-    {
-        image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_1_oczoxz.jpg',
-        link: '/products/motichoor',
-    },
-    {
-        image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
-        link: '/products/kalakand',
-    },
-    {
-        image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg',
-        link: '/products/kaju-katlii'
-    },
-];
-
 const AboutUs = () => {
-
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })])
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
-
     return (
-        <div className="w-full relative">
-            <div className='embla mx-auto relative'>
-                <div className='embla__viewport' ref={emblaRef}>
-                    <div className='embla__container h-full'>
-                        {slides.map((slide, index) => (
-                            <a href={slide.link} key={index} className='embla__slide flex flex-col items-center justify-center'>
-                                <img
-                                    src={slide.image}
-                                    alt={`Slide ${index + 1}`}
-                                    className="w-full object-cover"
-                                />
-                            </a>
-                        ))}
-                    </div>
-                </div>
-                <div className='absolute top-1/2 transform -translate-y-1/2 left-0 ml-4'>
-                    <ChevronLeft size={48} onClick={scrollPrev} color="grey" />
-                </div>
-                <div className='absolute top-1/2 transform -translate-y-1/2 right-0 mr-4'>
-                    <ChevronRight size={48} onClick={scrollNext} color="grey" />
-                </div>
+        <div className="bg-orange-50">
+            <div className="flex justify-center py-20">
+        <div className="max-w-6xl w-full px-4">
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-sm uppercase font-cormorant-garamond-bold tracking-wider text-gray-500">• Our Story •</h3>
+              <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
+              <p className="mt-6 text-lg text-gray-700">
+                When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian style of art featuring patterns and designs in rich, jewel-like colors.
+                <br />
+                Our restaurant is decorated in these vibrant hues, with Sanskrit script gracing the walls. Our interior welcomes you with private dining alcoves and fresh orchids on each table. Our attentive, gracious service invites you to linger and enjoy your dining experience.
+              </p>
             </div>
+            <div className="flex items-center">
+              <img
+                alt="The process of making sweets"
+                className="w-full h-auto object-cover"
+                height="400"
+                src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1711692061/rangoli_awydsf.jpg"
+                style={{
+                  aspectRatio: "600/400",
+                  objectFit: "cover",
+                }}
+                width="600"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
     )
 }
