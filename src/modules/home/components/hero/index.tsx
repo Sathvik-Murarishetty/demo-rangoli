@@ -154,7 +154,7 @@ const Hero = () => {
               As delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
             </p>
           </div>
-<div className="flex flex-wrap justify-between w-70vh pb-15">
+<div className="flex flex-wrap justify-between w-80vh pb-15">
   <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between md:gap-x-10">
     <div className="flex flex-col items-center mb-8 md:mb-0">
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
