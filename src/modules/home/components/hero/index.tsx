@@ -154,9 +154,11 @@ const Hero = () => {
               As delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
             </p>
           </div>
-<div className="flex flex-wrap justify-between w-full">
-  <div className="flex flex-col items-center w-full sm:w-auto md:flex-row md:flex-wrap md:justify-between md:gap-x-10">
-    <div className="flex flex-col items-center mb-8 md:mb-0">
+
+          <div className="flex justify-center py-20">
+        <div className="max-w-6xl w-full px-4">
+          <div className="grid grid-cols-1 gap-8">
+            <div className="flex flex-col items-center mb-8 md:mb-0">
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
       <p className="mt-2 text-sm">100% Vegetarian</p>
     </div>
@@ -180,9 +182,9 @@ const Hero = () => {
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/gulten-free_bntv96.png" alt="Image 6" className="h-18" />
       <p className="mt-2 text-sm">Gluten Free*</p>
     </div>
-  </div>
-</div>
-
+          </div>
+        </div>
+      </div>
 
         </div>
       </section>
