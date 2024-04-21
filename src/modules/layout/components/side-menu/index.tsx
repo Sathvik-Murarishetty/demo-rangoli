@@ -14,8 +14,8 @@ const SideMenuItems = {
   Store: "/store",
   Account: "/account",
   Cart: "/cart",
-  AboutUs: "/aboutus",
-  CorporateOrders: "/corporateorders",
+  'About Us': "/aboutus",
+  'Corporate Orders': "/corporateorders",
   Celebrations: "/gifting",
 }
 
