@@ -28,7 +28,7 @@ export default async function Nav() {
          About Us
         </LocalizedClientLink>
        </div>
-       <div className="text-large-semi">
+       <div className="text-large-regulari">
         <LocalizedClientLink
          className="text-[#D35400] hover:text-black"
          href="/corporateorders"
@@ -36,7 +36,7 @@ export default async function Nav() {
          Corporate Orders
         </LocalizedClientLink>
        </div>
-       <div className="text-xl">
+       <div className="text-large-regular">
         <LocalizedClientLink
          className="text-[#D35400] hover:text-black"
          href="/gifting"
@@ -58,7 +58,7 @@ export default async function Nav() {
 
      <div className="flex items-center gap-x-10 h-full flex-1 basis-0 justify-end">
       <div className="hidden small:flex items-center gap-x-10 h-full">
-               <div className="text-xl"> {/* Apply text-xl class to the div */}
+               <div className="text-large-regular"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
          className="text-[#D35400] hover:text-black"
          href="/store"
@@ -66,7 +66,7 @@ export default async function Nav() {
          Store
         </LocalizedClientLink>
        </div>
-       <div className="text-xl"> {/* Apply text-xl class to the div */}
+       <div className="text-large-regular"> {/* Apply text-xl class to the div */}
         <LocalizedClientLink
          className="text-[#D35400] hover:text-black"
          href="/account"
@@ -76,7 +76,7 @@ export default async function Nav() {
        </div>
        <Suspense
        fallback={
-        <div className="text-xl"> {/* Apply text-xl class to the div */}
+        <div className="text-large-regular"> {/* Apply text-xl class to the div */}
          <LocalizedClientLink className="text-[#D35400] hover:text-black flex gap-2" href="/cart">
   <span style={{ fontSize: '20px' }}>Cart (0)</span>
 </LocalizedClientLink>
