@@ -58,7 +58,7 @@ const Hero = () => {
       <section className="w-full mt-5 flex justify-center">
         <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
           <div className="space-y-3 p-4">
-            <h1 className="text-3xl font-cormorant-garamond-bold sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
+            <h1 className="text-3xl font-zcool-xiaowei-regular sm:text-4xl md:text-5xl">Rangoli Sweets</h1>
             <div className="mt-10 flex justify-center">
               {/* Any additional content you want to add here */}
             </div>
@@ -69,7 +69,7 @@ const Hero = () => {
         </div>
       </section>
       <div className="flex justify-center py-10">
-        <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Our Best Sellers</h1>
+        <h1 className="mt-4 text-5xl font-zcool-xiaowei-regular text-gray-800">Our Best Sellers</h1>
       </div>
       <div className="width-80vh">
         <BestSellers />
@@ -78,8 +78,8 @@ const Hero = () => {
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h3 className="text-sm uppercase font-cormorant-garamond-bold tracking-wider text-gray-500">• Our Story •</h3>
-              <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
+              <h3 className="text-sm uppercase font-zcool-xiaowei-regular tracking-wider text-gray-500">• Our Story •</h3>
+              <h1 className="mt-4 text-5xl font-zcool-xiaowei-regular text-gray-800">The Legacy Of Rangoli Sweets</h1>
               <p className="mt-6 text-lg text-gray-700">
                 When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian style of art featuring patterns and designs in rich, jewel-like colors.
                 <br />
@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       <AchievementsSection />
       <div className="flex justify-center py-10">
-        <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">Shop by Category</h1>
+        <h1 className="mt-4 text-5xl font-zcool-xiaowei-regular text-gray-800">Shop by Category</h1>
       </div>
       <section style={{ position: 'relative', width: '80%', height: 'auto', overflow: 'hidden', marginBottom: '20px', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-80 mx-auto md:w-full">
@@ -149,7 +149,7 @@ const Hero = () => {
       <section className="w-full mt-5 flex justify-center">
         <div className="container flex flex-col items-center gap-4 px-4 text-center md:gap-10 md:px-6">
           <div className="space-y-3 p-4">
-            <h1 className="text-3xl font-cormorant-garamond-bold sm:text-4xl md:text-5xl">Responsible Indulgence</h1>
+            <h1 className="text-3xl font-zcool-xiaowei-regular sm:text-4xl md:text-5xl">Responsible Indulgence</h1>
             <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               As delicious as our products may be, we encourage all our customers to indulge responsibly and in moderation, for the benefit of your well-being.
             </p>
