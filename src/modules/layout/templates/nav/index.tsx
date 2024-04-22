@@ -28,7 +28,7 @@ export default async function Nav() {
          About Us
         </LocalizedClientLink>
        </div>
-       <div className="text-large-regulari">
+       <div className="text-large-regular">
         <LocalizedClientLink
          className="text-[#D35400] hover:text-black"
          href="/corporateorders"
