@@ -33,7 +33,7 @@ export default async function Footer() {
               <ul className="grid grid-cols-1 gap-y-2 text-orange-50 text-large-regular">
                 <li>
                   <a
-                    href=""
+                    href="/collections/sweets"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -43,7 +43,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/collections/snacks"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -53,7 +53,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/collections/namkeen"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -63,7 +63,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/collections/bengali-sweets"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -73,7 +73,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/collections/bakery"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
@@ -83,7 +83,7 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
-                    href=""
+                    href="/collections/beverages"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
