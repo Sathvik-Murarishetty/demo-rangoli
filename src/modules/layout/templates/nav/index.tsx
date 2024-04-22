@@ -10,7 +10,7 @@ export default async function Nav() {
  return (
   <div className="sticky top-0 inset-x-0 z-50 group">
    <header className="relative h-20 mx-auto duration-200 bg-orange-50 text-[#D35400] text-xl border-ui-border-base">
-          <div className="large:hidden">
+          <div className="lg:hidden">
        <div className="h-full">
        <SideMenu regions={regions} />
         </div>
