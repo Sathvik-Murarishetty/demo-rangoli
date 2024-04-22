@@ -34,7 +34,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/sweets"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
@@ -44,7 +43,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/snacks"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
@@ -54,7 +52,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/namkeen"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
@@ -64,7 +61,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/bengali-sweets"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
@@ -74,7 +70,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/bakery"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
@@ -84,7 +79,6 @@ export default async function Footer() {
                 <li>
                   <a
                     href="/collections/beverages"
-                    target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
