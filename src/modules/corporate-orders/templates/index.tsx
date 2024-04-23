@@ -4,7 +4,7 @@ const Corporateorder = () => {
     return (
         <div className="bg-orange-50">
 
-            <h1 className="pt-4 text-5xl flex justify-center text-gray-800">The <span className="text-[#D35400]">TASTEMAKERS</span> of California</h1>
+            <h1 className="pt-4 text-5xl flex font-carattere-regular justify-center text-gray-800">The <span className="text-[#D35400]">&nbsp;TASTEMAKERS&nbsp;</span> of California</h1>
             <div className="flex justify-center py-20">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
