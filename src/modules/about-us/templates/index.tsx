@@ -3,13 +3,13 @@ import Slider from '../Slider'
 const AboutUs = () => {
     return (
         <div className="bg-orange-50">
-            <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">About Us</h1>
+            <h1 className="pt-4 text-5xl flex justify-center text-gray-800">About Us</h1>
             <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h3 className="text-sm uppercase font-cormorant-garamond-bold tracking-wider text-gray-500">• Our Story •</h3>
-              <h1 className="mt-4 text-5xl font-cormorant-garamond-bold text-gray-800">The Legacy Of Rangoli Sweets</h1>
+              <h3 className="text-sm uppercase tracking-wider text-gray-500">• Our Story •</h3>
+              <h1 className="mt-4 text-5xl text-gray-800">The Legacy Of Rangoli Sweets</h1>
               <p className="mt-6 text-lg text-gray-700">
                 When opening Rangoli, we set out to create an elegant Indian restaurant that offered artistic, creative versions of Northern and coastal Indian dishes. Our name, “Rangoli,” is drawn from a popular Indian style of art featuring patterns and designs in rich, jewel-like colors.
                 <br />
@@ -32,7 +32,7 @@ const AboutUs = () => {
           </div>
         </div>
           </div>
-                        <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">Our Kitchen</h1>
+                        <h1 className="pt-4 text-5xl flex justify-center text-gray-800">Our Kitchen</h1>
             <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-1 gap-8">
@@ -49,7 +49,7 @@ const AboutUs = () => {
             </div>
                 </div>
 
-            <h1 className="pt-4 text-5xl flex justify-center font-cormorant-garamond-bold text-gray-800">Our Clients</h1>
+            <h1 className="pt-4 text-5xl flex justify-center text-gray-800">Our Clients</h1>
             <div className="flex justify-center py-20">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
