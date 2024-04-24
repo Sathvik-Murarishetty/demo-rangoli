@@ -12,7 +12,7 @@ const Corporateorder = () => {
             <h1 className="text-4xl flex justify-center text-gray-800">
                 of California
             </h1>
-            <div className="flex justify-center py-20">
+            <div className="flex justify-center pb-20 pt-10">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
                         <div>
