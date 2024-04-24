@@ -6,7 +6,7 @@ const Corporateorder = () => {
             <h1 className="pt-4 text-4xl flex justify-center text-gray-800">
                 The
             </h1>
-            <span className="text-[#D35400] taste text-5xl justify-center">
+            <span className="text-[#D35400] taste text-6xl flex justify-center">
                 Tastemakers
             </span>
             <h1 className="text-4xl flex justify-center text-gray-800">
