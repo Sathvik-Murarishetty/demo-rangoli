@@ -12,7 +12,7 @@ const Corporateorder = () => {
             <h1 className="text-4xl flex justify-center text-gray-800">
                 of California
             </h1>
-            <div className="flex justify-center pb-20 pt-10">
+            <div className="flex justify-center pb-20 pt-5">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
                         <div>
@@ -27,7 +27,7 @@ const Corporateorder = () => {
             <div className="flex justify-center py-20">
                 <div className="max-w-6xl w-full px-4">
                     <div className="flex justify-center">
-                        <div className="grid grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             {/* Grid Item 1 */}
                             <div className="max-w-sm">
                                 <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713609643/send_uo6ose.png" alt="Image 1" className="w-auto h-20" />
