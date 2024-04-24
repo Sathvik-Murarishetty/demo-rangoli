@@ -4,7 +4,7 @@ const Gifting = () => {
     return (
         <div className="bg-orange-50">
             <h1 className="pt-4 text-5xl flex justify-center font-zcool-xiaowei-regular text-gray-800">MAKE YOUR EVENT SPECTACULAR</h1>
-            <div className="flex justify-center py-20">
+            <div className="flex justify-center pt-5 pb-20">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
                         <div>
