@@ -6,7 +6,7 @@ const AboutUs = () => {
             <h1 className="pt-4 text-5xl flex justify-center text-gray-800">About Us</h1>
             <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
-          <div className="grid grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h3 className="text-sm uppercase tracking-wider text-gray-500">• Our Story •</h3>
               <h1 className="mt-4 text-5xl text-gray-800">The Legacy Of Rangoli Sweets</h1>
