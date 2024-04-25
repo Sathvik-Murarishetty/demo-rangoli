@@ -76,7 +76,7 @@ const Hero = () => {
       </div>
       <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h3 className="text-sm uppercase font-zcool-xiaowei-regular tracking-wider text-gray-500">• Our Story •</h3>
               <h1 className="mt-4 text-5xl font-zcool-xiaowei-regular text-gray-800">The Legacy Of Rangoli Sweets</h1>
@@ -158,7 +158,7 @@ const Hero = () => {
           <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-6 gap-8">
-            <div className="flex flex-col items-center mb-8 md:mb-0">
+            <div className="flex flex-col items-center mt-auto mb-8 md:mb-0 sm:flex-row">
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
       <p className="mt-2 text-sm">100% Vegetarian</p>
     </div>
