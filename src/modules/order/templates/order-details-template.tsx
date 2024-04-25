@@ -19,7 +19,7 @@ const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
   order,
 }) => {
   return (
-    <div className="flex flex-col justify-center gap-y-4">
+    <div className="flex flex-col justify-center gap-y-4 bg-orange-50">
       <div className="flex gap-2 justify-between items-center">
         <h1 className="text-2xl-semi">Order details</h1>
         <LocalizedClientLink
@@ -29,7 +29,7 @@ const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
           <XMark /> Back to overview
         </LocalizedClientLink>
       </div>
-      <div className="flex flex-col gap-4 h-full bg-white w-full">
+      <div className="flex flex-col gap-4 h-full bg-orange-50 w-full">
         <OrderDetails order={order} showStatus />
         <Items items={order.items} region={order.region} />
         <ShippingDetails order={order} />
