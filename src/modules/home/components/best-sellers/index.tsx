@@ -21,10 +21,6 @@ const slides = [
         image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633013/WhatsApp_Image_2024-04-09_at_08.52.16_tkxkq0.jpg',
         link: '/products/kalakand',
     },
-    {
-        image: 'https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712633012/WhatsApp_Image_2024-04-09_at_08.52.17_wapqmc.jpg',
-        link: '/products/kaju-katlii'
-    },
 ];
 
 const BestSellers = () => {
