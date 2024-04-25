@@ -53,7 +53,7 @@ const AboutUs = () => {
             <div className="flex justify-center py-20">
                 <div className="max-w-6xl w-full px-4">
                     <div className="grid grid-cols-1 gap-8">
-                        <div className="flex justify-between items-center flex-col sm:flex-row">
+                        <div className="flex justify-between items-center flex-col sm:flex-row gap-5">
                         <div>
                             <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713605625/amazon_wxv4ka.svg" alt="Brand 1" className="w-auto h-16" />
                         </div>
