@@ -18,7 +18,7 @@ const Login = ({ setCurrentView }: Props) => {
       <p className="text-center text-base-regular text-ui-fg-base mb-8">
         Sign in to access an enhanced shopping experience.
       </p>
-      <form className="w-full" action={formAction}>
+      <form className="w-full" onSubmit={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
             label="Email"
