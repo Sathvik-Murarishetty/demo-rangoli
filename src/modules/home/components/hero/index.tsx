@@ -157,7 +157,7 @@ const Hero = () => {
 
           <div className="flex justify-center py-20">
         <div className="max-w-6xl w-full px-4">
-          <div className="grid grid-cols-1 md:grid-cols-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-6 md:gap-8 md:items-end">
       <div className="flex flex-col items-center mb-8 md:mb-0">
       <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1713582744/vegeterian_kqbcor.png" alt="Image 1" className="h-18" />
       <p className="mt-2 text-sm">100% Vegetarian</p>
