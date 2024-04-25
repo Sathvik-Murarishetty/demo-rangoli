@@ -108,7 +108,7 @@ const StoreTemplate = async ({
               </div>
             </div>
           </div>
-          <div style={{ width: '70%' }}>
+          <div style={{ width: '70%' }} className="sm:w-90vw">
             <div className="flex justify-center py-10">
               <h1 className="mt-4 text-5xl font-poppins-bold text-gray-800">Our Best Sellers</h1>
             </div>
