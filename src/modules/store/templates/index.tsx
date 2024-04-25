@@ -90,7 +90,7 @@ const StoreTemplate = async ({
         <img src="https://res.cloudinary.com/dg0rdc0bd/image/upload/v1712983839/Black_Elegant_Minimalist_Profile_LinkedIn_Banner_seha2o.png" alt="Your Image" className="w-full h-full object-cover" />
       </div>
       <div className="flex justify-center py-10">
-        <div className="flex justify-between gap-4" style={{ width: '90%' }}>
+        <div className="flex flex-col justify-between gap-4 sm:flex-row" style={{ width: '90%' }}>
           <div className="pl-5 pt-10" style={{ width: '30%' }}>
             <div className="w-full m-2 sticky top-0">
               <div className="pb-10 pl-5">
