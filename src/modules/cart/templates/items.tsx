@@ -15,7 +15,7 @@ const ItemsTemplate = ({ items, region }: ItemsTemplateProps) => {
       <div className="pb-3 flex items-center">
         <Heading className="text-[2rem] leading-[2.75rem]">Cart</Heading>
       </div>
-      <Table>
+      <Table className="bg-orange-50">
         <Table.Header className="border-t-0">
           <Table.Row className="text-ui-fg-subtle txt-medium-plus">
             <Table.HeaderCell className="!pl-0">Item</Table.HeaderCell>
