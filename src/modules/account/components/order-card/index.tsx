@@ -42,7 +42,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
       <div className="grid grid-cols-2 small:grid-cols-4 gap-4 my-4">
         {order.items.slice(0, 3).map((i) => {
           return (
-            <div key={i.id} className="flex flex-col gap-y-2">
+            <div key={i.id} className="flex flex-col gap-y-2 bg-orange-50">
               <Thumbnail thumbnail={i.thumbnail} images={[]} size="full" />
               <div className="flex items-center text-small-regular text-ui-fg-base">
                 <span className="text-ui-fg-base font-semibold">{i.title}</span>
@@ -53,7 +53,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           )
         })}
         {numberOfProducts > 4 && (
-          <div className="w-full h-full flex flex-col items-center justify-center">
+          <div className="w-full h-full flex flex-col items-center justify-center bg-orange-50">
             <span className="text-small-regular text-ui-fg-base">
               + {numberOfLines - 4}
             </span>
