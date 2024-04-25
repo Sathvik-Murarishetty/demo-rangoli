@@ -142,7 +142,7 @@
   /* Media query for smaller screens */
   @media only screen and (max-width: 600px) {
     .custom-div {
-      width: 90%;
+      width: 100%;
     }
   }
 }
